@@ -723,7 +723,9 @@ exports.commands =
 			"Last week, I decided I was going to enter the Worlds Tightest Hat competition. I just hope I can pull it off...",
 			"What do you call a beehive where bees can never leave? Un-bee-leaveable!",
 			"How much does it cost for a pirate to get their ears pierced? A buccaneer!",
-			"The minus button on my calculator is broken. On the plus side, it works."
+			"The minus button on my calculator is broken. On the plus side, it works.",
+			"Gravity is one of the fundamental forces in the universe. If you removed it, you'd get gravy.",
+			"Did you know that if you cut off your left arm, your right arm is left?", 
 		];
 
 		let jokeNum = parseInt(arg);
