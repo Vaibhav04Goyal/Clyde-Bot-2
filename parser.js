@@ -458,7 +458,7 @@ exports.parse =
 			}
 		}*/
 
-		let roomOwners = ["dawoblefet", "blarajan", "kaori"];
+		let roomOwners = ["dawoblefet", "blarajan"];
 		if (userRank === ROOMOWNER || roomOwners.indexOf(toID(room)) >= 0)
 		{
 			if (cmd === "custom")
@@ -472,6 +472,7 @@ exports.parse =
 		{
 			case "tour":
 				if (arg === "samples" || (userID === "legavgc" && arg === "vgc13") || (userID === "akinokaede" && !arg)) {canUse = true;}
+				break;
 			case "blog":
 				if (userID === "ansena") {canUse = true;}
 				break;
