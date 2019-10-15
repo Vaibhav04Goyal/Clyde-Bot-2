@@ -223,8 +223,14 @@ exports.parse =
 				}
 
 				ok("logged in as " + spl[2]);
-				send("|/avatar " + config.avatar);
-				send("|/status " + config.status);
+				if (config.avatar)
+				{
+					send("|/avatar " + config.avatar);
+				}
+				if (config.status)
+				{
+					send("|/status " + config.status);
+				}
 
 				//Joining the rooms
 				for (let i = 0, len = config.rooms.length; i < len; i++)
@@ -508,14 +514,18 @@ exports.parse =
 		}
 
 		//Owners have access to every command.
-		for (i = 0; i < config.owners.length; i++)
+		if (config.owners) //Sanity check
 		{
-			if (userID === toID(config.owners[i]))
+			for (i = 0; i < config.owners.length; i++)
 			{
-				canUse = true;
-				break;
+				if (userID === toID(config.owners[i]))
+				{
+					canUse = true;
+					break;
+				}
 			}
 		}
+		
 
 		return canUse;
 	},
