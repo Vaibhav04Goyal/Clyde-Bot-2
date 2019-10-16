@@ -725,7 +725,8 @@ exports.commands =
 			"How much does it cost for a pirate to get their ears pierced? A buccaneer!",
 			"The minus button on my calculator is broken. On the plus side, it works.",
 			"Gravity is one of the fundamental forces in the universe. If you removed it, you'd get gravy.",
-			"Did you know that if you cut off your left arm, your right arm is left?", 
+			"Did you know that if you cut off your left arm, your right arm is left?",
+			"The other day, I spotted an albino dalmatian. I figured it was the least I could do for him",
 		];
 
 		let jokeNum = parseInt(arg);
