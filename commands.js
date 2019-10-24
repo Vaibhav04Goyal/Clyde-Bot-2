@@ -240,16 +240,15 @@ exports.commands =
 			{
 				case "": //No argument specified, use default tour.
 					arglist[0] = defaultTour;
-					/*if (Math.random() < 0.5)
+					if (Math.random() < 0.5)
 					{
 						tourrules = "-guard split, -minimize";
-					}*/
+					}
 					break;
 				case "double":
 				case "double elim":
 				case "double elimination":
 					arglist[0] = defaultTour;
-					//tourrules = "-guard split, -minimize";
 					arglist[1] = "elimination";
 					arglist[2] = "128";
 					arglist[3] = "2";
