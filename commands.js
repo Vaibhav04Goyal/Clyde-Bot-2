@@ -517,6 +517,8 @@ exports.commands =
 				case "random battle":
 				case "randombattle":
 				case "gen7randombattle":
+				case "randomdoubles":
+				case "gen7doublesrandombattle":
 					this.say(room, "Cannot start random battle tours.");
 					return;
 				case "cap":
