@@ -477,7 +477,7 @@ exports.parse =
 		switch (cmd)
 		{
 			case "tour":
-				if (arg === "samples" || (userID === "legavgc" && arg === "vgc13") || (userID === "akinokaede" && !arg)) {canUse = true;}
+				if (arg === "samples" || (userID === "legavgc" && arg === "vgc13") || (userID === "dorian0404" && (!arg || arg === "vgc18"))) {canUse = true;}
 				break;
 			case "blog":
 				if (userID === "ansena") {canUse = true;}
