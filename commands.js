@@ -730,6 +730,7 @@ exports.commands =
 			"The other day, I spotted an albino dalmatian. I figured it was the least I could do for him.",
 			"What is the loudest pet? A trum**pet**!",
 			"What's the best way to cook an alligator? In a crockpot!",
+			"What's the best way to make a pirate angry? Remove the p!",
 		];
 
 		let jokeNum = parseInt(arg);
