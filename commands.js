@@ -265,6 +265,13 @@ exports.commands =
 			//Prepare tournament format.
 			switch (arglist[0])
 			{
+				case "vgc20":
+				case "vgc2020":
+				case "battlestadiumdoubles":
+				case "battlespotdoubles":
+				case "gen8battlestadiumdoubles":
+					tourformat = "gen8battlestadiumdoubles";
+					tourname = "[Gen 8] VGC 2020 (probably)";
 				case "ultra":
 				case "ultra series":
 					tourformat = "gen7vgc2019ultraseries";
