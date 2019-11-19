@@ -272,6 +272,7 @@ exports.commands =
 				case "gen8battlestadiumdoubles":
 					tourformat = "gen8battlestadiumdoubles";
 					tourname = "[Gen 8] VGC 2020 (probably)";
+					break;
 				case "ultra":
 				case "ultra series":
 					tourformat = "gen7vgc2019ultraseries";
