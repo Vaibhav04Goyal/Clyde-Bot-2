@@ -271,7 +271,7 @@ exports.commands =
 				case "battlespotdoubles":
 				case "gen8battlestadiumdoubles":
 					tourformat = "gen8battlestadiumdoubles";
-					tourname = "[Gen 8] VGC 2020 (probably)";
+					tourname = "[Gen 8] Battle Stadium Doubles";
 					break;
 				case "ultra":
 				case "ultra series":
@@ -291,10 +291,10 @@ exports.commands =
 					break;
 				case "moon":
 				case "moon series":
-					tourformat = "gen7vgc2019moonseries";
+					tourformat = "gen7vgc2019ultraseries";
 					formatname = "VGC 2019 Moon Series";
 					tourname = "[Gen 7] VGC 2019 Moon Series";
-					//tourrules = "-red orb, -blue orb, -dragon ascent, -ultranecroziumz, -Abomasite, -Absolite, -Aerodactylite, -Aggronite, -Alakazite, -Altarianite, -Ampharosite, -Audinite, -Banettite, -Beedrillite, -Blastoisinite, -Blazikenite, -Cameruptite, -Charizardite X, -Charizardite Y, -Crucibellite, -Diancite, -Galladite, -Garchompite, -Gardevoirite, -Gengarite, -Glalitite, -Gyaradosite, -Heracronite, -Houndoominite, -Kangaskhanite, -Latiasite, -Latiosite, -Lopunnite, -Lucarionite, -Manectite, -Mawilite, -Medichamite, -Metagrossite, -Mewtwonite X, -Mewtwonite Y, -Pidgeotite, -Pinsirite, -Sablenite, -Salamencite, -Sceptilite, -Scizorite, -Sharpedonite, -Slowbronite, -Steelixite, -Swampertite, -Tyranitarite, -Venusaurite";
+					tourrules = "-red orb, -blue orb, -dragon ascent, -ultranecroziumz, -Abomasite, -Absolite, -Aerodactylite, -Aggronite, -Alakazite, -Altarianite, -Ampharosite, -Audinite, -Banettite, -Beedrillite, -Blastoisinite, -Blazikenite, -Cameruptite, -Charizardite X, -Charizardite Y, -Crucibellite, -Diancite, -Galladite, -Garchompite, -Gardevoirite, -Gengarite, -Glalitite, -Gyaradosite, -Heracronite, -Houndoominite, -Kangaskhanite, -Latiasite, -Latiosite, -Lopunnite, -Lucarionite, -Manectite, -Mawilite, -Medichamite, -Metagrossite, -Mewtwonite X, -Mewtwonite Y, -Pidgeotite, -Pinsirite, -Sablenite, -Salamencite, -Sceptilite, -Scizorite, -Sharpedonite, -Slowbronite, -Steelixite, -Swampertite, -Tyranitarite, -Venusaurite";
 					formatDescription = "Moon Series allowed up to two restricted legendary Pokemon, and unlike Sun Series, Z-moves are allowed. However, Mega Evolutions, Primal Orbs, and Ultra Necrozma are all banned.";
 					sampleTeams = [
 						["xerneas", "lunala", "smeargle", "incineroar", "stakataka", "tsareena", "https://pokepast.es/dcd39a7c47343e97", "EmbC's 1st Place Australia Internationals Team"],
@@ -306,10 +306,10 @@ exports.commands =
 					break;
 				case "sun":
 				case "sun series":
-					tourformat = "gen7vgc2019sunseries";
+					tourformat = "gen7vgc2019ultraseries";
 					tourname = "[Gen 7] VGC 2019 Sun Series";
-					//tourrules = "-red orb, -blue orb, -dragon ascent, -BuginiumZ, -DarkiniumZ, -DragoniumZ, -ElectriumZ, -FairiumZ, -FightiniumZ, -FiriumZ, -FlyiniumZ, -GhostiumZ, -GrassiumZ, -GroundiumZ, -IciumZ, -LunaliumZ, -NormaliumZ, -PoisoniumZ, -PsychiumZ, -RockiumZ, -SolganiumZ, -SteeliumZ, -UltranecroziumZ, -WateriumZ, -Abomasite, -Absolite, -Aerodactylite, -Aggronite, -Alakazite, -Altarianite, -Ampharosite, -Audinite, -Banettite, -Beedrillite, -Blastoisinite, -Blazikenite, -Cameruptite, -Charizardite X, -Charizardite Y, -Crucibellite, -Diancite, -Galladite, -Garchompite, -Gardevoirite, -Gengarite, -Glalitite, -Gyaradosite, -Heracronite, -Houndoominite, -Kangaskhanite, -Latiasite, -Latiosite, -Lopunnite, -Lucarionite, -Manectite, -Mawilite, -Medichamite, -Metagrossite, -Mewtwonite X, -Mewtwonite Y, -Pidgeotite, -Pinsirite, -Sablenite, -Salamencite, -Sceptilite, -Scizorite, -Sharpedonite, -Slowbronite, -Steelixite, -Swampertite, -Tyranitarite, -Venusaurite, -oranguru+symbiosis, -passimian+defiant, -custap berry, -micle berry, -jaboca berry, -rowap berry";
-					tourrules = "-oranguru+symbiosis, -passimian+defiant, -custap berry, -micle berry, -jaboca berry, -rowap berry";
+					tourrules = "-red orb, -blue orb, -dragon ascent, -BuginiumZ, -DarkiniumZ, -DragoniumZ, -ElectriumZ, -FairiumZ, -FightiniumZ, -FiriumZ, -FlyiniumZ, -GhostiumZ, -GrassiumZ, -GroundiumZ, -IciumZ, -LunaliumZ, -NormaliumZ, -PoisoniumZ, -PsychiumZ, -RockiumZ, -SolganiumZ, -SteeliumZ, -UltranecroziumZ, -WateriumZ, -Abomasite, -Absolite, -Aerodactylite, -Aggronite, -Alakazite, -Altarianite, -Ampharosite, -Audinite, -Banettite, -Beedrillite, -Blastoisinite, -Blazikenite, -Cameruptite, -Charizardite X, -Charizardite Y, -Crucibellite, -Diancite, -Galladite, -Garchompite, -Gardevoirite, -Gengarite, -Glalitite, -Gyaradosite, -Heracronite, -Houndoominite, -Kangaskhanite, -Latiasite, -Latiosite, -Lopunnite, -Lucarionite, -Manectite, -Mawilite, -Medichamite, -Metagrossite, -Mewtwonite X, -Mewtwonite Y, -Pidgeotite, -Pinsirite, -Sablenite, -Salamencite, -Sceptilite, -Scizorite, -Sharpedonite, -Slowbronite, -Steelixite, -Swampertite, -Tyranitarite, -Venusaurite, -oranguru+symbiosis, -passimian+defiant, -custap berry, -micle berry, -jaboca berry, -rowap berry";
+					//tourrules = "-oranguru+symbiosis, -passimian+defiant, -custap berry, -micle berry, -jaboca berry, -rowap berry";
 					formatname = "VGC 2019 Sun Series";
 					formatDescription = "The first third of VGC 2019 was Sun Series. Like all three formats in VGC 2019, you can use up to two restricted legendary Pokemon per team (e.g. Kyogre, Xerneas, Lunala, etc.). However, all Z-moves, Mega Evolutions, and the Primal Orbs are banned.";
 					sampleTeams = [
