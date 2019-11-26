@@ -739,6 +739,7 @@ exports.commands =
 			"What is the loudest pet? A trum**pet**!",
 			"What's the best way to cook an alligator? In a crockpot!",
 			"What's the best way to make a pirate angry? Remove the p!",
+			"Last night, my wife was feeling pretty emotional, and she started coloring on my upper arm. I guess she just needed a shoulder to crayon.",
 		];
 
 		let jokeNum = parseInt(arg);
