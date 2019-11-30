@@ -198,7 +198,7 @@ global.Commands = require("./commands.js").commands;
 global.Parse = require("./parser.js").parse;
 global.Connection = null;
 global.hasTourStarted = false;
-const MESSAGE_THROTTLE = 850;
+const MESSAGE_THROTTLE = 300;
 
 let queue = [];
 let dequeueTimeout = null;
