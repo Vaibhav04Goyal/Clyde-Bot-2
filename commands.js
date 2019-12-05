@@ -255,7 +255,7 @@ exports.commands =
 					break;
 				case "random":
 				case "random vgc":
-					let vgcFormats = ["vgc11", "vgc12", "vgc13", "vgc14", "vgc14.5", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra"];
+					let vgcFormats = ["vgc11", "vgc12", "vgc13", "vgc14", "vgc14.5", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20"];
 					arglist[0] = vgcFormats[Math.floor(Math.random() * vgcFormats.length)];
 					break;
 				default:
@@ -267,11 +267,9 @@ exports.commands =
 			{
 				case "vgc20":
 				case "vgc2020":
-				case "battlestadiumdoubles":
-				case "battlespotdoubles":
-				case "gen8battlestadiumdoubles":
-					tourformat = "gen8battlestadiumdoubles";
-					tourname = "[Gen 8] Battle Stadium Doubles";
+				case "gen8vgc2020":
+					tourformat = "gen8vgc2020";
+					tourname = "[Gen 8] VGC 2020";
 					break;
 				case "ultra":
 				case "ultra series":
