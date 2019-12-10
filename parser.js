@@ -602,8 +602,8 @@ exports.parse =
 			}
 
 			//Autocorrect regexes and corresponding autocorrections
-			let autocorrectRegexes = [/(n|N)inetails/, /(m|M)eowstick/, /(c|C)owmoo/, /tylee/, /(w|W)olfie/, /(A|a)m(o|oo)ngus([^s]|$)/, /(s|S)hedninja/, /(d|d)a(w|W)obblefet/, /(s|S)norelax/, /(d|D)racofish/];
-			let autocorrectMessages = ["Ninetales", "Meowstic", "Kommo-o", "tlyee", "Wolfey", "Amoonguss", "Shedinja", "DaWoblefet", "Snorlax", "Dracovish"];
+			let autocorrectRegexes = [/(n|N)inetails/, /(m|M)eowstick/, /(c|C)owmoo/, /tylee/, /(w|W)olfie/, /(A|a)m(o|oo)ngus([^s]|$)/, /(s|S)hedninja/, /(d|d)a(w|W)obblefet/, /(s|S)norelax/, /(d|D)racofish/, /(b|B)abytron/];
+			let autocorrectMessages = ["Ninetales", "Meowstic", "Kommo-o", "tlyee", "Wolfey", "Amoonguss", "Shedinja", "DaWoblefet", "Snorlax", "Dracovish", "Babbytron"];
 
 			for (let i = 0; i < autocorrectRegexes.length; i++)
 			{
