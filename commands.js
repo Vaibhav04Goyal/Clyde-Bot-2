@@ -233,7 +233,7 @@ exports.commands =
 			let formatname;
 			let formatDescription;
 			let sampleTeams; //2D Array with each array having 6 team members, followed by pokepaste link, followed by description.
-			const defaultTour = "ultra";
+			const defaultTour = "vgc20";
 			
 			//Handle default case, double elim, and random format options.
 			switch (arglist[0])
