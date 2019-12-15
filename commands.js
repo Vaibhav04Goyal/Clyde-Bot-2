@@ -201,7 +201,7 @@ exports.commands =
 	//Creates a tournament with custom options. Sample teams are provided for each format when applicable.
 	tour: function(arg, by, room)
 	{
-		let arglist = arg.split(',');
+		let arglist = arg.split(', ');
 
 		if (arg === "reset" || arg === "restart")
 		{
@@ -539,6 +539,12 @@ exports.commands =
 			if (arglist[1] === undefined)
 			{
 				arglist[1] = "elimination";
+			}
+			if (arglist[1] === "double")
+			{
+				arglist[1] = "elimination";
+				arglist[2] = "128";
+				arglist[3] = "2";
 			}
 			if (arglist[2] === undefined || isNaN(arglist[2]))
 			{
