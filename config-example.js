@@ -1,6 +1,6 @@
 /* Websocket server and port the bot should connect to. Check the 'Request URL'
  * of the websocket. If you don't know what that means, just leave this as-is. */
-exports.server = "sim.psim.us";
+exports.server = "sim3.psim.us";
 exports.port = 80;
 
 /* The server ID. This should almost certainly be "showdown", but just in case,
@@ -57,7 +57,7 @@ exports.secprotocols = [];
 exports.debuglevel = 3;
 
 /* How fast the bot will attempt to reconnect after a disconnection,
- * in seconds,Depending on your Internet speed, setting this too low
+ * in seconds. Depending on your Internet speed, setting this too low
  * may cause multiple instances of the bot to join, or not join at all. */
 exports.timeout = 20;
 
