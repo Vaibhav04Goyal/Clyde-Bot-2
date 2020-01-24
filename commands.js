@@ -780,14 +780,14 @@ exports.commands =
 	{
 		let text;
 		let vgcstats = "https://vgcstats.com";
-		let bsUsage = "https://3ds.pokemon-gl.com/battle/usum/#wcs";
-		let psUsage = "https://www.smogon.com/stats/2019-10/gen7vgc2019ultraseries-1760.txt";
-		let psDetailedUsage = "https://www.smogon.com/stats/2019-10/moveset/gen7vgc2019ultraseries-1760.txt";
+		//let bsUsage = "https://3ds.pokemon-gl.com/battle/usum/#wcs";
+		let psUsage = "https://www.smogon.com/stats/2019-12/gen8vgc2020-1760.txt";
+		let psDetailedUsage = "https://www.smogon.com/stats/2019-12/moveset/gen8vgc2020-1760.txt";
 
 		if (by.charAt(0) === ' ' || room.charAt(0) === ",")
 		{
 			this.say(room, "/pm " + by + ", VGC Stats Website: " + vgcstats);
-			this.say(room, "/pm " + by + ", Battle Spot Usage: " + bsUsage);
+			//this.say(room, "/pm " + by + ", Battle Spot Usage: " + bsUsage);
 			this.say(room, "/pm " + by + ", Showdown Usage Stats: " + psUsage);
 			this.say(room, "/pm " + by + ", Showdown Detailed Usage Stats: " + psDetailedUsage);
 			return false;
@@ -795,7 +795,7 @@ exports.commands =
 		else
 		{
 			//See usage.html
-			text = "/addhtmlbox <strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + bsUsage + "\">Battle Spot Usage</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li></ul>";
+			text = "/addhtmlbox <strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li></ul>";
 		}
 		this.say(room, text);
 	},
