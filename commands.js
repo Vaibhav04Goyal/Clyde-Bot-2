@@ -577,44 +577,9 @@ exports.commands =
 				this.say(room, "/wall " + tournote);
 			}
 
-			/* HTML boiler plate for tour helper
-			<b>VGC 20XX</b>
-			<br>
-			<details>
-			    <summary>Rules for VGC 20XX</summary>
-			    y e e t
-			</details>
-			<details>
-			    <summary>Sample Teams</summary>
-			    <psicon pokemon=""></psicon> |
-			    <psicon pokemon=""></psicon> |
-			    <psicon pokemon=""></psicon> |
-			    <psicon pokemon=""></psicon> |
-			    <psicon pokemon=""></psicon> |
-			    <psicon pokemon=""></psicon> -
-			    <a href = "pokepastelink"><font size = "1">description</font></a>
-			    <br>
-			</details> */
-
-			let htmlText;
-
 			if (formatDescription && sampleTeams)
 			{
-				let htmlText = "<b>" + formatname + "</b> <br> <details> <summary>Rules for " + formatname + " (click to view)</summary> " + formatDescription +  "</details> <details> <summary>Sample Teams</summary>";
-				let numSampleTeams = sampleTeams.length / 8;
-
-				for (let i = 0; i < sampleTeams.length; i++)
-				{
-					let j;
-					for (j = 0; j < 5; j++)
-					{
-						htmlText += "<psicon pokemon=\"" + sampleTeams[i][j] + "\"></psicon>|";
-					}
-					htmlText += "<psicon pokemon=\"" + sampleTeams[i][j] + "\"></psicon>";
-					htmlText += "<a href= \"" + sampleTeams[i][j+1] + "\">"; //pokepaste link
-					htmlText += "<font size = \"1\">(" + sampleTeams[i][j+2] + ")</font></a> <br>"; //description
-				}
-				htmlText += "</details>";
+				let htmlText = this.generateHTMLSample(formatname, formatDescription, sampleTeams, false);
 				this.say(room, "/addhtmlbox " + htmlText);
 			}
 			this.say(room, "/tour autostart 2");
@@ -969,22 +934,32 @@ exports.commands =
 
 		this.say(room, "/addhtmlbox " + text);
 	},
-	/*response: function(arg, by, room)
+	sample: "samples",
+	samples: function(arg, by, room)
 	{
-		this.say(room, "/tour create mish, elim");
-		let message = this.checkTourStarted();
-		try
+		let text = "";
+		if (arg === "all")
 		{
-			message = await this.message("mish|error|bad day", room);
+			if (by.charAt(0) === " ")
+			{
+				text = "/pm " + by + ", ";
+			}
+			text += "VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
 		}
-		catch (err)
+		else
 		{
-			message = "It didn't work";
+			let formatname = "VGC 2020";
+			let formatDescription = "VGC 2020 allows all Pokemon from the Galar Pokedex except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.";
+			let sampleTeams = [
+				["arcanine", "excadrill", "tyranitar", "togekiss", "gastrodon", "dragapult", "https://pokepast.es/aa2e3a929e0bf1be", "Zeen's 1st Place Battle Stadium Team"],
+				["charizardgmax", "whimsicott", "jellicent", "duraludon", "conkeldurr", "togekiss", "https://pokepast.es/de7c131100951ee9", "Unreality's 1st Place Regionals Team"],
+				["dracozolt", "passimian", "whimsicott", "togekiss", "darmanitangalar", "duraludon", "https://pokepast.es/93223dd0e1cfb74f", "Sejun's 1st Place World Champ Invitational Team"],
+				["rhyperior", "togekiss", "jellicent", "ferrothorn", "hydreigon", "arcanine", "https://pokepast.es/9b57bf2abe5ad0ed", "EmbC's 1st Place Galar Weekly Team"],
+				["gothitelle", "dusclops", "torkoal", "rhyperior", "togekiss", "gyarados", "https://pokepast.es/bb66c9e105049b5d", "HamstermaniaCZ's Top 8 Regionals Team"],
+				["rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "https://www.trainertower.com/pokemon-sword-and-shield-rental-teams/", "More VGC 2020 Rental Teams"]
+			];
+			text = "/addhtmlbox " + this.generateHTMLSample(formatname, formatDescription, sampleTeams, true);
 		}
-		if (message === "bad day")
-		{
-			message = "ha, get mished";
-		}
-		this.say(room, "!code " + message);
-	},*/
+		this.say(room, text);
+	},
 };

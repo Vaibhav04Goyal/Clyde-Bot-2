@@ -451,7 +451,7 @@ exports.parse =
 
 		if (userRank >= VOICE)
 		{
-			if (["tour", "notice", "usage", "icpa", "thinking", "b", "epic"].indexOf(cmd) >= 0)
+			if (["tour", "samples", "notice", "usage", "icpa", "thinking", "b", "epic"].indexOf(cmd) >= 0)
 			{
 				canUse = true;
 			}
@@ -751,6 +751,43 @@ exports.parse =
 		}
 
 		return result;
+	},
+	/* HTML boiler plate for tour helper
+	<b>VGC 20XX</b>
+	<br>
+	<details>
+		<summary>Rules for VGC 20XX</summary>
+		y e e t
+	</details>
+	<details>
+		<summary>Sample Teams</summary>
+		<psicon pokemon=""></psicon> |
+		<psicon pokemon=""></psicon> |
+		<psicon pokemon=""></psicon> |
+		<psicon pokemon=""></psicon> |
+		<psicon pokemon=""></psicon> |
+		<psicon pokemon=""></psicon> -
+		<a href = "pokepastelink"><font size = "1">description</font></a>
+		<br>
+	</details> */
+	generateHTMLSample: function(formatname, formatDescription, sampleTeams, isOpen)
+	{
+		let htmlText = "<b>" + formatname + "</b> <br> <details> <summary>Rules for " + formatname + " (click to view)</summary> " + formatDescription +  "</details> <details" + (isOpen ? " open" : "") + "> <summary>Sample Teams</summary>";
+		let numSampleTeams = sampleTeams.length / 8;
+
+		for (let i = 0; i < sampleTeams.length; i++)
+		{
+			let j;
+			for (j = 0; j < 5; j++)
+			{
+				htmlText += "<psicon pokemon=\"" + sampleTeams[i][j] + "\"></psicon>|";
+			}
+			htmlText += "<psicon pokemon=\"" + sampleTeams[i][j] + "\"></psicon>";
+			htmlText += "<a href= \"" + sampleTeams[i][j+1] + "\">"; //pokepaste link
+			htmlText += "<font size = \"1\">(" + sampleTeams[i][j+2] + ")</font></a> <br>"; //description
+		}
+		htmlText += "</details>";
+		return htmlText;
 	},
 	/*displayNPAbox: function()
 	{
