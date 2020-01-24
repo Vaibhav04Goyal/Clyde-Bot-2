@@ -224,6 +224,8 @@ exports.commands =
 			return;
 		}
 
+
+
 		if (!hasTourStarted)
 		{
 			let tourformat;
@@ -233,17 +235,13 @@ exports.commands =
 			let formatname;
 			let formatDescription;
 			let sampleTeams; //2D Array with each array having 6 team members, followed by pokepaste link, followed by description.
-			const defaultTour = "vgc20";
+			const defaultTour = "gen8vgc2020";
 			
 			//Handle default case, double elim, and random format options.
 			switch (arglist[0])
 			{
 				case "": //No argument specified, use default tour.
 					arglist[0] = defaultTour;
-					/*if (Math.random() < 0.5)
-					{
-						tourrules = "-guard split, -minimize";
-					}*/
 					break;
 				case "double":
 				case "double elim":
@@ -270,6 +268,16 @@ exports.commands =
 				case "gen8vgc2020":
 					tourformat = "gen8vgc2020";
 					tourname = "[Gen 8] VGC 2020";
+					formatname = "VGC 2020";
+					formatDescription = "VGC 2020 allows all Pokemon from the Galar Pokedex except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.";
+					sampleTeams = [
+						["arcanine", "excadrill", "tyranitar", "togekiss", "gastrodon", "dragapult", "https://pokepast.es/aa2e3a929e0bf1be", "Zeen's 1st Place Battle Stadium Team"],
+						["charizardgmax", "whimsicott", "jellicent", "duraludon", "conkeldurr", "togekiss", "https://pokepast.es/de7c131100951ee9", "Unreality's 1st Place Regionals Team"],
+						["dracozolt", "passimian", "whimsicott", "togekiss", "darmanitangalar", "duraludon", "https://pokepast.es/93223dd0e1cfb74f", "Sejun's 1st Place World Champ Invitational Team"],
+						["rhyperior", "togekiss", "jellicent", "ferrothorn", "hydreigon", "arcanine", "https://pokepast.es/9b57bf2abe5ad0ed", "EmbC's 1st Place Galar Weekly Team"],
+						["gothitelle", "dusclops", "torkoal", "rhyperior", "togekiss", "gyarados", "https://pokepast.es/bb66c9e105049b5d", "HamstermaniaCZ's Top 8 Regionals Team"],
+						["rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "https://www.trainertower.com/pokemon-sword-and-shield-rental-teams/", "More VGC 2020 Rental Teams"]
+					];
 					break;
 				case "ultra":
 				case "ultra series":
@@ -483,7 +491,7 @@ exports.commands =
 				case "inverse vgc":
 				case "vgc inverse":
 					tourformat = defaultTour;
-					tourname = "[Gen 7] VGC 2019 Inverse Battle";
+					tourname = "[Gen 8] VGC 2020 Inverse Battle";
 					tourrules = "inverse mod";
 					tournote = "VGC Inverse Battles! Type matchups are inverted. Now Fire-type attacks are super-effective against Water-type Pokemon!";
 					break;
@@ -554,15 +562,11 @@ exports.commands =
 			{
 				arglist[3] = "1";
 			}
-			if (tourname === undefined)
-			{
-				this.say(room, "/tour create " + tourformat + ", " + arglist[1] + ", " + arglist[2] + ", " + arglist[3]);
-			}
-			else
-			{
-				this.say(room, "/tour create " + tourformat + ", " + arglist[1] + ", " + arglist[2] + ", " + arglist[3] + ", " + tourname);
-			}
-			
+			//console.log("before trying to send the /tour command");
+			let tourCommand = "/tour create " + tourformat + ", " + arglist[1] + ", " + arglist[2] + ", " + arglist[3];
+			if (tourname) { tourCommand += ", " + tourname; }
+			this.say(room, tourCommand);
+			//console.log("after trying to send the /tour command");
 			if (tourrules)
 			{
 				this.say(room, "/tour rules " + tourrules);
@@ -964,5 +968,23 @@ exports.commands =
 		+ ' style = "position: absolute; top: 0%; left: 0%"></div>';
 
 		this.say(room, "/addhtmlbox " + text);
-	}
+	},
+	/*response: function(arg, by, room)
+	{
+		this.say(room, "/tour create mish, elim");
+		let message = this.checkTourStarted();
+		try
+		{
+			message = await this.message("mish|error|bad day", room);
+		}
+		catch (err)
+		{
+			message = "It didn't work";
+		}
+		if (message === "bad day")
+		{
+			message = "ha, get mished";
+		}
+		this.say(room, "!code " + message);
+	},*/
 };
