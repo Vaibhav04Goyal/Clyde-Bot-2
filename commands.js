@@ -38,7 +38,7 @@ exports.commands =
 		{
 			text = "There is no guide for this bot. PM the owner, " + config.owners[0] + " , with any questions.";
 		}
-		if (by.charAt(0) === " ")
+		if (by.charAt(0) === " ") //Regular user used command in chatroom
 		{
 			text = "/pm " + by + ", " + text;
 		}
@@ -56,7 +56,7 @@ exports.commands =
 		{
 			text = "There is no public source code for " + config.nick + ". However, the repository for the bot it is based on, BoTTT III, can be found here: https://github.com/DaWoblefet/BoTTT-III.";
 		}
-		if (by.charAt(0) === " ")
+		if (by.charAt(0) === " ") //Regular user used command in chatroom
 		{
 			text = "/pm " + by + ", " + text;
 		}
@@ -217,7 +217,7 @@ exports.commands =
 		if (arg === "samples")
 		{
 			let text = "";
-			if (by.charAt(0) === " ")
+			if (by.charAt(0) === " ") //Regular user used command in chatroom
 			{
 				text = "/pm " + by + ", ";
 			}
@@ -773,7 +773,11 @@ exports.commands =
 	{
 		let defaultFormat = "gen8vgc2020";
 		let text = "";
-		if (tourJSON.hasOwnProperty(arg))
+		if (room.charAt(0) === ",")
+		{
+			text = "/pm " + by + ", VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
+		}
+		else if (tourJSON.hasOwnProperty(arg))
 		{
 			text = "/addhtmlbox " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true);
 		}
@@ -783,21 +787,14 @@ exports.commands =
 		}
 		else if (arg === "all")
 		{
-			if (by.charAt(0) === " ")
+			text = "/addhtmlbox ";
+			let keys = Object.keys(tourJSON);
+			
+			for (key in keys)
 			{
-				text = "/pm " + by + ", VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
-			}
-			else
-			{
-				text = "/addhtmlbox ";
-				let keys = Object.keys(tourJSON);
-				
-				for (key in keys)
+				if (tourJSON[keys[key]].formatname)
 				{
-					if (tourJSON[keys[key]].formatname)
-					{
-						text += this.generateHTMLSample(tourJSON[keys[key]].formatname, tourJSON[keys[key]].formatDescription, tourJSON[keys[key]].sampleTeams, false);
-					}
+					text += this.generateHTMLSample(tourJSON[keys[key]].formatname, tourJSON[keys[key]].formatDescription, tourJSON[keys[key]].sampleTeams, false);
 				}
 			}
 		}
