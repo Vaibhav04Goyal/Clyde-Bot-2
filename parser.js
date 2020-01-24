@@ -265,6 +265,10 @@ exports.parse =
 				if (toID(by) !== toID(config.nick))
 				{
 					console.log("PM from " + by + " at " + new Date().toLocaleString() + ": " + spl[4]); //Logs PMs to BoTTT III in the console.
+					if (toID(spl[4]) === "mish")
+					{
+						send("|/pm " + toID(by) + ", mish");
+					}
 				}
 				this.chatMessage(spl[4], by, ',' + by);
 				break;
@@ -302,6 +306,11 @@ exports.parse =
 				{
 					console.log("Message sent too fast at: " + new Date().toLocaleString() + ". MESSAGE_THROTTLE in main.js is likely set too low.");
 				}
+				break;
+			case "error": //this protocol is triggered whenever Showdown's errorReply() function is called
+				console.log("Error message from Showdown: " + spl[2]);
+				errorMessageReceived = true;
+				errorMessage = spl[2];
 				break;
 			case "win":
 				//this.bestOfThree.wins.push(spl[2]);
