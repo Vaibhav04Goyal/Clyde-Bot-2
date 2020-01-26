@@ -309,8 +309,6 @@ exports.parse =
 				break;
 			case "error": //this protocol is triggered whenever Showdown's errorReply() function is called
 				console.log("Error message from Showdown: " + spl[2]);
-				errorMessageReceived = true;
-				errorMessage = spl[2];
 				break;
 			case "win":
 				//this.bestOfThree.wins.push(spl[2]);
