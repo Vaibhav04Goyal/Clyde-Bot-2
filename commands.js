@@ -547,6 +547,7 @@ exports.commands =
 			"What's the best way to cook an alligator? In a crockpot!",
 			"What's the best way to make a pirate angry? Remove the p!",
 			"Last night, my wife was feeling pretty emotional, and she started coloring on my upper arm. I guess she just needed a shoulder to crayon.",
+			"Did you hear about the marriage of the invisible man and the invisible woman? I'm just not sure what they saw in each other.",
 		];
 
 		let jokeNum = parseInt(arg);
