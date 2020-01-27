@@ -214,20 +214,6 @@ exports.commands =
 			return;
 		}
 
-		if (arg === "samples")
-		{
-			let text = "";
-			if (by.charAt(0) === " ") //Regular user used command in chatroom
-			{
-				text = "/pm " + by + ", ";
-			}
-			text += "VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
-			this.say(room, text);
-			return;
-		}
-
-
-
 		if (!hasTourStarted)
 		{
 			let tourformat;
@@ -774,7 +760,7 @@ exports.commands =
 	{
 		let defaultFormat = "gen8vgc2020";
 		let text = "";
-		if (room.charAt(0) === ",")
+		if (room.charAt(0) === "," || by.charAt(0) === " ") //Regular user used command or via PM
 		{
 			text = "/pm " + by + ", VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
 		}

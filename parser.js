@@ -441,7 +441,7 @@ exports.parse =
 
 		if (userRank >= NONE)
 		{
-			if(["commands", "git", "usage"].indexOf(cmd) >= 0)
+			if(["commands", "git", "usage", "samples"].indexOf(cmd) >= 0)
 			{
 				canUse = true;
 			}
@@ -449,7 +449,7 @@ exports.parse =
 
 		if (userRank >= VOICE)
 		{
-			if (["tour", "samples", "notice", "usage", "icpa", "thinking", "b", "epic"].indexOf(cmd) >= 0)
+			if (["tour", "notice", "usage", "icpa", "thinking", "b", "epic"].indexOf(cmd) >= 0)
 			{
 				canUse = true;
 			}
@@ -484,7 +484,7 @@ exports.parse =
 		switch (cmd)
 		{
 			case "tour":
-				if (arg === "samples" || (userID === "legavgc" && arg === "vgc13") || (userID === "dorian0404" && (!arg || arg === "vgc18"))) {canUse = true;}
+				if ((userID === "legavgc" && arg === "vgc13") || (userID === "dorian0404" && (!arg || arg === "vgc18"))) {canUse = true;}
 				break;
 			case "blog":
 				if (userID === "ansena") {canUse = true;}
