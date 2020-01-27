@@ -690,11 +690,6 @@ exports.commands =
 	{
 		this.say(room, "gaming");
 	},
-	yveldon: "raydon",
-	raydon: function(arg, by, room)
-	{
-		this.say(room, "sogood");
-	},
 	nom: function(arg, by, room)
 	{
 		this.say(room, "Player not recognized. Perhaps you meant **seaco**.");

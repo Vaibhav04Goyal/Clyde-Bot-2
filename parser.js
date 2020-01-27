@@ -457,7 +457,7 @@ exports.parse =
 
 		if (userRank >= DRIVER)
 		{
-			if (["insult", "8ball", "say", "objectively", "joke", "compliment", "mish", "uno", "chef", "platypus", "mynameis", "nom", "diglett", "ezrael", "raydon", "dynamax", "delet"].indexOf(cmd) >= 0)
+			if (["insult", "8ball", "say", "objectively", "joke", "compliment", "mish", "uno", "chef", "platypus", "mynameis", "nom", "diglett", "ezrael", "dynamax", "delet"].indexOf(cmd) >= 0)
 			{
 				canUse = true;
 			}
@@ -509,9 +509,6 @@ exports.parse =
 				break;
 			case "epic":
 				if (userID === "animusvgc" || userID === "joeux9") {canUse = true;}
-				break;
-			case "raydon":
-				if (userID === "joeux9") {canUse = true;}
 				break;
 			case "uno":
 				if (userID === "dingram") {canUse = true;}
