@@ -19,7 +19,7 @@
     },
     "gen7vgc2019ultraseries":
     {
-        "tourformat": "gen7vgc2019ultraseries",
+        "tourformat": "gen7vgc2019",
         "tourname": "[Gen 7] VGC 2019 Ultra Series",
         "tourrules": "",
         "formatname": "VGC 2019 Ultra Series",
@@ -38,7 +38,7 @@
     },
     "gen7vgc2019moonseries":
     {
-        "tourformat": "gen7vgc2019ultraseries",
+        "tourformat": "gen7vgc2019",
         "tourname": "[Gen 7] VGC 2019 Moon Series",
         "tourrules": "-red orb, -blue orb, -dragon ascent, -ultranecroziumz, -Abomasite, -Absolite, -Aerodactylite, -Aggronite, -Alakazite, -Altarianite, -Ampharosite, -Audinite, -Banettite, -Beedrillite, -Blastoisinite, -Blazikenite, -Cameruptite, -Charizardite X, -Charizardite Y, -Crucibellite, -Diancite, -Galladite, -Garchompite, -Gardevoirite, -Gengarite, -Glalitite, -Gyaradosite, -Heracronite, -Houndoominite, -Kangaskhanite, -Latiasite, -Latiosite, -Lopunnite, -Lucarionite, -Manectite, -Mawilite, -Medichamite, -Metagrossite, -Mewtwonite X, -Mewtwonite Y, -Pidgeotite, -Pinsirite, -Sablenite, -Salamencite, -Sceptilite, -Scizorite, -Sharpedonite, -Slowbronite, -Steelixite, -Swampertite, -Tyranitarite, -Venusaurite",
         "formatname": "VGC 2019 Moon Series",
@@ -55,7 +55,7 @@
     },
     "gen7vgc2019sunseries":
     {
-        "tourformat": "gen7vgc2019ultraseries",
+        "tourformat": "gen7vgc2019",
         "tourname": "[Gen 7] VGC 2019 Sun Series",
         "tourrules": "-red orb, -blue orb, -dragon ascent, -BuginiumZ, -DarkiniumZ, -DragoniumZ, -ElectriumZ, -FairiumZ, -FightiniumZ, -FiriumZ, -FlyiniumZ, -GhostiumZ, -GrassiumZ, -GroundiumZ, -IciumZ, -NormaliumZ, -PoisoniumZ, -PsychiumZ, -RockiumZ, -SteeliumZ, -WateriumZ, -PikaniumZ, -PikashuniumZ, -AloraichiumZ, -EeviumZ, -SnorliumZ, -DecidiumZ, -InciniumZ, -PrimariumZ, -LycaniumZ, -MimikiumZ, -KommoniumZ, -TapuniumZ, -SolganiumZ, -LunaliumZ, -UltranecroziumZ, -Abomasite, -Absolite, -Aerodactylite, -Aggronite, -Alakazite, -Altarianite, -Ampharosite, -Audinite, -Banettite, -Beedrillite, -Blastoisinite, -Blazikenite, -Cameruptite, -Charizardite X, -Charizardite Y, -Crucibellite, -Diancite, -Galladite, -Garchompite, -Gardevoirite, -Gengarite, -Glalitite, -Gyaradosite, -Heracronite, -Houndoominite, -Kangaskhanite, -Latiasite, -Latiosite, -Lopunnite, -Lucarionite, -Manectite, -Mawilite, -Medichamite, -Metagrossite, -Mewtwonite X, -Mewtwonite Y, -Pidgeotite, -Pinsirite, -Sablenite, -Salamencite, -Sceptilite, -Scizorite, -Sharpedonite, -Slowbronite, -Steelixite, -Swampertite, -Tyranitarite, -Venusaurite, -oranguru+symbiosis, -passimian+defiant, -custap berry, -micle berry, -jaboca berry, -rowap berry",
         "formatname": "VGC 2019 Sun Series",
