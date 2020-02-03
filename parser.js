@@ -457,7 +457,7 @@ exports.parse =
 
 		if (userRank >= DRIVER)
 		{
-			if (["insult", "8ball", "say", "objectively", "joke", "compliment", "mish", "uno", "chef", "platypus", "mynameis", "nom", "diglett", "ezrael", "dynamax", "delet"].indexOf(cmd) >= 0)
+			if (["insult", "8ball", "say", "objectively", "joke", "compliment", "mish", "uno", "chef", "platypus", "mynameis", "nom", "diglett", "ezrael", "conics", "dynamax", "delet"].indexOf(cmd) >= 0)
 			{
 				canUse = true;
 			}
