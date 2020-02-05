@@ -534,9 +534,12 @@ exports.commands =
 			"What's the best way to make a pirate angry? Remove the p!",
 			"Last night, my wife was feeling pretty emotional, and she started coloring on my upper arm. I guess she just needed a shoulder to crayon.",
 			"Did you hear about the marriage of the invisible man and the invisible woman? I'm just not sure what they saw in each other.",
+			"Where do you take a boat when it gets sick? To the doc!",
+			"My eye doctor called and said the results of my last appointment were finished. When I asked if I could see them, she said, \"probably not\".",
 		];
 
-		let jokeNum = parseInt(arg);
+		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
+
 		if (!arg)
 		{
 			let rand = Math.floor(jokeList.length * Math.random());
