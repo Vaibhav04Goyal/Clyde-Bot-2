@@ -730,7 +730,7 @@ exports.commands =
 	},
 	dynamax: async function(arg, by, room)
 	{
-		let pokemonSprite = "http://play.pokemonshowdown.com/sprites/xyani/" + arg + ".gif";
+		let pokemonSprite = "http://play.pokemonshowdown.com/sprites/ani/" + arg + ".gif";
 
 		let probe = require('probe-image-size');
 		let height;
