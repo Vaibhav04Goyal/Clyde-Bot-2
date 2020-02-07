@@ -570,8 +570,8 @@ exports.commands =
 		let text;
 		let vgcstats = "https://vgcstats.com";
 		//let bsUsage = "https://3ds.pokemon-gl.com/battle/usum/#wcs";
-		let psUsage = "https://www.smogon.com/stats/2019-12/gen8vgc2020-1760.txt";
-		let psDetailedUsage = "https://www.smogon.com/stats/2019-12/moveset/gen8vgc2020-1760.txt";
+		let psUsage = "https://www.smogon.com/stats/2020-01/gen8vgc2020-1760.txt";
+		let psDetailedUsage = "https://www.smogon.com/stats/2020-01/moveset/gen8vgc2020-1760.txt";
 
 		if (by.charAt(0) === ' ' || room.charAt(0) === ",")
 		{
