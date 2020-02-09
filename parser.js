@@ -508,7 +508,7 @@ exports.parse =
 				if (userID === "ezrael") {canUse = true;}
 				break;
 			case "epic":
-				if (userID === "animusvgc" || userID === "joeux9") {canUse = true;}
+				if (userID === "animus" || userID === "joeux9") {canUse = true;}
 				break;
 			case "uno":
 				if (userID === "dingram") {canUse = true;}
