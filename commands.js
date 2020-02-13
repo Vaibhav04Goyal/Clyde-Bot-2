@@ -629,11 +629,6 @@ exports.commands =
 		}
 	},*/
 
-	icpa: function(arg, by, room)
-	{
-		this.say(room, "/addhtmlbox The ICPA is an intercollegiate Pokemon league where colleges play bo3 VGC matches to determine the best college. The <a href = \"https://trainertower.com/forums/threads/2018-icpa-fall-series-sign-up-thread.5235/\">Fall Series session signups </a>end on November 2nd. More information can be found in the link provided.");
-	},
-
 	uno: function(arg, by, room)
 	{
 		this.say(room, "/uno create 10");

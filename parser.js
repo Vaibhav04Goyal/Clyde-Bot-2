@@ -449,7 +449,7 @@ exports.parse =
 
 		if (userRank >= VOICE)
 		{
-			if (["tour", "notice", "usage", "icpa", "thinking", "b", "epic"].indexOf(cmd) >= 0)
+			if (["tour", "notice", "usage", "thinking", "b", "epic"].indexOf(cmd) >= 0)
 			{
 				canUse = true;
 			}
@@ -457,7 +457,7 @@ exports.parse =
 
 		if (userRank >= DRIVER)
 		{
-			if (["insult", "8ball", "say", "objectively", "joke", "compliment", "mish", "uno", "chef", "platypus", "mynameis", "nom", "diglett", "ezrael", "conics", "dynamax", "delet"].indexOf(cmd) >= 0)
+			if (["insult", "8ball", "say", "objectively", "joke", "mish", "uno", "chef", "platypus", "mynameis", "nom", "diglett", "ezrael", "conics", "dynamax", "delet"].indexOf(cmd) >= 0)
 			{
 				canUse = true;
 			}
@@ -488,9 +488,6 @@ exports.parse =
 				break;
 			case "blog":
 				if (userID === "ansena") {canUse = true;}
-				break;
-			case "icpa":
-				if (userID.substr(0,12) === "torwildheart" || userID.substr(0,4) == "icpa") {canUse = true;}
 				break;
 			case "chef":
 				if (userID.substr(0,4) === "chef") {canUse = true;}
