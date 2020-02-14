@@ -21,21 +21,14 @@ const FLOOD_MESSAGE_TIME = 6*1000;
 const MIN_CAPS_LENGTH = 18;
 const MIN_CAPS_PROPORTION = 0.8;
 
-const NONE = 0;
-const VOICE = 1;
-const DRIVER = 2;
-const MODERATOR = 3;
-const BOT = 4;
-const LEADER = 5;
-const ROOMOWNER = 6;
-const ADMIN = 7;
-
 let ranks = " +%@*&#~";
 let rankMap = new Map();
 for (let i = 0, len = ranks.length; i < len; i++)
 {
 	rankMap.set(ranks.charAt(i), i);
 }
+
+const commandsJSON = require("./commandpermissions.json");
 
 exports.parse =
 {
@@ -429,93 +422,73 @@ exports.parse =
 		let canUse = false;
 		let userRank;
 		let userID = toID(this.trimStatus(user));
+		let commandsObject;
+		let globalCommandsObject = commandsJSON["global"];
 
+		//0 = regular user, 1 = voice, 2 = driver, 3 = mod, 4 = bot, 5 = leader, 6 = room owner, 7 = admin
 		if (rankMap.get(user.charAt(0)) === -1)
 		{
-			userRank = NONE;
+			userRank = 0;
 		}
 		else
 		{
 			userRank = rankMap.get(user.charAt(0));
 		}
 
-		if (userRank >= NONE)
+		commandsObject = commandsJSON[room] ? commandsJSON[room] : false;
+
+		if (commandsObject)
 		{
-			if(["commands", "git", "usage", "samples"].indexOf(cmd) >= 0)
+			//Check if the room has a direct rank for the command
+			if (commandsObject[cmd])
 			{
-				canUse = true;
+				if (userRank >= commandsObject[cmd]["rank"])
+				{
+					canUse = true;
+				}
+			}
+			//Check if the room has a special user/arg condition for the command
+			if (!canUse && commandsObject["special"][cmd])
+			{
+				//TODO: make more generic
+				let userList = commandsObject["special"][cmd]["users"];
+				let specialArg = commandsObject["special"][cmd]["arg"];
+				if (specialArg === undefined) {specialArg = "";}
+
+				if (userList.indexOf(userID) >= 0 && arg == specialArg)
+				{
+					canUse = true;
+				}
+			}			
+		}
+		//Check that room owners of a room can use .custom in PMs
+		if (!canUse && cmd === "custom" && room.charAt(0) === ",")
+		{
+			if (arg.indexOf("[") === 0 && arg.indexOf("]") > -1)
+			{
+				targetRoom = arg.slice(1, arg.indexOf("]"));
+				console.log(targetRoom);
+				if (commandsJSON[targetRoom])
+				{
+					let userList = commandsJSON[targetRoom]["roomowners"];
+					if (userList.indexOf(userID) >= 0)
+					{
+						canUse = true;
+					}
+				}
 			}
 		}
-
-		if (userRank >= VOICE)
+		//Fallback on global command settings if no local room commands were set
+		if (!canUse && globalCommandsObject[cmd])
 		{
-			if (["tour", "notice", "usage", "thinking", "b", "epic"].indexOf(cmd) >= 0)
+			if (userRank >= globalCommandsObject[cmd]["rank"])
 			{
 				canUse = true;
 			}
-		}
-
-		if (userRank >= DRIVER)
-		{
-			if (["insult", "8ball", "say", "objectively", "joke", "mish", "uno", "chef", "platypus", "mynameis", "nom", "diglett", "ezrael", "conics", "dynamax", "delet"].indexOf(cmd) >= 0)
-			{
-				canUse = true;
-			}
-		}
-
-		/*if (cmd === "npa" && room.charAt(0) === ',')
-		{
-			if (["chalkey", "dualistx", "tan", "acenowak", "avatarfede", "azazelthegod", "cablevgc", "drfidget", "fumitobr", "gramgus", "jeanmarc", "kingofmars", "pd0nz", "platypusvgc", "pokealex", "renevgc", "rufflesbag", "tman", "xenobladehero"].indexOf(toID(room)) >= 0);
-			{
-				canUse = true;
-			}
-		}*/
-
-		let roomOwners = ["dawoblefet", "blarajan"];
-		if (userRank === ROOMOWNER || roomOwners.indexOf(toID(room)) >= 0)
-		{
-			if (cmd === "custom")
-			{
-				canUse = true;
-			}
-		}
-
-		//Special cases
-		switch (cmd)
-		{
-			case "tour":
-				if ((userID === "legavgc" && arg === "vgc13") || (userID === "dorian0404" && (!arg || arg === "vgc18"))) {canUse = true;}
-				break;
-			case "blog":
-				if (userID === "ansena") {canUse = true;}
-				break;
-			case "chef":
-				if (userID.substr(0,4) === "chef") {canUse = true;}
-				break;
-			case "platypus":
-				if (userID === "platypusvgc" || userID === "awesomeplatypus") {canUse = true;}
-				break;
-			case "mynameis":
-				if (userID === "casedvictory") {canUse = true;}
-				break;
-			case "nom":
-				if (userID === "seaco") {canUse = true;}
-				break;
-			case "ezrael":
-				if (userID === "ezrael") {canUse = true;}
-				break;
-			case "epic":
-				if (userID === "animus" || userID === "joeux9") {canUse = true;}
-				break;
-			case "uno":
-				if (userID === "dingram") {canUse = true;}
-				break;
-			default:
-				break;
 		}
 
 		//Owners have access to every command.
-		if (config.owners) //Sanity check
+		if (config.owners)
 		{
 			for (i = 0; i < config.owners.length; i++)
 			{
@@ -525,8 +498,7 @@ exports.parse =
 					break;
 				}
 			}
-		}
-		
+		}	
 
 		return canUse;
 	},

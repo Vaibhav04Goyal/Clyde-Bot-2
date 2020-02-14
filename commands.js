@@ -798,4 +798,55 @@ exports.commands =
 		}
 		this.say(room, text);
 	},
+	testpermissions: function(arg, by, room)
+	{
+		//Normal cases in VGC room
+		this.say(room, "Normal cases in VGC");
+		this.say(room, "Driver");
+		this.say(room, this.canUse("joke", "vgc", "%ansena", "")); //true
+		this.say(room, this.canUse("custom", "vgc", "%ansena", "")); //false
+		this.say(room, this.canUse("samples", "vgc", "%ansena", "")); //true
+		this.say(room, this.canUse("tour", "vgc", "%ansena", "")); //true
+
+		this.say(room, "Voice");
+		this.say(room, this.canUse("joke", "vgc", "+ansena", "")); //false
+		this.say(room, this.canUse("custom", "vgc", "+ansena", "")); //false
+		this.say(room, this.canUse("samples", "vgc", "+ansena", "")); //true
+		this.say(room, this.canUse("tour", "vgc", "+ansena", "")); //true
+
+		this.say(room, "Reg");
+		this.say(room, this.canUse("joke", "vgc", " ansena", "")); //false
+		this.say(room, this.canUse("custom", "vgc", " ansena", "")); //false
+		this.say(room, this.canUse("samples", "vgc", " ansena", "")); //true
+		this.say(room, this.canUse("tour", "vgc", " ansena", "")); //false
+
+		//Normal cases not in VGC room
+		this.say(room, "Normal cases not in VGC");
+		this.say(room, "Driver");
+		this.say(room, this.canUse("joke", "notvgc", "%ansena", "")); //true
+		this.say(room, this.canUse("custom", "notvgc", "%ansena", "")); //false
+		this.say(room, this.canUse("samples", "notvgc", "%ansena", "")); //true
+		this.say(room, this.canUse("tour", "notvgc", "%ansena", "")); //true
+
+		this.say(room, "Voice");
+		this.say(room, this.canUse("joke", "notvgc", "+ansena", "")); //false
+		this.say(room, this.canUse("custom", "notvgc", "+ansena", "")); //false
+		this.say(room, this.canUse("samples", "notvgc", "+ansena", "")); //true
+		this.say(room, this.canUse("tour", "notvgc", "+ansena", "")); //false
+
+		this.say(room, "Reg");
+		this.say(room, this.canUse("joke", "notvgc", " ansena", "")); //false
+		this.say(room, this.canUse("custom", "notvgc", " ansena", "")); //false
+		this.say(room, this.canUse("samples", "notvgc", " ansena", "")); //true
+		this.say(room, this.canUse("tour", "notvgc", " ansena", "")); //false
+
+		//Special case tests
+		this.say(room, "Special cases");
+		this.say(room, this.canUse("blog", "notvgc", "%ansena", "")); //false
+		this.say(room, this.canUse("blog", "vgc", "%ansena", "")); //true
+		this.say(room, this.canUse("blog", "vgc", "%mish", "")); //false
+		this.say(room, this.canUse("blog", "notvgc", "%mish", "")); //false
+		this.say(room, this.canUse("tour", "vgc", " legavgc", "vgc13")); //true
+		this.say(room, this.canUse("custom", ",notvgc", "+blarajan", "[vgc] hello")); //true
+	}
 };

@@ -1,0 +1,171 @@
+{
+    "sampleroom":
+    {
+        "roomowners": ["provide your ROs", "here"],
+        "commandname":
+        {
+            "rank": "set custom rank (integer, not a string)",
+            "special":
+            {
+                "commandname":
+                {
+                    "users": ["custom user list", "another user"],
+                    "arg": "if you want to require an arg for the user to use"
+                }
+            }
+        }
+    },
+    "vgc":
+    {
+        "roomowners":["blarajan", "dawoblefet"],
+        "tour":
+        {
+            "rank": 1
+        },
+        "special":
+        {
+            "tour":
+            {
+                "users": ["legavgc"],
+                "arg": "vgc13"
+            },
+            "blog":
+            {
+                "users": ["ansena"]
+            },
+            "chef":
+            {
+                "users": ["chef17"]
+            },
+            "platypus":
+            {
+                "users": ["platypusvgc", "awesomeplatypus"]
+            },
+            "nom":
+            {
+                "users": ["seaco"]
+            },
+            "ezrael":
+            {
+                "users": ["ezrael"]
+            },
+            "epic":
+            {
+                "users": ["animus", "joeux9"]
+            },
+            "uno":
+            {
+                "users": ["dingram"]
+            }
+        }
+
+    },
+    "global":
+    {
+        "commands":
+        {
+            "rank": 0
+        },
+        "git":
+        {
+            "rank": 0
+        },
+        "usage":
+        {
+            "rank": 0
+        },
+        "samples":
+        {
+            "rank": 0
+        },
+        "notice":
+        {
+            "rank": 1
+        },
+        "thinking":
+        {
+            "rank": 1
+        },
+        "b":
+        {
+            "rank": 1
+        },
+        "epic":
+        {
+            "rank": 1
+        },
+        "tour":
+        {
+            "rank": 2
+        },
+        "insult":
+        {
+            "rank": 2
+        },
+        "8ball":
+        {
+            "rank": 2
+        },
+        "say":
+        {
+            "rank": 2
+        },
+        "objectively":
+        {
+            "rank": 2
+        },
+        "joke":
+        {
+            "rank": 2
+        },
+        "mish":
+        {
+            "rank": 2
+        },
+        "uno":
+        {
+            "rank": 2
+        },
+        "chef":
+        {
+            "rank": 2
+        },
+        "platypus":
+        {
+            "rank": 2
+        },
+        "mynameis":
+        {
+            "rank": 2
+        },
+        "nom":
+        {
+            "rank": 2
+        },
+        "diglett":
+        {
+            "rank": 2
+        },
+        "ezrael":
+        {
+            "rank": 2
+        },
+        "conics":
+        {
+            "rank": 2
+        },
+        "dynamax":
+        {
+            "rank": 2
+        },
+        "delet":
+        {
+            "rank": 2
+        },
+        "custom":
+        {
+            "rank": 6
+        }
+    }
+    
+}
