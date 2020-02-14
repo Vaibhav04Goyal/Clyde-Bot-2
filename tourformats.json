@@ -3,7 +3,7 @@
     {
         "tourformat": "gen8vgc2020",
         "tourname": "[Gen 8] VGC 2020 Series 3",
-        "tourrules": "!galarpokedex, -Meltan, -Melmetal, -Virizion, -Terrakion, -Cobalion, +Orbeetle-Gmax, +Lapras-Gmax, +Alcremie-Gmax, +Flapple-Gmax, +Appletun-Gmax, +Kingler-Gmax, +Toxtricity-Gmax, +Hatterene-Gmax, +Grimmsnarl-Gmax, +Vulpix-Alola, +Ninetales-Alola, +Meowth-Alola, +Persian-Alola, +Diglett-Alola, +Dugtrio-Alola, +Zigzagoon-Base, +Linoone-Base, +Corsola-Base, +Darmanitan-Base, +Darumaka-Base, +Farfetch'd-Base, +Ponyta-Base, +Rapidash-Base, +Slowpoke-Galar, +Stunfisk-Base",
+        "tourrules": "!galarpokedex, -Virizion, -Terrakion, -Cobalion, +Orbeetle-Gmax, +Lapras-Gmax, +Alcremie-Gmax, +Flapple-Gmax, +Appletun-Gmax, +Kingler-Gmax, +Toxtricity-Gmax, +Hatterene-Gmax, +Grimmsnarl-Gmax, +Vulpix-Alola, +Ninetales-Alola, +Meowth-Alola, +Persian-Alola, +Diglett-Alola, +Dugtrio-Alola, +Zigzagoon-Base, +Linoone-Base, +Corsola-Base, +Darmanitan-Base, +Darumaka-Base, +Farfetch'd-Base, +Ponyta-Base, +Rapidash-Base, +Slowpoke-Galar, +Stunfisk-Base",
         "formatname": "VGC 2020 Series 3",
         "formatDescription": "Though currently unconfirmed at this time, VGC 2020 Series 3 will probably allow alternate Regional forms that can be bred in Galar (e.g. Alolan Ninetales), the Kanto and Alolan starters, and additional G-Max Pokemon.",
         "sampleTeams":
