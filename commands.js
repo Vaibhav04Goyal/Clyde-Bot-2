@@ -253,6 +253,8 @@ exports.commands =
 					break;
 				case "ultra":
 				case "ultra series":
+				case "vgc19":
+				case "vgc2019":
 					tourObject = tourJSON["gen7vgc2019ultraseries"];
 					break;
 				case "moon":
