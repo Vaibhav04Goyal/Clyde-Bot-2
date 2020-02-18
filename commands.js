@@ -684,7 +684,7 @@ exports.commands =
 
 	platypus: function(arg, by, room)
 	{
-		this.say(room, "/addhtmlbox <img src=\"https://cdn.discordapp.com/attachments/394481120806305794/506966120482209792/platyprowl.gif\" height=175 width=170><br><a href = \"https://www.youtube.com/watch?v=VaNbDYGmGwc\">Platypus on the Prowl</a>");
+		this.say(room, "/addhtmlbox <center><img src=\"https://pngimage.net/wp-content/uploads/2018/06/platypus-png.png\" class=\"fa fa-spin\" width=\"100\" height=\"100\"><a style = \"font-size: 20px; \"href = \"https://www.youtube.com/watch?v=VaNbDYGmGwc\">Platypus on the Prowl</a><img src=\"https://pngimage.net/wp-content/uploads/2018/06/platypus-png.png\" class=\"fa fa-spin\" width=\"100\" height=\"100\"><br><br><img src=\"https://cdn.discordapp.com/attachments/394481120806305794/506966120482209792/platyprowl.gif\" height=175 width=170></center>");
 	},
 
 	mynameis: function(arg, by, room)
