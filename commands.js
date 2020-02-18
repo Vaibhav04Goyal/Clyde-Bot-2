@@ -542,6 +542,7 @@ exports.commands =
 			"Did you hear about the marriage of the invisible man and the invisible woman? I'm just not sure what they saw in each other.",
 			"Where do you take a boat when it gets sick? To the doc!",
 			"My eye doctor called and said the results of my last appointment were finished. When I asked if I could see them, she said, \"probably not\".",
+			"A priest, a pastor, and a rabbit walk into a bar. The rabbit says, \"I must be a typo!\"",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
