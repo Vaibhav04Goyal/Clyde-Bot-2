@@ -580,6 +580,7 @@ exports.commands =
 		//let bsUsage = "https://3ds.pokemon-gl.com/battle/usum/#wcs";
 		let psUsage = "https://www.smogon.com/stats/2020-01/gen8vgc2020-1760.txt";
 		let psDetailedUsage = "https://www.smogon.com/stats/2020-01/moveset/gen8vgc2020-1760.txt";
+		let jorijnUsage = "https://drive.google.com/drive/folders/1lQr-HyxCjQJF_uoZVBqi7IfZFiAQwb2A";
 
 		if (by.charAt(0) === ' ' || room.charAt(0) === ",")
 		{
@@ -587,12 +588,13 @@ exports.commands =
 			//this.say(room, "/pm " + by + ", Battle Spot Usage: " + bsUsage);
 			this.say(room, "/pm " + by + ", Showdown Usage Stats: " + psUsage);
 			this.say(room, "/pm " + by + ", Showdown Detailed Usage Stats: " + psDetailedUsage);
+			this.say(room, "/pm " + by + ", Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage);
 			return false;
 		}
 		else
 		{
 			//See usage.html
-			text = "/addhtmlbox <strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li></ul>";
+			text = "/addhtmlbox <strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li><li><a href = \"" + jorijnUsage + "\">Jorijn's Detailed Showdown Usage Stats</a></li></ul>";
 		}
 		this.say(room, text);
 	},
