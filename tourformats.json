@@ -1,29 +1,11 @@
 {
-    "gen8vgc2020series3":
-    {
-        "tourformat": "gen8vgc2020",
-        "tourname": "[Gen 8] VGC 2020 Series 3",
-        "tourrules": "!galarpokedex, -Virizion, -Terrakion, -Cobalion, -Raichu-Alola, -Weezing-Base, +Charizard-Gmax + Solar Power, +Orbeetle-Gmax, +Coalossal-Gmax, +Lapras-Gmax, +Alcremie-Gmax, +Flapple-Gmax, +Appletun-Gmax, +Kingler-Gmax, +Toxtricity-Gmax, +Hatterene-Gmax, +Grimmsnarl-Gmax, +Vulpix-Alola, +Ninetales-Alola, +Meowth-Alola, +Persian-Alola, +Diglett-Alola, +Dugtrio-Alola, +Zigzagoon-Base, +Linoone-Base, +Corsola-Base, +Darmanitan-Base, +Darumaka-Base, +Farfetch'd-Base, +Ponyta-Base, +Rapidash-Base, +Slowpoke-Galar, +Stunfisk-Base",
-        "formatname": "VGC 2020 Series 3",
-        "formatDescription": "Though currently unconfirmed at this time, VGC 2020 Series 3 will probably allow alternate Regional forms that can be bred in Galar (e.g. Alolan Ninetales), the Kanto and Alolan starters, and additional G-Max Pokemon.",
-        "sampleTeams":
-        [
-            ["arcanine", "excadrill", "tyranitar", "togekiss", "gastrodon", "dragapult", "https://pokepast.es/aa2e3a929e0bf1be", "Zeen's 1st Place Battle Stadium Team"],
-            ["charizardgmax", "whimsicott", "jellicent", "duraludon", "conkeldurr", "togekiss", "https://pokepast.es/de7c131100951ee9", "Unreality's 1st Place Regionals Team"],
-            ["dracozolt", "passimian", "whimsicott", "togekiss", "darmanitangalar", "duraludon", "https://pokepast.es/93223dd0e1cfb74f", "Sejun's 1st Place World Champ Invitational Team"],
-            ["rhyperior", "togekiss", "jellicent", "ferrothorn", "hydreigon", "arcanine", "https://pokepast.es/9b57bf2abe5ad0ed", "EmbC's 1st Place Galar Weekly Team"],
-            ["gothitelle", "dusclops", "torkoal", "rhyperior", "togekiss", "gyarados", "https://pokepast.es/bb66c9e105049b5d", "HamstermaniaCZ's Top 8 Regionals Team"],
-            ["rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "https://www.trainertower.com/pokemon-sword-and-shield-rental-teams/", "More VGC 2020 Rental Teams"]
-        ],
-        "tournote": ""
-    },
     "gen8vgc2020":
     {
         "tourformat": "gen8vgc2020",
         "tourname": "[Gen 8] VGC 2020",
         "tourrules": "",
         "formatname": "VGC 2020",
-        "formatDescription": "VGC 2020 allows all Pokemon from the Galar Pokedex except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.",
+        "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar symbol in-game except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.",
         "sampleTeams":
         [
             ["arcanine", "excadrill", "tyranitar", "togekiss", "gastrodon", "dragapult", "https://pokepast.es/aa2e3a929e0bf1be", "Zeen's 1st Place Battle Stadium Team"],
