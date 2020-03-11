@@ -225,13 +225,13 @@
         ],
         "tournote": ""
     },
-    "gen7corsolacup":
+    "gen8corsolacup":
     {
-        "tourformat": "gen71v1",
-        "tourname": "[Gen 7] Corsola Cup",
-        "tourrules": "-uber, -ou, -uubl, -uu, -rubl, -ru, -nubl, -nu, -publ, -pu, -zu, -nfe, -lc, -lc uber, +Corsola, +Focus Sash,  -Hidden Power, -Waterium Z, -Groundium Z, -Rockium Z, -Natural Gift, !evasion moves clause, !accuracy moves clause",
+        "tourformat": "gen81v1",
+        "tourname": "[Gen 8] Corsola Cup",
+        "tourrules": "-uber, -ou, -uubl, -uu, -rubl, -ru, -nubl, -nu, -publ, -pu, -zu, -nfe, -lc, -lc uber, -Giga Drain, +Corsola, +Focus Sash, !evasion moves clause, !accuracy moves clause",
         "formatname": "Corsola Cup",
-        "formatDescription": "Corsola only! Waterium Z, Groundium Z, Rockium Z, Natural Gift, and Hidden Power are banned. Create teams in the [Gen 7] 1v1 format, and make sure it's level 100!",
+        "formatDescription": "Corsola only (Galar Corsola is allowed too)! Giga Drain is banned. Create teams in the [Gen 8] 1v1 format, and make sure it's level 100!",
         "sampleTeams":
         [
             ["corsola", "corsola", "corsola", "corsola", "corsola", "corsola", "https://pokepast.es/4ecf64b1bb612848", "Choice Band Corsola"]

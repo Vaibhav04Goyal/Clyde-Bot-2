@@ -304,7 +304,7 @@ exports.commands =
 				case "corsola":
 				case "corsolacup":
 				case "corsola cup":
-					tourObject = tourJSON["gen7corsolacup"];
+					tourObject = tourJSON["gen8corsolacup"];
 					break;
 				case "bulu":
 				case "tapu bulu":
@@ -399,7 +399,7 @@ exports.commands =
 
 				if (tourObject.formatDescription && tourObject.sampleTeams)
 				{
-					let htmlText = this.generateHTMLSample(tourObject.formatname, tourObject.formatDescription, tourObject.sampleTeams, false);
+					let htmlText = this.generateHTMLSample(tourObject.formatname, tourObject.formatDescription, tourObject.sampleTeams, true);
 					this.say(room, "/addhtmlbox " + htmlText);
 				}
 			}
