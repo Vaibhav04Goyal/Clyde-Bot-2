@@ -455,7 +455,7 @@ exports.parse =
 				let specialArg = commandsObject["special"][cmd]["arg"];
 				if (specialArg === undefined) {specialArg = "";}
 
-				if (userList.indexOf(userID) >= 0 && arg == specialArg)
+				if (userList.indexOf(userID) >= 0 && specialArg.indexOf(arg) >= 0)
 				{
 					canUse = true;
 				}

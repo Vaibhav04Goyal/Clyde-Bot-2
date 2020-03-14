@@ -26,8 +26,8 @@
         {
             "tour":
             {
-                "users": ["legavgc"],
-                "arg": "vgc13"
+                "users": ["legavgc", "frankcastles"],
+                "arg": ["", "vgc13"]
             },
             "blog":
             {
