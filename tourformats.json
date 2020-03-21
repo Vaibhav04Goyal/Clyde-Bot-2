@@ -75,7 +75,7 @@
     {
         "tourformat": "gen7vgc2018",
         "tourname": "[Gen 7] VGC 2018",
-        "tourules": "-Custap Berry, -Micle Berry, -Jaboca Berry, -Rowap Berry, -Passimian+Defiant, -Oranguru+Symbiosis",
+        "tourrules": "-Custap Berry, -Micle Berry, -Jaboca Berry, -Rowap Berry, -Passimian+Defiant, -Oranguru+Symbiosis",
         "formatname": "VGC 2018",
         "formatDescription": "VGC 2018 was the National Pokedex format for Generation VII. The \"black clover\" rule ensured players could only use Pokemon obtained in Generation VII, which regrettably banned Unown, because it is obtainable in neither Sun/Moon nor Ultra Sun/Ultra Moon without transferring.",
         "sampleTeams":
@@ -93,7 +93,7 @@
     {
         "tourformat": "gen7vgc2017",
         "tourname": "[Gen 7] VGC 2017",
-        "tourules": "-Incineroar+Intimidate, -Torracat+Intimidate, -Litten+Intimidate, -Decidueye+Long Reach, -Dartrix+Long Reach, -Rowlet+Long Reach, -Primarina+Liquid Voice, -Brionne+Liquid Voice, -Popplio+Liquid Voice, -Custap Berry, -Micle Berry, -Jaboca Berry, -Rowap Berry, -Passimian+Defiant, -Oranguru+Symbiosis",
+        "tourrules": "-Incineroar+Intimidate, -Torracat+Intimidate, -Litten+Intimidate, -Decidueye+Long Reach, -Dartrix+Long Reach, -Rowlet+Long Reach, -Primarina+Liquid Voice, -Brionne+Liquid Voice, -Popplio+Liquid Voice, -Custap Berry, -Micle Berry, -Jaboca Berry, -Rowap Berry, -Passimian+Defiant, -Oranguru+Symbiosis",
         "formatname": "VGC 2017",
         "formatDescription": "VGC 2017 was played on Pokemon Sun and Moon, and like VGC 2011 and VGC 2014 before it, it was the Regional Pokedex format of the generation. All USUM move tutor moves and other unreleased Abilities (e.g. Intimidate Incineroar) were disallowed. The new \"black clover\" replaced the old blue pentagon, forcing players to only use Pokemon obtained in Pokemon Sun and Moon for VGC 2017.",
         "sampleTeams":
