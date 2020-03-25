@@ -271,16 +271,6 @@
         "sampleTeams": [],
         "tournote": "VGC Inverse Battles! Type matchups are inverted. Now Fire-type attacks are super-effective against Water-type Pokemon!"
     },
-    "gen8littlecupvgc":
-    {
-        "tourformat": "gen8vgc2020",
-        "tourname": "[Gen 8] VGC Little Cup",
-        "tourrules": "Little Cup, !Item Clause",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "Teams for this tournament must only use Pokemon that are the first in their evolution family, while also having the potential to evolve."
-    },
     "gen8giocup":
     {
         "tourformat": "gen81v1",
@@ -290,15 +280,5 @@
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "Only Eevee Evolutions allowed! Bring as many Eeveelutions as you want, but you can only choose 1 per battle!"
-    },
-    "gen7vgc98":
-    {
-        "tourformat": "gen7vgc2018",
-        "tourname": "[Gen 7] VGC Kanto Cup",
-        "tourrules": "-uber, -ou, -uubl, -uu, -rubl, -ru, -nubl, -nu, -publ, -pu, -zu, -nfe, -lc, -lc uber, +Bulbasaur, +Ivysaur, +Venusaur, +Charmander, +Charmeleon, +Charizard, +Squirtle, +Wartortle, +Blastoise, +Caterpie, +Metapod, +Butterfree, +Weedle, +Kakuna, +Beedrill, +Pidgey, +Pidgeotto, +Pidgeot, +Rattata, +Raticate, +Spearow, +Fearow, +Ekans, +Arbok, +Pikachu, +Raichu, +Sandshrew, +Sandslash, +Nidoran♀, +Nidorina, +Nidoqueen, +Nidoran♂, +Nidorino, +Nidoking, +Clefairy, +Clefable, +Vulpix, +Ninetales, +Jigglypuff, +Wigglytuff, +Zubat, +Golbat, +Oddish, +Gloom, +Vileplume, +Paras, +Parasect, +Venonat, +Venomoth, +Diglett, +Dugtrio, +Meowth, +Persian, +Psyduck, +Golduck, +Mankey, +Primeape, +Growlithe, +Arcanine, +Poliwag, +Poliwhirl, +Poliwrath, +Abra, +Kadabra, +Alakazam, +Machop, +Machoke, +Machamp, +Bellsprout, +Weepinbell, +Victreebel, +Tentacool, +Tentacruel, +Geodude, +Graveler, +Golem, +Ponyta, +Rapidash, +Slowpoke, +Slowbro, +Magnemite, +Magneton, +Farfetch’d, +Doduo, +Dodrio, +Seel, +Dewgong, +Grimer, +Muk, +Shellder, +Cloyster, +Gastly, +Haunter, +Gengar, +Onix, +Drowzee, +Hypno, +Krabby, +Kingler, +Voltorb, +Electrode, +Exeggcute, +Exeggutor, +Cubone, +Marowak, +Hitmonlee, +Hitmonchan, +Lickitung, +Koffing, +Weezing, +Rhyhorn, +Rhydon, +Chansey, +Tangela, +Kangaskhan, +Horsea, +Seadra, +Goldeen, +Seaking, +Staryu, +Starmie, +Mr. Mime, +Scyther, +Jynx, +Electabuzz, +Magmar, +Pinsir, +Tauros, +Magikarp, +Gyarados, +Lapras, +Ditto, +Eevee, +Vaporeon, +Jolteon, +Flareon, +Porygon, +Omanyte, +Omastar, +Kabuto, +Kabutops, +Aerodactyl, +Snorlax, +Articuno, +Zapdos, +Moltres, +Dratini, +Dragonair, +Dragonite",
-        "formatname": "",
-        "formatDescription": "Teams for this tournament can only use Pokemon from the Kanto region (dex numbers #1-149). Alolan versions, Megas, and Z-crystals are allowed.",
-        "sampleTeams": [],
-        "tournote": ""
     }
 }

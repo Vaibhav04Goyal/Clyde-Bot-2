@@ -297,11 +297,15 @@ exports.parse =
 			case "raw":
 				if (spl[2].startsWith("<strong class=\"message-throttle-notice\">"))
 				{
-					console.log("Message sent too fast at: " + new Date().toLocaleString() + ". MESSAGE_THROTTLE in main.js is likely set too low.");
+					error("Message sent too fast at: " + new Date().toLocaleString() + ". MESSAGE_THROTTLE in main.js is likely set too low.");
 				}
 				break;
 			case "error": //this protocol is triggered whenever Showdown's errorReply() function is called
-				console.log(new Date().toLocaleString() + ": Error message from Showdown: " + spl[2]);
+				if (spl[2].includes("valid tournament"))
+				{
+					this.say(room, spl[2]);
+				}
+				error(new Date().toLocaleString() + ": Error message from Showdown: " + spl[2]);
 				break;
 			case "win":
 				//this.bestOfThree.wins.push(spl[2]);
@@ -467,7 +471,6 @@ exports.parse =
 			if (arg.indexOf("[") === 0 && arg.indexOf("]") > -1)
 			{
 				targetRoom = arg.slice(1, arg.indexOf("]"));
-				console.log(targetRoom);
 				if (commandsJSON[targetRoom])
 				{
 					let userList = commandsJSON[targetRoom]["roomowners"];

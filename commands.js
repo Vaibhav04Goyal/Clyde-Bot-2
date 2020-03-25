@@ -323,21 +323,9 @@ exports.commands =
 				case "vgc inverse":
 					tourObject = tourJSON["gen8inversevgc"];
 					break;
-				case "vgclc":
-				case "lcvgc":
-				case "little cup vgc":
-				case "vgc little cup": //Little Cup style. Doesn't enforce level 5 limit.
-					tourObject = tourJSON["gen8littlecupvgc"];
-					break;
 				case "gio":
 				case "eevee":
 					tourObject = tourJSON["gen8giocup"];
-					break;
-				case "kantocup":
-				case "kanto":
-				case "gen1cup":
-				case "vgc98":
-					tourObject = tourJSON["gen7vgc98"];
 					break;
 				case "random battle":
 				case "randombattle":
@@ -639,11 +627,7 @@ exports.commands =
 	{
 		this.say(room, "/uno create 10");
 		this.say(room, "/uno autostart 30");
-		let timer = 10;
-		if (by === "dingram")
-		{
-			timer = 5;
-		}
+		let timer = by === "dingram" ? 5 : 10;
 		this.say(room, "/uno timer " + timer);
 	},
 
@@ -713,7 +697,7 @@ exports.commands =
 	},
 	thinking: function(arg, by, room)
 	{
-		let text = "<img src = \"https://i.imgur.com/vXbla1s.png\" width=\"24\" height=\"27\">";
+		let text = "<img src = \"https://i.imgur.com/vXbla1s.png\" width=24 height=27>";
 		this.say(room, "/addhtmlbox " + text);
 	},
 	delet: function(arg, by, room)
@@ -811,8 +795,8 @@ exports.commands =
 		let creatorData = [
 			["exeggutor-alola", "Wolfe Glick", "https://www.twitch.tv/wolfeyvgc", "WolfeyVGC", "https://www.youtube.com/wolfeyvgc", "WolfeyVGC", "https://twitter.com/WolfeyGlick", "@WolfeyGlick"],
 			["rotom-wash", "Aaron Zheng", "https://www.twitch.tv/cybertronvgc", "CybertronVGC", "https://www.youtube.com/CybertronProductions", "CybertronProductions", "https://twitter.com/CybertronVGC", "@CybertronVGC"],
-			["Mudsdale", "Eduardo Cunha", "https://www.twitch.tv/EmbCPT", "EmbCPT", "https://www.youtube.com/channel/UCla-h0hvByq_LSzBMqRr4eA", "EmbC", "https://twitter.com/MeninoJardim", "@MeninoJardim"],
-			["tornadus", "James Baek", "https://www.twitch.tv/jamesspeed1", "Jamesspeed1", "https://www.youtube.com/channel/UCJbbTSmMzaDhJg2uz6elyPA", "James Baek", "https://twitter.com/JamesWBaek", "@JamesWBaek"],
+			["mudsdale", "Eduardo Cunha", "https://www.twitch.tv/EmbCPT", "EmbCPT", "https://www.youtube.com/channel/UCla-h0hvByq_LSzBMqRr4eA", "EmbC", "https://twitter.com/MeninoJardim", "@MeninoJardim"],
+			["piplup", "James Baek", "https://www.twitch.tv/jameswbaek", "JamesWBaek", "http://youtube.com/jameswbaek", "James Baek", "https://twitter.com/JamesWBaek", "@JamesWBaek"],
 			["hariyama", "Alex Gomez", "https://www.twitch.tv/pokealexvgc", "PokeAlexVGC", "https://www.youtube.com/user/Pokealexproductions", "PokeAlex Productions", "https://twitter.com/PokeAlex_", "@PokeAlex_"],
 			["buzzwole", "Graham Ammodee", false, false, "https://www.youtube.com/channel/UCBvb1EZjYRLuTot13DCIDXA", "Graham Ammodee", "https://twitter.com/amedeegraham", "@AmedeeGraham"],
 			["feraligatr", "Aldrich Yan Sutandra", "https://www.twitch.tv/aldrichyan", "aldrichyan", "https://www.youtube.com/channel/UCTN3uwcBhyid2iEOCD68cqg", "Aldrich Yan Sutandra", "https://twitter.com/AldrichYan", "@AldrichYan"],
