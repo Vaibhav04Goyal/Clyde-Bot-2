@@ -736,7 +736,7 @@ exports.parse =
 	</details> */
 	generateHTMLSample: function(formatname, formatDescription, sampleTeams, isOpen)
 	{
-		let htmlText = "<b>" + formatname + "</b> <br> <details> <summary>Rules for " + formatname + " (click to view)</summary> " + formatDescription +  "</details> <details" + (isOpen ? " open" : "") + "> <summary>Sample Teams</summary>";
+		let htmlText = "<strong>" + formatname + "</strong> <br> <details> <summary>Rules for " + formatname + " (click to view)</summary> " + formatDescription +  "</details> <details" + (isOpen ? " open" : "") + "> <summary>Sample Teams</summary>";
 		let numSampleTeams = sampleTeams.length / 8;
 
 		for (let i = 0; i < sampleTeams.length; i++)
@@ -751,6 +751,42 @@ exports.parse =
 			htmlText += "<font size = \"1\">(" + sampleTeams[i][j+2] + ")</font></a> <br>"; //description
 		}
 		htmlText += "</details>";
+		return htmlText;
+	},
+	generateHTMLContentCreators: function(creatorData)
+	{
+		const twitchlogo = "https://pngimg.com/uploads/twitch/twitch_PNG49.png";
+		const youtubeLogo = "https://image.flaticon.com/icons/svg/1384/1384060.svg";
+		const twitterLogo = "https://image.flaticon.com/icons/svg/124/124021.svg";
+		const socialMediaLineSize = 13;
+
+		let htmlText = "<center style = 'font-size: 20px;'>VGC Content Creators</center><ul style='list-style-type:none; padding: 0; margin-top: 0;'>";
+		for (let i = 0; i < creatorData.length; i++)
+		{
+			htmlText += "<li><psicon pokemon = \"" + creatorData[i][0] + "\"></psicon>";
+			htmlText += "<span style = \"font-size: 14px;\">" + creatorData[i][1] + " - </span>";
+			htmlText += "<span style = \"font-size: " + socialMediaLineSize + "px;\">";
+			if (creatorData[i][2]) //If they have a Twitch
+			{
+				htmlText += "<img src = \"" + twitchlogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
+				htmlText += " <a href = \"" + creatorData[i][2] + "\">" + creatorData[i][3] + "</a> | ";
+			}
+			if (creatorData[i][4]) //If they have a YouTube
+			{
+				htmlText += "<img src = \"" + youtubeLogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
+				htmlText += " <a href = \"" + creatorData[i][4] + "\">" + creatorData[i][5] + "</a> | ";
+			}
+			if (creatorData[i][6])
+			{
+				htmlText += "<img src = \"" + twitterLogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
+				htmlText += " <a href = \"" + creatorData[i][6] + "\">" + creatorData[i][7] + "</a>";
+			}
+			
+			
+			htmlText += "</span>";
+			htmlText += "</li>";
+			if (i != creatorData.length - 1) {htmlText += "<hr>";}
+		}
 		return htmlText;
 	},
 	/*displayNPAbox: function()

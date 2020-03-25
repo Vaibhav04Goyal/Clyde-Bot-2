@@ -804,6 +804,23 @@ exports.commands =
 		}
 		this.say(room, text);
 	},
+	cc: "contentcreators",
+	creators: "contentcreators",
+	contentcreators: function(arg, by, room)
+	{
+		let creatorData = [
+			["exeggutor-alola", "Wolfe Glick", "https://www.twitch.tv/wolfeyvgc", "WolfeyVGC", "https://www.youtube.com/wolfeyvgc", "WolfeyVGC", "https://twitter.com/WolfeyGlick", "@WolfeyGlick"],
+			["rotom-wash", "Aaron Zheng", "https://www.twitch.tv/cybertronvgc", "CybertronVGC", "https://www.youtube.com/CybertronProductions", "CybertronProductions", "https://twitter.com/CybertronVGC", "@CybertronVGC"],
+			["Mudsdale", "Eduardo Cunha", "https://www.twitch.tv/EmbCPT", "EmbCPT", "https://www.youtube.com/channel/UCla-h0hvByq_LSzBMqRr4eA", "EmbC", "https://twitter.com/MeninoJardim", "@MeninoJardim"],
+			["tornadus", "James Baek", "https://www.twitch.tv/jamesspeed1", "Jamesspeed1", "https://www.youtube.com/channel/UCJbbTSmMzaDhJg2uz6elyPA", "James Baek", "https://twitter.com/JamesWBaek", "@JamesWBaek"],
+			["hariyama", "Alex Gomez", "https://www.twitch.tv/pokealexvgc", "PokeAlexVGC", "https://www.youtube.com/user/Pokealexproductions", "PokeAlex Productions", "https://twitter.com/PokeAlex_", "@PokeAlex_"],
+			["buzzwole", "Graham Ammodee", false, false, "https://www.youtube.com/channel/UCBvb1EZjYRLuTot13DCIDXA", "Graham Ammodee", "https://twitter.com/amedeegraham", "@AmedeeGraham"],
+			["feraligatr", "Aldrich Yan Sutandra", "https://www.twitch.tv/aldrichyan", "aldrichyan", "https://www.youtube.com/channel/UCTN3uwcBhyid2iEOCD68cqg", "Aldrich Yan Sutandra", "https://twitter.com/AldrichYan", "@AldrichYan"],
+			["sylveon", "Rosemary Kelley", "https://www.twitch.tv/nekkragaming", "NekkraGaming", "https://www.youtube.com/channel/UCIlFSUs8MzCuYosEMq0WFeg", "Nekkra", "https://twitter.com/NekkraGaming", "@NekkraGaming"],
+		];
+		let text = this.generateHTMLContentCreators(creatorData);
+		this.say(room, "/addhtmlbox " + text);
+	},
 	testpermissions: function(arg, by, room)
 	{
 		//Normal cases in VGC room
