@@ -798,7 +798,7 @@ exports.commands =
 			["mudsdale", "Eduardo Cunha", "https://www.twitch.tv/EmbCPT", "EmbCPT", "https://www.youtube.com/channel/UCla-h0hvByq_LSzBMqRr4eA", "EmbC", "https://twitter.com/MeninoJardim", "@MeninoJardim"],
 			["piplup", "James Baek", "https://www.twitch.tv/jameswbaek", "JamesWBaek", "http://youtube.com/jameswbaek", "James Baek", "https://twitter.com/JamesWBaek", "@JamesWBaek"],
 			["hariyama", "Alex Gomez", "https://www.twitch.tv/pokealexvgc", "PokeAlexVGC", "https://www.youtube.com/user/Pokealexproductions", "PokeAlex Productions", "https://twitter.com/PokeAlex_", "@PokeAlex_"],
-			["buzzwole", "Graham Ammodee", false, false, "https://www.youtube.com/channel/UCBvb1EZjYRLuTot13DCIDXA", "Graham Ammodee", "https://twitter.com/amedeegraham", "@AmedeeGraham"],
+			["buzzwole", "Graham Amedee", false, false, "https://www.youtube.com/channel/UCBvb1EZjYRLuTot13DCIDXA", "Graham Ammodee", "https://twitter.com/amedeegraham", "@AmedeeGraham"],
 			["feraligatr", "Aldrich Yan Sutandra", "https://www.twitch.tv/aldrichyan", "aldrichyan", "https://www.youtube.com/channel/UCTN3uwcBhyid2iEOCD68cqg", "Aldrich Yan Sutandra", "https://twitter.com/AldrichYan", "@AldrichYan"],
 			["sylveon", "Rosemary Kelley", "https://www.twitch.tv/nekkragaming", "NekkraGaming", "https://www.youtube.com/channel/UCIlFSUs8MzCuYosEMq0WFeg", "Nekkra", "https://twitter.com/NekkraGaming", "@NekkraGaming"],
 		];
