@@ -8,12 +8,13 @@
         "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar symbol in-game except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.",
         "sampleTeams":
         [
-            ["arcanine", "excadrill", "tyranitar", "togekiss", "gastrodon", "dragapult", "https://pokepast.es/aa2e3a929e0bf1be", "Zeen's 1st Place Battle Stadium Team"],
-            ["charizardgmax", "whimsicott", "jellicent", "duraludon", "conkeldurr", "togekiss", "https://pokepast.es/de7c131100951ee9", "Unreality's 1st Place Regionals Team"],
-            ["dracozolt", "passimian", "whimsicott", "togekiss", "darmanitangalar", "duraludon", "https://pokepast.es/93223dd0e1cfb74f", "Sejun's 1st Place World Champ Invitational Team"],
-            ["rhyperior", "togekiss", "jellicent", "ferrothorn", "hydreigon", "arcanine", "https://pokepast.es/9b57bf2abe5ad0ed", "EmbC's 1st Place Galar Weekly Team"],
-            ["gothitelle", "dusclops", "torkoal", "rhyperior", "togekiss", "gyarados", "https://pokepast.es/bb66c9e105049b5d", "HamstermaniaCZ's Top 8 Regionals Team"],
-            ["rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "https://www.trainertower.com/pokemon-sword-and-shield-rental-teams/", "More VGC 2020 Rental Teams"]
+            ["lapras-gmax", "togekiss", "incineroar", "alcremie-gmax", "dusclops", "conkeldurr", "https://pokepast.es/52c958ae3270eeaa", "fevzi's Top 8 Regionals Team"],
+            ["hatterene-gmax", "dusclops", "rhyperior", "torkoal", "butterfree-gmax", "indeedee-f", "https://pokepast.es/edd5b9d5b8f392b2", "TobySxE's 1st Place Regionals Team"],
+            ["gothitelle", "durant", "milotic", "tyranitar", "sylveon", "torracat", "https://pokepast.es/6576b590306a8f4c", "MattieMoo's Top 4 Regionals Team"],
+            ["dragapult", "mimikyu", "snorlax", "togekiss", "rotom-wash", "aegislash", "https://pokepast.es/8a9e43f9ae9aadae", "Spanish Triple Ghost Top 4 Regionals Team"],
+            ["tyranitar", "excadrill", "incineroar", "conkeldurr", "togekiss", "jellicent", "https://pokepast.es/e2c494d36ac417e2", "Eakes' Sand Team"],
+            ["charizard-gmax", "venusaur", "torkoal", "indeedee-f", "dusclops", "rhyperior", "https://pokepast.es/751af31628010157", "Gechis' Sun Team"],
+            ["salamence-mega", "salamence-mega", "salamence-mega", "salamence-mega", "salamence-mega", "salamence-mega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
         ],
         "tournote": ""
     },
