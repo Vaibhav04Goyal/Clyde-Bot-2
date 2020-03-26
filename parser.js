@@ -720,7 +720,7 @@ exports.parse =
 		return result;
 	},
 	/* HTML boiler plate for tour helper
-	<b>VGC 20XX</b>
+	<strong>VGC 20XX</strong>
 	<br>
 	<details>
 		<summary>Rules for VGC 20XX</summary>
