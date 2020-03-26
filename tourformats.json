@@ -8,13 +8,13 @@
         "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar symbol in-game except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.",
         "sampleTeams":
         [
-            ["lapras-gmax", "togekiss", "incineroar", "alcremie-gmax", "dusclops", "conkeldurr", "https://pokepast.es/52c958ae3270eeaa", "fevzi's Top 8 Regionals Team"],
-            ["hatterene-gmax", "dusclops", "rhyperior", "torkoal", "butterfree-gmax", "indeedee-f", "https://pokepast.es/edd5b9d5b8f392b2", "TobySxE's 1st Place Regionals Team"],
+            ["laprasgmax", "togekiss", "incineroar", "alcremiegmax", "dusclops", "conkeldurr", "https://pokepast.es/52c958ae3270eeaa", "fevzi's Top 8 Regionals Team"],
+            ["hatterenegmax", "dusclops", "rhyperior", "torkoal", "butterfreegmax", "indeedeef", "https://pokepast.es/edd5b9d5b8f392b2", "TobySxE's 1st Place Regionals Team"],
             ["gothitelle", "durant", "milotic", "tyranitar", "sylveon", "torracat", "https://pokepast.es/6576b590306a8f4c", "MattieMoo's Top 4 Regionals Team"],
             ["dragapult", "mimikyu", "snorlax", "togekiss", "rotom-wash", "aegislash", "https://pokepast.es/8a9e43f9ae9aadae", "Spanish Triple Ghost Top 4 Regionals Team"],
+            ["charizardgmax", "venusaur", "torkoal", "conkeldurr", "mimikyu", "rotomwash", "https://pokepast.es/297f99eee9c7dadf", "Namuko Pro's Sun Team"],
             ["tyranitar", "excadrill", "incineroar", "conkeldurr", "togekiss", "jellicent", "https://pokepast.es/e2c494d36ac417e2", "Eakes' Sand Team"],
-            ["charizard-gmax", "venusaur", "torkoal", "indeedee-f", "dusclops", "rhyperior", "https://pokepast.es/751af31628010157", "Gechis' Sun Team"],
-            ["salamence-mega", "salamence-mega", "salamence-mega", "salamence-mega", "salamence-mega", "salamence-mega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
         ],
         "tournote": ""
     },
