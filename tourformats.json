@@ -235,7 +235,7 @@
         "formatDescription": "Corsola only (Galar Corsola is allowed too)! Giga Drain is banned. Create teams in the [Gen 8] 1v1 format, and make sure it's level 100!",
         "sampleTeams":
         [
-            ["corsola", "corsola", "corsola", "corsola", "corsola", "corsola", "https://pokepast.es/4ecf64b1bb612848", "Choice Band Corsola"]
+            ["corsola", "corsola", "corsola", "corsola", "corsola", "corsola", "https://pokepast.es/4ecf64b1bb612848", "Choice Band Corsola"],
             ["corsolagalar", "corsolagalar", "corsolagalar", "corsolagalar", "corsolagalar", "corsolagalar", "https://pokepast.es/c9bdc46dd5e049d4", "Bulky Setup Corsola"]
         ],
         "tournote": ""
