@@ -805,6 +805,11 @@ exports.parse =
 		let color;
 		let rankDifference;
 
+		if (Object.keys(abilities).length === 0) //if a Pokemon doesn't have ability data, it's not really being used
+		{
+			return "No usage data found for " + pokemon + ".";
+		}
+
 		//Obtain sprite info
 		let pokemonSprite = "https://play.pokemonshowdown.com/sprites/ani/" + pokemon.toLowerCase() + ".gif";
 		let probe = require('probe-image-size');

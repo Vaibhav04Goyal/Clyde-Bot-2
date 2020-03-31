@@ -567,10 +567,18 @@ exports.commands =
 
 		if (by.charAt(0) === ' ' || room.charAt(0) === ",")
 		{
-			this.say(room, "/pm " + by + ", VGC Stats Website: " + vgcstats);
-			this.say(room, "/pm " + by + ", Showdown Usage Stats: " + psUsage);
-			this.say(room, "/pm " + by + ", Showdown Detailed Usage Stats: " + psDetailedUsage);
-			this.say(room, "/pm " + by + ", Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage);
+			if (arg)
+			{
+				this.say(room, "/pm " + by + ", Individual Pokemon usage statistics is currently unsupported in PMs. Try .usage instead.")
+			}
+			else
+			{
+				this.say(room, "/pm " + by + ", VGC Stats Website: " + vgcstats);
+				this.say(room, "/pm " + by + ", Showdown Usage Stats: " + psUsage);
+				this.say(room, "/pm " + by + ", Showdown Detailed Usage Stats: " + psDetailedUsage);
+				this.say(room, "/pm " + by + ", Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage);
+			}
+
 			return;
 		}
 		else
