@@ -792,6 +792,125 @@ exports.parse =
 		}
 		return htmlText;
 	},
+	generateHTMLUsage: async function(usageJSON, currentMonth, lastMonthRank)
+	{
+		let htmlText = "";
+		let pokemon = usageJSON.pokemon;
+		let rank = usageJSON.rank;
+		let usagePercent = usageJSON.usage;
+		let abilities = usageJSON.abilities;
+		let items = usageJSON.items;
+		let moves = usageJSON.moves;
+		let spreads = usageJSON.spreads;
+		let color;
+		let rankDifference;
+
+		//Obtain sprite info
+		let pokemonSprite = "https://play.pokemonshowdown.com/sprites/ani/" + pokemon.toLowerCase() + ".gif";
+		let probe = require('probe-image-size');
+		let height;
+		let width;
+		try
+		{
+			await probe(pokemonSprite).then(result =>
+			{
+				height = result.height;
+				width = result.width;
+			});
+		}
+		catch (err)
+		{
+			pokemonSprite = "https://play.pokemonshowdown.com/sprites/rby/missingno.png";
+			height = 96;
+			width = 96;
+		}
+
+		//Rank since last month
+		if (rank - lastMonthRank < 0)
+		{
+			color = "green";
+			rankDifference = "+" + (lastMonthRank - rank);
+		}
+		else if (rank - lastMonthRank > 0)
+		{
+			color = "red";
+			rankDifference = "-" + (rank - lastMonthRank);
+		}
+		else
+		{
+			color = "darkblue";
+			rankDifference = "±0";
+		}
+
+		//Months
+		const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		let usageMonth =  months[currentMonth - 1];
+
+		//Name and sprite
+		htmlText += "<div><div style = 'float: left; border-right: 1px solid black;'><center style = 'margin-right: 5px;'>";
+		htmlText += "<h2 style = 'margin: 0'>" + pokemon + "</h2>";
+		htmlText += "<img src = \"" + pokemonSprite + "\" height=\"" + height + "\" width=\"" + width + "\"></center></div>";
+
+		//Ranking information
+		htmlText += "<div style = 'float: left; width: 55%;'><div style = 'margin-left: 5px;'>";
+		htmlText += "<h3 style = 'float: right; margin: 0'>Showdown Rank (" + usageMonth + ") - #" + rank + "</h3>";
+		htmlText += "<span style = 'float: right;'><span style = 'float: right;'><span style = 'color: " + color + ";'><strong>" + rankDifference + "</strong></span> since " + (months !== 1 ? months[currentMonth - 2] : "December") + "</span>";
+		htmlText += "<br><strong>" + usagePercent  + " usage</strong></span><div style = 'clear: both'></div><br>";
+
+		//Abilities
+		htmlText += "<details open><summary style = 'font-size: 14px'><strong>Abilities</strong></summary><ul style = 'margin: 0; padding-left: 18px'>"
+		let abilityNames = Object.keys(abilities);
+		for (i = 0; i < abilityNames.length; i++)
+		{
+			htmlText += "<li>" + abilityNames[i] + " - "  + abilities[abilityNames[i]] + "</li>";
+		}
+		htmlText += "</ul></details></div></div><div style = 'clear: both;'></div>";
+
+		//Moves
+		htmlText += "<div style = 'float: left;  width: 40%;'><div style = 'margin-right: 5px;'>";
+		htmlText += "<details><summary style = 'font-size: 14px'><strong>Moves</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
+		let moveNames = Object.keys(moves);
+		for (i = 0; i < moveNames.length; i++)
+		{
+			htmlText += "<li>" + moveNames[i] + " - "  + moves[moveNames[i]] + "</li>";
+		}
+		htmlText += "</ul></details></div></div>";
+
+		//Items
+		htmlText += "<div style = 'float: left;  width: 40%;'><div style = 'margin-right: 5px;'>";
+		htmlText += "<details><summary style = 'font-size: 14px'><strong>Items</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
+		let itemNames = Object.keys(items);
+		for (i = 0; i < itemNames.length; i++)
+		{
+			htmlText += "<li>" + itemNames[i] + " - "  + items[itemNames[i]] + "</li>";
+		}
+		htmlText += "</ul></details></div></div><div style = 'clear: both;'></div>";
+
+		//EV spreads
+		htmlText += "<div style = 'float: left;'><div style = 'margin-right: 5px;'>";
+		htmlText += "<details><summary style = 'font-size: 14px'><strong>EV Spreads</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
+		let natures = Object.keys(spreads);
+		for (i = 0; i < natures.length; i++)
+		{	
+			if (natures[i] !== "Other")
+			{
+				let particularNature = spreads[natures[i]];
+				let evs = Object.keys(particularNature);
+				for (j = 0; j < evs.length; j++)
+				{
+					htmlText += "<li>" + natures[i] + ": "  + evs[j] + " - " + particularNature[evs[j]] + "</li>";
+				}
+			}
+			else //Other is formatted differently.
+			{
+				htmlText += "<li>" + natures[i] + ": " + spreads[natures[i]] + "</li>";
+			}
+				
+		}
+		htmlText += "</ul></details></div></div></div>";
+
+		return htmlText;
+	},
 	/*displayNPAbox: function()
 	{
 		let htmlText = "<center> <img src=\"https:\/\/i.imgur.com\/YzEVGvU.png\" width=\"30\" height=\"30\"> &nbsp;&nbsp; <span style=\"font-weight: bold; font-size: 20px; text-decoration: underline\">";

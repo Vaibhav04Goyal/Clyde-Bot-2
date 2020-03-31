@@ -9,13 +9,8 @@
  * @license MIT license
  */
 
-const http = require("http");
 const { inspect } = require("util");
-
-if (config.serverid === "showdown")
-{
-	const https = require("https");
-}
+const axios = require("axios");
 
 const tourJSON = require("./tourformats.json");
 
@@ -557,30 +552,65 @@ exports.commands =
 
 	//Displays recent VGC usage stats. Also works in PM.
 	usgae: "usage",
-	usage: function(arg, by, room)
+	usage: async function(arg, by, room)
 	{
 		let text;
+		let JSONresponse;
+		let lastMonthRank;
+		let month = 2;
+		let year = 2020;
 		let vgcstats = "https://vgcstats.com";
-		//let bsUsage = "https://3ds.pokemon-gl.com/battle/usum/#wcs";
-		let psUsage = "https://www.smogon.com/stats/2020-02/gen8vgc2020-1760.txt";
-		let psDetailedUsage = "https://www.smogon.com/stats/2020-02/moveset/gen8vgc2020-1760.txt";
+		let psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
+		let psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2020-1760.txt";
 		let jorijnUsage = "https://drive.google.com/drive/folders/1lQr-HyxCjQJF_uoZVBqi7IfZFiAQwb2A";
 
 		if (by.charAt(0) === ' ' || room.charAt(0) === ",")
 		{
 			this.say(room, "/pm " + by + ", VGC Stats Website: " + vgcstats);
-			//this.say(room, "/pm " + by + ", Battle Spot Usage: " + bsUsage);
 			this.say(room, "/pm " + by + ", Showdown Usage Stats: " + psUsage);
 			this.say(room, "/pm " + by + ", Showdown Detailed Usage Stats: " + psDetailedUsage);
 			this.say(room, "/pm " + by + ", Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage);
-			return false;
+			return;
 		}
 		else
 		{
-			//See usage.html
-			text = "/addhtmlbox <strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li><li><a href = \"" + jorijnUsage + "\">Jorijn's Detailed Showdown Usage Stats</a></li></ul>";
+			if (arg)
+			{
+				//Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
+				arg = toID(arg);
+				const getData = async url =>
+				{
+					try
+					{
+						const response = await axios.get(url);
+						JSONresponse = response.data;
+						lastMonthRank = JSONresponse.rank;
+					}
+					catch (error)
+					{
+					  if (error.response.status = "404")
+					  {
+						  text = "No usage data found for " + arg + ".";
+					  }
+					  else
+					  {
+						  console.log(new Date().toLocaleString() + error);
+					  }
+					}
+				};
+				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
+				//Get last month's ranking, but don't override with old usage stats
+				let temp = JSONresponse;
+				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
+				JSONresponse = temp;
+				text = await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
+			}
+			else
+			{
+				text = "<strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li><li><a href = \"" + jorijnUsage + "\">Jorijn's Detailed Showdown Usage Stats</a></li></ul>";
+			}
 		}
-		this.say(room, text);
+		this.say(room, "!code " + text);
 	},
 
 	/*npa: function(arg, by, room)
@@ -715,7 +745,7 @@ exports.commands =
 	},
 	dynamax: async function(arg, by, room)
 	{
-		let pokemonSprite = "http://play.pokemonshowdown.com/sprites/ani/" + arg + ".gif";
+		let pokemonSprite = "https://play.pokemonshowdown.com/sprites/ani/" + arg + ".gif";
 
 		let probe = require('probe-image-size');
 		let height;
@@ -730,7 +760,7 @@ exports.commands =
 		}
 		catch (err)
 		{
-			pokemonSprite = "http://play.pokemonshowdown.com/sprites/rby/missingno.png";
+			pokemonSprite = "https://play.pokemonshowdown.com/sprites/rby/missingno.png";
 			height = 96;
 			width = 96;
 		}
