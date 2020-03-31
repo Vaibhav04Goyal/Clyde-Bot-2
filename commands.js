@@ -610,7 +610,7 @@ exports.commands =
 				text = "<strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li><li><a href = \"" + jorijnUsage + "\">Jorijn's Detailed Showdown Usage Stats</a></li></ul>";
 			}
 		}
-		this.say(room, "!code " + text);
+		this.say(room, "/addhtmlbox " + text);
 	},
 
 	/*npa: function(arg, by, room)
