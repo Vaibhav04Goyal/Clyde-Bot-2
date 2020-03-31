@@ -204,7 +204,7 @@ exports.commands =
 		{
 			hasTourStarted = false;
 			this.say(room, "Tournament creation should be working again.");
-			this.say(room, "/pm " + by + ", Please let DaWoblefet know tours were broken.");
+			send("|/pm " + toID(by) + ", Please let DaWoblefet know tours were broken.");
 			console.log("Tour reset was called. Better check it out. " + new Date().toLocaleString());
 			return;
 		}
@@ -469,7 +469,7 @@ exports.commands =
 		if (text == undefined)
 		{
 			text = arglist[0] + " is bad and should feel bad.";
-			this.say(room, "/pm " + by + ", You entered an invalid insult number, probably. Valid insult numbers are 0-" + (insultList.length - 1) + ".");
+			send("|/pm " + toID(by) +  ", You entered an invalid insult number, probably. Valid insult numbers are 0-" + (insultList.length - 1) + ".");
 		}
 
 		this.say(room, text);
@@ -537,7 +537,7 @@ exports.commands =
 		if (text == undefined)
 		{
 			text = "le epic funny joke.";
-			this.say(room, "/pm " + by + ", You entered an invalid joke number, probably. Valid joke numbers are 0-" + (jokeList.length - 1) + ".");
+			send("|/pm " + toID(by) + ", You entered an invalid joke number, probably. Valid joke numbers are 0-" + (jokeList.length - 1) + ".");
 		}
 
 		this.say(room, text);
@@ -565,24 +565,24 @@ exports.commands =
 		let psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2020-1760.txt";
 		let jorijnUsage = "https://drive.google.com/drive/folders/1lQr-HyxCjQJF_uoZVBqi7IfZFiAQwb2A";
 
-		/*if (by.charAt(0) === ' ' || room.charAt(0) === ",")
+		if (by.charAt(0) === ' ' || room.charAt(0) === ",")
 		{
 			if (arg)
 			{
-				this.say(room, "/pm " + by + ", Individual Pokemon usage statistics is currently unsupported in PMs. Try .usage instead.")
+				send("|/pm " + toID(by) + ", only room voices (+) and higher are allowed to use this command in the VGC room. You can use .usage to have general usage statistics PMed to you.")
 			}
 			else
 			{
-				this.say(room, "/pm " + by + ", VGC Stats Website: " + vgcstats);
-				this.say(room, "/pm " + by + ", Showdown Usage Stats: " + psUsage);
-				this.say(room, "/pm " + by + ", Showdown Detailed Usage Stats: " + psDetailedUsage);
-				this.say(room, "/pm " + by + ", Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage);
+				send("|/pm " + toID(by) + ", VGC Stats Website: " + vgcstats);
+				send("|/pm " + toID(by) + ", Showdown Usage Stats: " + psUsage);
+				send("|/pm " + toID(by) + ", Showdown Detailed Usage Stats: " + psDetailedUsage);
+				send("|/pm " + toID(by) + ", Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage);
 			}
 
 			return;
 		}
 		else
-		{*/
+		{
 			if (arg)
 			{
 				//Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
@@ -622,7 +622,7 @@ exports.commands =
 			{
 				text = "<strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li><li><a href = \"" + jorijnUsage + "\">Jorijn's Detailed Showdown Usage Stats</a></li></ul>";
 			}
-		//}
+		}
 		this.say(room, "/addhtmlbox " + text);
 	},
 
