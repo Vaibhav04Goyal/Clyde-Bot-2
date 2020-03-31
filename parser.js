@@ -853,7 +853,7 @@ exports.parse =
 
 		//Ranking information
 		htmlText += "<div style = 'float: left; width: 55%;'><div style = 'margin-left: 5px;'>";
-		htmlText += "<h3 style = 'float: right; margin: 0'>Showdown Rank (" + usageMonth + ") - #" + rank + "</h3>";
+		htmlText += "<div style = 'float: right;'><h3 style = 'margin: 0'>Showdown Rank (" + usageMonth + ") - #" + rank + "</h3></div><div style = 'clear: both;'></div>";
 		htmlText += "<span style = 'float: right;'><span style = 'float: right;'><span style = 'color: " + color + ";'><strong>" + rankDifference + "</strong></span> since " + (months !== 1 ? months[currentMonth - 2] : "December") + "</span>";
 		htmlText += "<br><strong>" + usagePercent  + " usage</strong></span><div style = 'clear: both'></div><br>";
 

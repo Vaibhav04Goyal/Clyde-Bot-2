@@ -556,6 +556,7 @@ exports.commands =
 	{
 		let text;
 		let JSONresponse;
+		let wasSuccessful = true;
 		let lastMonthRank;
 		let month = 2;
 		let year = 2020;
@@ -588,22 +589,26 @@ exports.commands =
 					}
 					catch (error)
 					{
-					  if (error.response.status = "404")
-					  {
-						  text = "No usage data found for " + arg + ".";
-					  }
-					  else
-					  {
-						  console.log(new Date().toLocaleString() + error);
-					  }
+						wasSuccessful = false;
+						if (error.response.status = "404")
+						{
+							text = "No usage data found for " + arg + ".";
+						}
+						else
+						{
+							console.log(new Date().toLocaleString() + error);
+						}
 					}
 				};
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
-				//Get last month's ranking, but don't override with old usage stats
-				let temp = JSONresponse;
-				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
-				JSONresponse = temp;
-				text = await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
+				if (wasSuccessful)
+				{
+					//Get last month's ranking, but don't override with old usage stats
+					let temp = JSONresponse;
+					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
+					JSONresponse = temp;
+					text = await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
+				}
 			}
 			else
 			{
