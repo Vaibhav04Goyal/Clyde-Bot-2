@@ -565,7 +565,7 @@ exports.commands =
 		let psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2020-1760.txt";
 		let jorijnUsage = "https://drive.google.com/drive/folders/1lQr-HyxCjQJF_uoZVBqi7IfZFiAQwb2A";
 
-		if (by.charAt(0) === ' ' || room.charAt(0) === ",")
+		/*if (by.charAt(0) === ' ' || room.charAt(0) === ",")
 		{
 			if (arg)
 			{
@@ -582,7 +582,7 @@ exports.commands =
 			return;
 		}
 		else
-		{
+		{*/
 			if (arg)
 			{
 				//Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
@@ -622,7 +622,7 @@ exports.commands =
 			{
 				text = "<strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li><li><a href = \"" + jorijnUsage + "\">Jorijn's Detailed Showdown Usage Stats</a></li></ul>";
 			}
-		}
+		//}
 		this.say(room, "/addhtmlbox " + text);
 	},
 
