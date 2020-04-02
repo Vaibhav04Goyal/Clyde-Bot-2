@@ -420,7 +420,9 @@ exports.commands =
 			"The intersection of " + arglist[0] + "'s brain and reality is the null set.",
 			"Trying to understand " + arglist[0] + "'s teambuilding decisions is more complex than solving the P vs. NP problem.",
 			arglist[0] + " is the type of person who stares at a can of orange juice because it says \"concentrate\".",
-			arglist[0] + " uses Facade Snorlax on teams with Tapu Fini."
+			arglist[0] + " uses Facade Snorlax on teams with Tapu Fini.",
+			arglist[0] + " would struggle to pour water out of a boot with the directions on the bottom.",
+			arglist[0] + " has Van Gogh's ear for music.",
 		];
 
 		let douInsultList = [
