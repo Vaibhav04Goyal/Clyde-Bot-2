@@ -404,13 +404,19 @@ exports.parse =
 		if (room.charAt(0) !== ',')
 		{
 			msg = (room !== "lobby" ? room : "") + '|' + text;
+			send(msg);
 		}
 		else //if room has a comma, it was done in PM
 		{
 			room = room.substr(1);
-			msg = "|/pm " + room + ", " + text;
+			text = text.split('\n');
+			for (i = 0; i < text.length; i++)
+			{
+				msg = "|/pm " + room + ", " + text[i];
+				send(msg);
+			}
+			
 		}
-		send(msg);
 	},
 
 
@@ -915,6 +921,98 @@ exports.parse =
 		htmlText += "</ul></details></div></div></div>";
 
 		return htmlText;
+	},
+	generateTextUsage: async function(usageJSON, currentMonth, lastMonthRank)
+	{
+		let text = "";
+		let pokemon = usageJSON.pokemon;
+		let rank = usageJSON.rank;
+		let usagePercent = usageJSON.usage;
+		let abilities = usageJSON.abilities;
+		let items = usageJSON.items;
+		let moves = usageJSON.moves;
+		let spreads = usageJSON.spreads;
+		let rankDifference;
+
+		if (Object.keys(abilities).length === 0) //if a Pokemon doesn't have ability data, it's not really being used
+		{
+			return "No usage data found for " + pokemon + ".";
+		}
+
+
+		//Rank since last month
+		if (rank - lastMonthRank < 0)
+		{
+			rankDifference = "+" + (lastMonthRank - rank);
+		}
+		else if (rank - lastMonthRank > 0)
+		{
+			rankDifference = "-" + (rank - lastMonthRank);
+		}
+		else
+		{
+			rankDifference = "±0";
+		}
+
+		//Months
+		const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		let usageMonth =  months[currentMonth - 1];
+
+		text += usageMonth + " Usage Stats for **" + pokemon + "** (Rank " + rank + ")\n";
+		text += pokemon + " was on " + usagePercent + " of teams; its rank has adjusted by " + rankDifference + " since " + (months !== 1 ? months[currentMonth - 2] : "December") + ".\n";
+		text += "**Abilities**:";
+		let abilityNames = Object.keys(abilities);
+		for (i = 0; i < abilityNames.length; i++)
+		{
+			text += abilityNames[i] + " - "  + abilities[abilityNames[i]] + "; ";
+		}
+		text += "\n";
+
+		text += "**Moves**:";
+		let moveNames = Object.keys(moves);
+		for (i = 0; i < moveNames.length; i++)
+		{
+			text += moveNames[i] + " - "  + moves[moveNames[i]] + "; ";
+			if (i % 3 === 0 && i !== 0)
+			{
+				text += "\n";
+			}
+		}
+		text += "\n";
+
+		text += "**Items**:";
+		let itemNames = Object.keys(items);
+		for (i = 0; i < itemNames.length; i++)
+		{
+			text += itemNames[i] + " - "  + items[itemNames[i]] + "; ";
+			if (i % 3 === 0 && i !== 0)
+			{
+				text += "\n";
+			}
+		}
+		text += "\n";
+
+		text += "**EV Spreads**:";
+		let natures = Object.keys(spreads);
+		for (i = 0; i < natures.length; i++)
+		{	
+			if (natures[i] !== "Other")
+			{
+				let particularNature = spreads[natures[i]];
+				let evs = Object.keys(particularNature);
+				for (j = 0; j < evs.length; j++)
+				{
+					text += natures[i] + ": "  + evs[j] + " - " + particularNature[evs[j]] + "; ";
+				}
+			}
+			else //Other is formatted differently.
+			{
+				text += natures[i] + ": " + spreads[natures[i]] + "; ";
+			}
+			if (i !== natures.length - 1) {text += "\n";}		
+		}
+
+		return text;
 	},
 	/*displayNPAbox: function()
 	{

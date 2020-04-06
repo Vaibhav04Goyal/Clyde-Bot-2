@@ -556,60 +556,49 @@ exports.commands =
 	usgae: "usage",
 	usage: async function(arg, by, room)
 	{
-		let text;
+		let text = "";
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
 		let month = 3;
 		let year = 2020;
-		let vgcstats = "https://vgcstats.com";
-		let psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
-		let psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2020-1760.txt";
-		let jorijnUsage = "https://drive.google.com/drive/folders/1lQr-HyxCjQJF_uoZVBqi7IfZFiAQwb2A";
+		const vgcstats = "https://vgcstats.com";
+		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
+		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2020-1760.txt";
+		const jorijnUsage = "https://drive.google.com/drive/folders/1lQr-HyxCjQJF_uoZVBqi7IfZFiAQwb2A";
 
-		if (by.charAt(0) === ' ' || room.charAt(0) === ",")
+		//Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
+		const getData = async url =>
 		{
-			if (arg)
+			try
 			{
-				send("|/pm " + toID(by) + ", only room voices (+) and higher are allowed to use this command in the VGC room. You can use .usage to have general usage statistics PMed to you.")
+				const response = await axios.get(url);
+				JSONresponse = response.data;
+				lastMonthRank = JSONresponse.rank;
 			}
-			else
+			catch (error)
 			{
-				send("|/pm " + toID(by) + ", VGC Stats Website: " + vgcstats);
-				send("|/pm " + toID(by) + ", Showdown Usage Stats: " + psUsage);
-				send("|/pm " + toID(by) + ", Showdown Detailed Usage Stats: " + psDetailedUsage);
-				send("|/pm " + toID(by) + ", Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage);
-			}
-
-			return;
-		}
-		else
-		{
-			if (arg)
-			{
-				//Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
-				arg = toID(arg);
-				const getData = async url =>
+				wasSuccessful = false;
+				if (error.response.status = "404")
 				{
-					try
-					{
-						const response = await axios.get(url);
-						JSONresponse = response.data;
-						lastMonthRank = JSONresponse.rank;
-					}
-					catch (error)
-					{
-						wasSuccessful = false;
-						if (error.response.status = "404")
-						{
-							text = "No usage data found for " + arg + ".";
-						}
-						else
-						{
-							console.log(new Date().toLocaleString() + error);
-						}
-					}
-				};
+					text = "No usage data found for " + arg + ".";
+				}
+				else
+				{
+					console.log(new Date().toLocaleString() + error);
+				}
+			}
+		};
+
+		if (arg) //Pokemon is specified
+		{
+			if (by.charAt(0) === ' ' && room.charAt(0) !== ',') //no permissions for htmlbox
+			{
+				send("|/pm " + toID(by) + ", Only room voices (+) and higher are allowed to use .usage in the " + room + " room. However, you can use .usage here in " + config.nick + "'s PMs to have usage statistics PMed to you (**warning**: it will be a lot of PMs).");
+			}
+			else if (room.charAt(0) === ',') //PMs
+			{
+				arg = toID(arg);
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
 				if (wasSuccessful)
 				{
@@ -617,15 +606,46 @@ exports.commands =
 					let temp = JSONresponse;
 					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
 					JSONresponse = temp;
-					text = await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
+					text = await this.generateTextUsage(JSONresponse, month, lastMonthRank);
 				}
+			}
+			else //has permissions for htmlbox
+			{
+				arg = toID(arg);
+				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
+				if (wasSuccessful)
+				{
+					//Get last month's ranking, but don't override with old usage stats
+					let temp = JSONresponse;
+					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
+					JSONresponse = temp;
+					text = "/addhtmlbox " + await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
+				}
+			}
+		}
+		else //Generic links to usage stats
+		{
+			if (by.charAt(0) === ' ' && room.charAt(0) !== ',') //regular user in room
+			{
+				by = toID(by);
+				text += "/pm " + by + ", " + "VGC Stats Website: " + vgcstats + "\n";
+				text += "/pm " + by + ", " + "Showdown Usage Stats: " + psUsage + "\n";
+				text += "/pm " + by + ", " + "Showdown Detailed Usage Stats: " + psDetailedUsage + "\n";
+				text += "/pm " + by + ", " + "Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage;
+			}
+			else if (room.charAt(0) === ',') //PMs
+			{
+				text += "VGC Stats Website: " + vgcstats + "\n";
+				text += "Showdown Usage Stats: " + psUsage + "\n";
+				text += "Showdown Detailed Usage Stats: " + psDetailedUsage + "\n";
+				text += "Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage + "\n";
 			}
 			else
 			{
-				text = "<strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li><li><a href = \"" + jorijnUsage + "\">Jorijn's Detailed Showdown Usage Stats</a></li></ul>";
+				text = "/addhtmlbox <strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li><li><a href = \"" + jorijnUsage + "\">Jorijn's Detailed Showdown Usage Stats</a></li></ul>";
 			}
 		}
-		this.say(room, "/addhtmlbox " + text);
+		this.say(room, text);
 	},
 
 	/*npa: function(arg, by, room)
