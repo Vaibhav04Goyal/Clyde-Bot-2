@@ -332,6 +332,9 @@ exports.commands =
 				case "cap":
 					this.say(room, "Cannot start CAP tours.");
 					return;
+				case "monotyperandombattle":
+					this.say(room, "Cannot start Monotype Random tours.");
+					return;
 				default:
 					tourformat = arglist[0];
 					tourname = "";
@@ -771,7 +774,16 @@ exports.commands =
 	},
 	b: function(arg, by, room)
 	{
-		let text = "\ud83c\udd71\ufe0f";
+		let text;
+		const bEmoji = "\ud83c\udd71\ufe0f";
+		if (arg.match(/(b|B)/gm))
+		{
+			text = arg.replace(/(b|B)/g, bEmoji);
+		}
+		else
+		{
+			text = bEmoji;
+		}
 		if (room.charAt(0) != ",")
 		{
 			text = "/addhtmlbox " + text;
