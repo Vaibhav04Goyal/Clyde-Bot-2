@@ -725,7 +725,7 @@ exports.commands =
 
 	blog: function(arg, by, room)
 	{
-		this.say(room, "/addhtmlbox <a href=\"https://tinyurl.com/2fcpre6\">ansena's blog</a>");
+		this.say(room, "/addhtmlbox <a href=\"https://spo.ink/ansena\">ansena's blog</a>");
 	},
 
 	chef: function(arg, by, room)
