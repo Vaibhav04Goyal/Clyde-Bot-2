@@ -8,12 +8,12 @@
         "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar symbol in-game except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.",
         "sampleTeams":
         [
-            ["laprasgmax", "togekiss", "incineroar", "alcremiegmax", "dusclops", "conkeldurr", "https://pokepast.es/52c958ae3270eeaa", "fevzi's Top 8 Regionals Team"],
+            ["laprasgmax", "tyranitar", "arcanine", "mimikyu", "dusclops", "conkeldurr", "https://pokepast.es/7efb979aa3dccbf4", "fevzi's 1st Place Champions Cup Team"],
+            ["rotomwash", "togekiss", "incineroar", "excadrill", "dragapult", "venusaur", "https://pokepast.es/fab1e1231d632d1a", "EmbC's 2nd Place Champions Cup Team"],
             ["hatterenegmax", "dusclops", "rhyperior", "torkoal", "butterfreegmax", "indeedeef", "https://pokepast.es/946fe38d3374194d", "TobySxE's 1st Place Regionals Team"],
             ["gothitelle", "durant", "milotic", "tyranitar", "sylveon", "torracat", "https://pokepast.es/6576b590306a8f4c", "MattieMoo's Top 4 Regionals Team"],
-            ["dragapult", "mimikyu", "snorlax", "togekiss", "rotom-wash", "aegislash", "https://pokepast.es/8a9e43f9ae9aadae", "Spanish Triple Ghost Top 4 Regionals Team"],
+            ["dragapult", "mimikyu", "snorlax", "togekiss", "rotomwash", "aegislash", "https://pokepast.es/8a9e43f9ae9aadae", "Spanish Triple Ghost Top 4 Regionals Team"],
             ["charizardgmax", "venusaur", "torkoal", "conkeldurr", "mimikyu", "rotomwash", "https://pokepast.es/297f99eee9c7dadf", "Namuko Pro's Sun Team"],
-            ["tyranitar", "excadrill", "incineroar", "conkeldurr", "togekiss", "jellicent", "https://pokepast.es/afae91c330ab9961", "Eakes's Sand Team"],
             ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
         ],
         "tournote": ""
@@ -32,7 +32,7 @@
             ["xerneas", "kyogreprimal", "kartana", "tornadus", "amoonguss", "incineroar", "https://pokepast.es/fe935379b10de53a", "Jamesspeed1's Top 4 Worlds Team"],
             ["xerneas", "rayquazamega", "nihilego", "incineroar", "tapufini", "amoonguss", "https://pokepast.es/2e2c22371e2cdcdd", "Pado's 1st Place Europe Internationals Team"],
             ["xerneas", "groudonprimal", "kangaskhanmega", "mawilemega", "tornadus", "kommoo", "https://pokepast.es/245146eaaf615889", "Animus's Top 8 US Internationals Team"],
-            ["xerneas", "necrozmaultra", "salamencemega", "salazzle", "tapukoko", "breloom", "https://pokepast.es/c28982cdb66faa17", "MrJellyLegs's Top 16 Worlds Team"],
+            ["xerneas", "necrozmaultra", "salamencemega", "salazzle", "tapukoko", "breloom", "https://pokepast.es/c28982cdb66faa17", "MrJellyLeggs's Top 16 Worlds Team"],
             ["rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "rhydon", "https://trainertower.com/vgc19-ultra-series-sample-teams/", "More Ultra Series Samples"]
         ],
         "tournote": ""
