@@ -769,33 +769,42 @@ exports.parse =
 		const twitterLogo = "https://image.flaticon.com/icons/svg/124/124021.svg";
 		const socialMediaLineSize = 13;
 
-		let htmlText = "<center style = 'font-size: 20px;'>VGC Content Creators</center><ul style='list-style-type:none; padding: 0; margin-top: 0;'>";
-		for (let i = 0; i < creatorData.length; i++)
+		let htmlText = "<center style = 'margin-bottom: 10px;'><h2 style = 'margin: 0'>Sample of VGC Content Creators</h2>";
+		htmlText += "<em style = 'font-style: italic;'>Click the arrows to see links to a content creator's YouTube, Twitch, and Twitter!</em></center>";
+		for (j = 0; j < 2; j++)
 		{
-			htmlText += "<li><psicon pokemon = \"" + creatorData[i][0] + "\"></psicon>";
-			htmlText += "<span style = \"font-size: 14px;\">" + creatorData[i][1] + " - </span>";
-			htmlText += "<span style = \"font-size: " + socialMediaLineSize + "px;\">";
-			if (creatorData[i][2]) //If they have a Twitch
+			htmlText += "<div style = 'width: 50%; float: left;'>";
+			for (let i = j === 0 ? 0 : 1; i < creatorData.length; i = i + 2)
 			{
-				htmlText += "<img src = \"" + twitchlogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
-				htmlText += " <a href = \"" + creatorData[i][2] + "\">" + creatorData[i][3] + "</a> | ";
+				htmlText += "<details><summary><psicon pokemon = \"" + creatorData[i][0] + "\">" + creatorData[i][1] + "</summary>";
+				htmlText += "<ul style = 'list-style-type: none; padding: 0;'>";
+
+				if (creatorData[i][2]) //If they have a Twitch
+				{
+					htmlText += "<li>";
+					htmlText += "<img src = \"" + twitchlogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
+					htmlText += " <a href = \"" + creatorData[i][2] + "\">" + creatorData[i][3] + "</a> ";
+					htmlText += "</li>";
+				}
+				if (creatorData[i][4]) //If they have a YouTube
+				{
+					htmlText += "<li>";
+					htmlText += "<img src = \"" + youtubeLogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
+					htmlText += " <a href = \"" + creatorData[i][4] + "\">" + creatorData[i][5] + "</a>";
+					htmlText += "</li>";
+				}
+				if (creatorData[i][6]) //If they have a Twitter
+				{
+					htmlText += "<li>";
+					htmlText += "<img src = \"" + twitterLogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
+					htmlText += " <a href = \"" + creatorData[i][6] + "\">" + creatorData[i][7] + "</a>";
+					htmlText += "</li>";
+				}
+				htmlText += "</ul></details>";
 			}
-			if (creatorData[i][4]) //If they have a YouTube
-			{
-				htmlText += "<img src = \"" + youtubeLogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
-				htmlText += " <a href = \"" + creatorData[i][4] + "\">" + creatorData[i][5] + "</a> | ";
-			}
-			if (creatorData[i][6])
-			{
-				htmlText += "<img src = \"" + twitterLogo + "\" height=" + socialMediaLineSize + " width=" + socialMediaLineSize + ">";
-				htmlText += " <a href = \"" + creatorData[i][6] + "\">" + creatorData[i][7] + "</a>";
-			}
-			
-			
-			htmlText += "</span>";
-			htmlText += "</li>";
-			if (i != creatorData.length - 1) {htmlText += "<hr>";}
+			htmlText += "</div>";
 		}
+		htmlText += "<div><p style = 'font-size: 10px';>Note: This list is not comprehensive.</p></div>";
 		return htmlText;
 	},
 	generateHTMLUsage: async function(usageJSON, currentMonth, lastMonthRank)
