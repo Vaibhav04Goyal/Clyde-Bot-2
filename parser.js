@@ -827,7 +827,6 @@ exports.parse =
 
 		//Obtain sprite info
 		let pokemonSprite = "https://play.pokemonshowdown.com/sprites/ani/" + pokemon.toLowerCase().replace("'", "") + ".gif";
-		console.log(pokemonSprite);
 		let probe = require('probe-image-size');
 		let height;
 		let width;
