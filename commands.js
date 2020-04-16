@@ -318,10 +318,6 @@ exports.commands =
 				case "vgc inverse":
 					tourObject = tourJSON["gen8inversevgc"];
 					break;
-				case "gio":
-				case "eevee":
-					tourObject = tourJSON["gen8giocup"];
-					break;
 				case "random battle":
 				case "randombattle":
 				case "gen7randombattle":
