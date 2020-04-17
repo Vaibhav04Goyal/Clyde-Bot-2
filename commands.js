@@ -328,9 +328,6 @@ exports.commands =
 				case "cap":
 					this.say(room, "Cannot start CAP tours.");
 					return;
-				case "monotyperandombattle":
-					this.say(room, "Cannot start Monotype Random tours.");
-					return;
 				default:
 					tourformat = arglist[0];
 					tourname = "";
