@@ -788,6 +788,7 @@ exports.commands =
 	},
 	dynamax: async function(arg, by, room)
 	{
+		arg = arg.toLowerCase().replace("'", "");
 		let pokemonSprite = "https://play.pokemonshowdown.com/sprites/ani/" + arg + ".gif";
 
 		let probe = require('probe-image-size');
