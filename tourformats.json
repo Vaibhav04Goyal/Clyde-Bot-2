@@ -1,4 +1,23 @@
 {
+    "gen8vgc2020series4":
+    {
+        "tourformat": "gen8vgc2020",
+        "tourname": "[Gen 8] VGC 2020 Series 4",
+        "tourrules": "+Copperajah-Gmax, +Machamp-Gmax, +Gengar-Gmax, +Duraludon-Gmax, +Garbodor-Gmax",
+        "formatname": "VGC 2020",
+        "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar symbol in-game except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.",
+        "sampleTeams":
+        [
+            ["laprasgmax", "tyranitar", "arcanine", "mimikyu", "dusclops", "conkeldurr", "https://pokepast.es/7efb979aa3dccbf4", "fevzi's 1st Place Champions Cup Team"],
+            ["rotomwash", "togekiss", "incineroar", "excadrill", "dragapult", "venusaur", "https://pokepast.es/fab1e1231d632d1a", "EmbC's 2nd Place Champions Cup Team"],
+            ["hatterenegmax", "dusclops", "rhyperior", "torkoal", "butterfreegmax", "indeedeef", "https://pokepast.es/946fe38d3374194d", "TobySxE's 1st Place Regionals Team"],
+            ["gothitelle", "durant", "milotic", "tyranitar", "sylveon", "torracat", "https://pokepast.es/6576b590306a8f4c", "MattieMoo's Top 4 Regionals Team"],
+            ["dragapult", "mimikyu", "snorlax", "togekiss", "rotomwash", "aegislash", "https://pokepast.es/8a9e43f9ae9aadae", "Spanish Triple Ghost Top 4 Regionals Team"],
+            ["charizardgmax", "venusaur", "torkoal", "conkeldurr", "mimikyu", "rotomwash", "https://pokepast.es/297f99eee9c7dadf", "Namuko Pro's Sun Team"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
+        ],
+        "tournote": ""
+    },
     "gen8vgc2020":
     {
         "tourformat": "gen8vgc2020",

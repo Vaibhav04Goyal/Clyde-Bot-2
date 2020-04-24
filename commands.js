@@ -242,6 +242,9 @@ exports.commands =
 			//Prepare tournament format.
 			switch (arglist[0])
 			{
+				case "series3":
+					tourObject = tourJSON["gen8vgc2020series4"];
+					break;
 				case "vgc20":
 				case "vgc2020":
 					tourObject = tourJSON["gen8vgc2020"];
