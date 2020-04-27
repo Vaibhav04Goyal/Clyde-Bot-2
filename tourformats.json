@@ -77,7 +77,7 @@
     {
         "tourformat": "gen7vgc2019",
         "tourname": "[Gen 7] VGC 2019 Sun Series",
-        "tourrules": "-Mega, -BuginiumZ, -DarkiniumZ, -DragoniumZ, -ElectriumZ, -FairiumZ, -FightiniumZ, -FiriumZ, -FlyiniumZ, -GhostiumZ, -GrassiumZ, -GroundiumZ, -IciumZ, -NormaliumZ, -PoisoniumZ, -PsychiumZ, -RockiumZ, -SteeliumZ, -WateriumZ, -PikaniumZ, -PikashuniumZ, -AloraichiumZ, -EeviumZ, -SnorliumZ, -DecidiumZ, -InciniumZ, -PrimariumZ, -LycaniumZ, -MimikiumZ, -KommoniumZ, -TapuniumZ, -SolganiumZ, -LunaliumZ, -UltranecroziumZ, -oranguru+symbiosis, -passimian+defiant, -custap berry, -micle berry, -jaboca berry, -rowap berry",
+        "tourrules": "-Mega, Z-Move Clause, -Oranguru + Symbiosis, -Passimian + Defiant, -Custap Berry, -Micle Berry, -Jaboca Berry, -Rowap Berry",
         "formatname": "VGC 2019 Sun Series",
         "formatDescription": "The first third of VGC 2019 was Sun Series. Like all three formats in VGC 2019, you can use up to two restricted legendary Pokemon per team (e.g. Kyogre, Xerneas, Lunala, etc.). However, all Z-moves, Mega Evolutions, and the Primal Orbs are banned.",
         "sampleTeams":
