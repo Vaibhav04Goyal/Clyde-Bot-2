@@ -60,7 +60,7 @@
     {
         "tourformat": "gen7vgc2019",
         "tourname": "[Gen 7] VGC 2019 Moon Series",
-        "tourrules": "-red orb, -blue orb, -dragon ascent, -ultranecroziumz, -Abomasite, -Absolite, -Aerodactylite, -Aggronite, -Alakazite, -Altarianite, -Ampharosite, -Audinite, -Banettite, -Beedrillite, -Blastoisinite, -Blazikenite, -Cameruptite, -Charizardite X, -Charizardite Y, -Crucibellite, -Diancite, -Galladite, -Garchompite, -Gardevoirite, -Gengarite, -Glalitite, -Gyaradosite, -Heracronite, -Houndoominite, -Kangaskhanite, -Latiasite, -Latiosite, -Lopunnite, -Lucarionite, -Manectite, -Mawilite, -Medichamite, -Metagrossite, -Mewtwonite X, -Mewtwonite Y, -Pidgeotite, -Pinsirite, -Sablenite, -Salamencite, -Sceptilite, -Scizorite, -Sharpedonite, -Slowbronite, -Steelixite, -Swampertite, -Tyranitarite, -Venusaurite",
+        "tourrules": "-Ultranecrozium Z, -Mega",
         "formatname": "VGC 2019 Moon Series",
         "formatDescription": "Moon Series allowed up to two restricted legendary Pokemon, and unlike Sun Series, Z-moves are allowed. However, Mega Evolutions, Primal Orbs, and Ultra Necrozma are all banned.",
         "sampleTeams":
@@ -77,7 +77,7 @@
     {
         "tourformat": "gen7vgc2019",
         "tourname": "[Gen 7] VGC 2019 Sun Series",
-        "tourrules": "-red orb, -blue orb, -dragon ascent, -BuginiumZ, -DarkiniumZ, -DragoniumZ, -ElectriumZ, -FairiumZ, -FightiniumZ, -FiriumZ, -FlyiniumZ, -GhostiumZ, -GrassiumZ, -GroundiumZ, -IciumZ, -NormaliumZ, -PoisoniumZ, -PsychiumZ, -RockiumZ, -SteeliumZ, -WateriumZ, -PikaniumZ, -PikashuniumZ, -AloraichiumZ, -EeviumZ, -SnorliumZ, -DecidiumZ, -InciniumZ, -PrimariumZ, -LycaniumZ, -MimikiumZ, -KommoniumZ, -TapuniumZ, -SolganiumZ, -LunaliumZ, -UltranecroziumZ, -Abomasite, -Absolite, -Aerodactylite, -Aggronite, -Alakazite, -Altarianite, -Ampharosite, -Audinite, -Banettite, -Beedrillite, -Blastoisinite, -Blazikenite, -Cameruptite, -Charizardite X, -Charizardite Y, -Crucibellite, -Diancite, -Galladite, -Garchompite, -Gardevoirite, -Gengarite, -Glalitite, -Gyaradosite, -Heracronite, -Houndoominite, -Kangaskhanite, -Latiasite, -Latiosite, -Lopunnite, -Lucarionite, -Manectite, -Mawilite, -Medichamite, -Metagrossite, -Mewtwonite X, -Mewtwonite Y, -Pidgeotite, -Pinsirite, -Sablenite, -Salamencite, -Sceptilite, -Scizorite, -Sharpedonite, -Slowbronite, -Steelixite, -Swampertite, -Tyranitarite, -Venusaurite, -oranguru+symbiosis, -passimian+defiant, -custap berry, -micle berry, -jaboca berry, -rowap berry",
+        "tourrules": "-Mega, -BuginiumZ, -DarkiniumZ, -DragoniumZ, -ElectriumZ, -FairiumZ, -FightiniumZ, -FiriumZ, -FlyiniumZ, -GhostiumZ, -GrassiumZ, -GroundiumZ, -IciumZ, -NormaliumZ, -PoisoniumZ, -PsychiumZ, -RockiumZ, -SteeliumZ, -WateriumZ, -PikaniumZ, -PikashuniumZ, -AloraichiumZ, -EeviumZ, -SnorliumZ, -DecidiumZ, -InciniumZ, -PrimariumZ, -LycaniumZ, -MimikiumZ, -KommoniumZ, -TapuniumZ, -SolganiumZ, -LunaliumZ, -UltranecroziumZ, -oranguru+symbiosis, -passimian+defiant, -custap berry, -micle berry, -jaboca berry, -rowap berry",
         "formatname": "VGC 2019 Sun Series",
         "formatDescription": "The first third of VGC 2019 was Sun Series. Like all three formats in VGC 2019, you can use up to two restricted legendary Pokemon per team (e.g. Kyogre, Xerneas, Lunala, etc.). However, all Z-moves, Mega Evolutions, and the Primal Orbs are banned.",
         "sampleTeams":
