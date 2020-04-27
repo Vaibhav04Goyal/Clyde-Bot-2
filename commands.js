@@ -524,6 +524,7 @@ exports.commands =
 			"My eye doctor called and said the results of my last appointment were finished. When I asked if I could see them, she said, \"probably not\".",
 			"A priest, a pastor, and a rabbit walk into a bar. The rabbit says, \"I must be a typo!\"",
 			"Why was the tennis club's website down? They had problems with their server.",
+			"What's the best time to buy a bird? When it's going cheep!",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
