@@ -580,7 +580,14 @@ exports.commands =
 				wasSuccessful = false;
 				if (error.response.status = "404")
 				{
-					text = "No usage data found for " + arg + ".";
+					if (error.response.statusText === "Service Unavailable")
+					{
+						text = "Unable to communicate with the usage stats API. Tell fingerprint it's not working: https://www.smogon.com/forums/members/fingerprint.510904/";
+					}
+					else
+					{
+						text = "No usage data found for " + arg + ".";
+					}	
 				}
 				else
 				{
