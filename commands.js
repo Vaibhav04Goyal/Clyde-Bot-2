@@ -563,6 +563,7 @@ exports.commands =
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
 		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2020-1760.txt";
 		const jorijnUsage = "https://drive.google.com/drive/folders/1lQr-HyxCjQJF_uoZVBqi7IfZFiAQwb2A";
+		const babiri = "https://babiri.net";
 
 		//Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
 		const getData = async url =>
@@ -629,24 +630,23 @@ exports.commands =
 		}
 		else //Generic links to usage stats
 		{
-			if (by.charAt(0) === ' ' && room.charAt(0) !== ',') //regular user in room
+			//HTML for generic usage
+			text += "<strong>VGC Usage Stats!</strong><ul style = 'margin: 0 0 0 -20px'>";
+			text += "<li><a href = '" + vgcstats +"'>VGC Stats Website</a></li>";
+			text += "<li><a href = '" + psUsage +"'>Showdown Usage</a></li>";
+			text += "<li><a href = '" + psDetailedUsage +"'>Showdown Detailed Usage</a></li>";
+			text += "<li><a href = '" + jorijnUsage +"'>Jorijn's Detailed Showdown Usage</a></li>";
+			text += "<li><a href = '" + babiri +"'>babiri.net's Showdown Ladder Teams</a></li>";
+			text += "</ul>";
+
+			if (by.charAt(0) === ' ' || room.charAt(0) === ',') //regular user in room or PMs
 			{
-				by = toID(by);
-				text += "/pm " + by + ", " + "VGC Stats Website: " + vgcstats + "\n";
-				text += "/pm " + by + ", " + "Showdown Usage Stats: " + psUsage + "\n";
-				text += "/pm " + by + ", " + "Showdown Detailed Usage Stats: " + psDetailedUsage + "\n";
-				text += "/pm " + by + ", " + "Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage;
-			}
-			else if (room.charAt(0) === ',') //PMs
-			{
-				text += "VGC Stats Website: " + vgcstats + "\n";
-				text += "Showdown Usage Stats: " + psUsage + "\n";
-				text += "Showdown Detailed Usage Stats: " + psDetailedUsage + "\n";
-				text += "Jorijn's Detailed Showdown Usage Stats: " + jorijnUsage + "\n";
+				room = config.rooms[0];
+				text = "/pminfobox " + by + ", " + text; 
 			}
 			else
 			{
-				text = "/addhtmlbox <strong>VGC Usage Stats!</strong> <ul style = \"list-style: outside; margin: 0px 0px 0px -20px\"><li><a href=\"" + vgcstats + "\">VGC Stats Website</a></li><li><a href=\"" + psUsage + "\">Showdown Usage</a></li><li><a href=\"" + psDetailedUsage + "\">Showdown Detailed Usage</a></li><li><a href = \"" + jorijnUsage + "\">Jorijn's Detailed Showdown Usage Stats</a></li></ul>";
+				text = "/addhtmlbox " + text; 
 			}
 		}
 		this.say(room, text);
