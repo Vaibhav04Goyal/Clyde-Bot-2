@@ -828,15 +828,29 @@ exports.commands =
 		let text = "";
 		if (room.charAt(0) === "," || by.charAt(0) === " ") //Regular user used command or via PM
 		{
-			text = "/pm " + by + ", VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
+			room = config.rooms[0];
+			by = toID(by);
+
+			if (tourJSON.hasOwnProperty(arg))
+			{
+				text = "/pminfobox " + by + ", " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true, true);
+			}
+			else if (arg === "")
+			{
+				text = "/pminfobox " + by + ", " + this.generateHTMLSample(tourJSON[defaultFormat].formatname, tourJSON[defaultFormat].formatDescription, tourJSON[defaultFormat].sampleTeams, true, true);
+			}
+			else if (arg === "all")
+			{
+				text = "/pm " + by + ", VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
+			}
 		}
 		else if (tourJSON.hasOwnProperty(arg))
 		{
-			text = "/addhtmlbox " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true);
+			text = "/addhtmlbox " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true, false);
 		}
 		else if (arg === "")
 		{
-			text = "/addhtmlbox " + this.generateHTMLSample(tourJSON[defaultFormat].formatname, tourJSON[defaultFormat].formatDescription, tourJSON[defaultFormat].sampleTeams, true);
+			text = "/addhtmlbox " + this.generateHTMLSample(tourJSON[defaultFormat].formatname, tourJSON[defaultFormat].formatDescription, tourJSON[defaultFormat].sampleTeams, true, false);
 		}
 		else if (arg === "all")
 		{
@@ -847,7 +861,7 @@ exports.commands =
 			{
 				if (tourJSON[keys[key]].formatname)
 				{
-					text += this.generateHTMLSample(tourJSON[keys[key]].formatname, tourJSON[keys[key]].formatDescription, tourJSON[keys[key]].sampleTeams, false);
+					text += this.generateHTMLSample(tourJSON[keys[key]].formatname, tourJSON[keys[key]].formatDescription, tourJSON[keys[key]].sampleTeams, false, false);
 				}
 			}
 		}
@@ -864,6 +878,7 @@ exports.commands =
 				}
 			}
 			text += validFormats.join(", ");
+			text = "all, " + text;
 		}
 		this.say(room, text);
 	},

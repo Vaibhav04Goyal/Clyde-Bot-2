@@ -350,7 +350,7 @@ exports.parse =
 		//Auto-accepts invites to rooms if the global rank is % or higher.
 		if (room.charAt(0) === ',' && message.substr(0,8) === "/invite " && this.hasRank(by, "%@*&~"))
 		{
-			this.say("", "/join " + message.substr(8));
+			send("|/join " + message.substr(8));
 		}
 
 		//If it's not a command or BoTTT III is saying a message, don't go any farther
@@ -725,39 +725,24 @@ exports.parse =
 
 		return result;
 	},
-	/* HTML boiler plate for tour helper
-	<strong>VGC 20XX</strong>
-	<br>
-	<details>
-		<summary>Rules for VGC 20XX</summary>
-		y e e t
-	</details>
-	<details>
-		<summary>Sample Teams</summary>
-		<psicon pokemon=""></psicon> |
-		<psicon pokemon=""></psicon> |
-		<psicon pokemon=""></psicon> |
-		<psicon pokemon=""></psicon> |
-		<psicon pokemon=""></psicon> |
-		<psicon pokemon=""></psicon> -
-		<a href = "pokepastelink"><font size = "1">description</font></a>
-		<br>
-	</details> */
-	generateHTMLSample: function(formatname, formatDescription, sampleTeams, isOpen)
+	
+	generateHTMLSample: function(formatname, formatDescription, sampleTeams, isOpen, isPM)
 	{
 		let htmlText = "<strong>" + formatname + "</strong> <br> <details> <summary>Rules for " + formatname + " (click to view)</summary> " + formatDescription +  "</details> <details" + (isOpen ? " open" : "") + "> <summary>Sample Teams</summary>";
-		let numSampleTeams = sampleTeams.length / 8;
-
+		
 		for (let i = 0; i < sampleTeams.length; i++)
 		{
 			let j;
-			for (j = 0; j < 5; j++)
+			for (j = 0; j < 6; j++)
 			{
-				htmlText += "<psicon pokemon=\"" + sampleTeams[i][j] + "\"></psicon>|";
+				htmlText += "<psicon ";
+				if (isPM) {htmlText += "style = 'width: 35px;'";}
+				htmlText += "pokemon='" + sampleTeams[i][j] + "'></psicon>";
+				if (j !== 5) {htmlText += "|";}
 			}
-			htmlText += "<psicon pokemon=\"" + sampleTeams[i][j] + "\"></psicon>";
-			htmlText += "<a href= \"" + sampleTeams[i][j+1] + "\">"; //pokepaste link
-			htmlText += "<font size = \"1\">(" + sampleTeams[i][j+2] + ")</font></a> <br>"; //description
+			htmlText += "<a href= '" + sampleTeams[i][j] + "'>"; //pokepaste link
+			htmlText += "<span style = 'font-size: x-small'>(" + sampleTeams[i][j+1] + ")</span></a> <br>"; //description
+			if (isPM && (i !== sampleTeams.length - 1)) {htmlText += "<br>";}
 		}
 		htmlText += "</details>";
 		return htmlText;
