@@ -242,9 +242,6 @@ exports.commands =
 			//Prepare tournament format.
 			switch (arglist[0])
 			{
-				case "series4":
-					tourObject = tourJSON["gen8vgc2020series4"];
-					break;
 				case "vgc20":
 				case "vgc2020":
 					tourObject = tourJSON["gen8vgc2020"];
@@ -560,7 +557,7 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 3;
+		let month = 4;
 		let year = 2020;
 		const vgcstats = "https://vgcstats.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
