@@ -846,6 +846,7 @@ exports.commands =
 	creators: "contentcreators",
 	contentcreators: function(arg, by, room)
 	{
+		let text;
 		let creatorData = [
 			["exeggutor-alola", "Wolfe Glick", "https://www.twitch.tv/wolfeyvgc", "WolfeyVGC", "https://www.youtube.com/wolfeyvgc", "WolfeyVGC", "https://twitter.com/WolfeyGlick", "@WolfeyGlick"],
 			["rotom-wash", "Aaron Zheng", "https://www.twitch.tv/cybertronvgc", "CybertronVGC", "https://www.youtube.com/CybertronProductions", "CybertronProductions", "https://twitter.com/CybertronVGC", "@CybertronVGC"],
@@ -864,8 +865,18 @@ exports.commands =
 			["wobbuffet", "Leonard Craft III", false, false, "https://www.youtube.com/dawoblefet", "DaWoblefet", "https://twitter.com/DaWoblefet", "@DaWoblefet"],
 			["honchkrow", "Marcos Perez", "https://www.twitch.tv/moxieboosted", "MoxieBoosted", "https://www.youtube.com/moxieboosted", "MoxieBoosted", "https://twitter.com/MoxieBoosted", "@MoxieBoosted"],
 		];
-		let text = this.generateHTMLContentCreators(creatorData);
-		this.say(room, "/addhtmlbox " + text);
+		if (room.charAt(0) === "," || by.charAt(0) === " ") //if PMs or regular user in room
+		{
+			text = this.generateHTMLContentCreators(creatorData, true);
+			room = config.rooms[0];
+			text = "/pminfobox " + by + ", " + text;
+		}
+		else
+		{
+			text = this.generateHTMLContentCreators(creatorData, false);
+			text = "/addhtmlbox " + text;	
+		}
+		this.say(room, text);
 	},
 	testpermissions: function(arg, by, room)
 	{

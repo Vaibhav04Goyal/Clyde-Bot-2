@@ -78,6 +78,10 @@
         {
             "rank": 0
         },
+        "contentcreators":
+        {
+            "rank": 0
+        },
         "notice":
         {
             "rank": 1
@@ -91,10 +95,6 @@
             "rank": 1
         },
         "epic":
-        {
-            "rank": 1
-        },
-        "contentcreators":
         {
             "rank": 1
         },

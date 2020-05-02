@@ -706,7 +706,7 @@ exports.parse =
 		htmlText += "</details>";
 		return htmlText;
 	},
-	generateHTMLContentCreators: function(creatorData)
+	generateHTMLContentCreators: function(creatorData, isPM)
 	{
 		const twitchlogo = "https://pngimg.com/uploads/twitch/twitch_PNG49.png";
 		const youtubeLogo = "https://image.flaticon.com/icons/svg/1384/1384060.svg";
@@ -717,7 +717,7 @@ exports.parse =
 		htmlText += "<em style = 'font-style: italic;'>Click the arrows to see links to a content creator's YouTube, Twitch, and Twitter!</em></center>";
 		for (j = 0; j < 2; j++)
 		{
-			htmlText += "<div style = 'width: 50%; float: left;'>";
+			if (!isPM) {htmlText += "<div style = 'width: 50%; float: left;'>";}
 			for (let i = j === 0 ? 0 : 1; i < creatorData.length; i = i + 2)
 			{
 				htmlText += "<details><summary><psicon pokemon = \"" + creatorData[i][0] + "\">" + creatorData[i][1] + "</summary>";
@@ -746,9 +746,9 @@ exports.parse =
 				}
 				htmlText += "</ul></details>";
 			}
-			htmlText += "</div>";
+			if (!isPM) {htmlText += "</div>";}
 		}
-		htmlText += "<div><p style = 'font-size: 10px';>Note: This list is not comprehensive.</p></div>";
+		htmlText += "<div><p style = 'font-size: x-small';>Note: This list is not comprehensive.</p></div>";
 		return htmlText;
 	},
 	generateHTMLUsage: async function(usageJSON, currentMonth, lastMonthRank)
