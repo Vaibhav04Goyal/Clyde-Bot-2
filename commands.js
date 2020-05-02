@@ -652,46 +652,6 @@ exports.commands =
 		this.say(room, text);
 	},
 
-	/*npa: function(arg, by, room)
-	{
-		if (room !== "npa" && room.charAt(0) !== ',')
-		{
-			this.say(room, "Discuss NPA matches in <<npa>>. Read more about NPA by typing /rfaq npa.");
-		}
-		else
-		{
-			if (arg === "reset")
-			{
-				Parse.bestOfThree.havePlayerData = false;
-				this.say(room, "NPA match automation should be working again.");
-				return;
-			}
-			let games = arg.split(', ');
-			if (games.length !== 3)
-			{
-				this.say(room, "You must give a link to all three games, separated by commas.");
-				return;
-			}
-			if (Parse.bestOfThree.havePlayerData)
-			{
-				this.say(room, "Only one NPA set may be managed by " + config.nick + " at a time.");
-				return;
-			}
-			//Initialize data
-			Parse.bestOfThree.wins = [];
-			Parse.bestOfThree.games = [];
-			Parse.bestOfThree.playerOneTeam = [];
-			Parse.bestOfThree.playerTwoTeam = [];
-
-			//Join the games
-			for (let i = 0; i < games.length; i++)
-			{
-				Parse.bestOfThree.games.push(games[i]);
-				this.say(room, "/j " + games[i].substring(games[i].lastIndexOf('/') + 1, games[i].length));
-			}
-		}
-	},*/
-
 	uno: function(arg, by, room)
 	{
 		this.say(room, "/uno create 10");

@@ -38,17 +38,6 @@ exports.parse =
 	ranks: {},
 	msgQueue: [],
 
-	/*bestOfThree:
-	{
-		havePlayerData: false,
-		playerOne: "Player 1",
-		playerOneTeam: [],
-		playerTwo: "Player 2",
-		playerTwoTeam: [],
-		games: [],
-		wins: []
-	},*/
-
 	data: function(data)
 	{
 		if (data.substr(0, 1) === 'a')
@@ -308,37 +297,7 @@ exports.parse =
 				error(new Date().toLocaleString() + ": Error message from Showdown: " + spl[2]);
 				break;
 			case "win":
-				//this.bestOfThree.wins.push(spl[2]);
 				this.say(room, "/leave");
-				//this.displayNPAbox();
-				break;
-			case "player":
-				/*if (spl[2] === "p1")
-				{
-					this.bestOfThree.playerOne = spl[3];
-				}
-				else
-				{
-					this.bestOfThree.playerTwo = spl[3];
-				}*/
-				break;
-			case "poke":
-				/*if (!this.bestOfThree.havePlayerData)
-				{
-					if (spl[2] === "p1")
-					{
-						this.bestOfThree.playerOneTeam.push(spl[3].substring(0, spl[3].indexOf(',')));
-					}
-					else
-					{
-						this.bestOfThree.playerTwoTeam.push(spl[3].substring(0, spl[3].indexOf(',')));
-						if (this.bestOfThree.playerTwoTeam.length === 6)
-						{
-							this.bestOfThree.havePlayerData = true;
-							this.displayNPAbox();
-						}
-					}
-				}*/
 				break;
 		}
 	},
@@ -1008,48 +967,5 @@ exports.parse =
 
 		return text;
 	},
-	/*displayNPAbox: function()
-	{
-		let htmlText = "<center> <img src=\"https:\/\/i.imgur.com\/YzEVGvU.png\" width=\"30\" height=\"30\"> &nbsp;&nbsp; <span style=\"font-weight: bold; font-size: 20px; text-decoration: underline\">";
-		htmlText += this.bestOfThree.playerOne + " vs. " + this.bestOfThree.playerTwo;
-		htmlText += "<\/span> &nbsp;&nbsp; <img src=\"https:\/\/i.imgur.com\/YzEVGvU.png\" width=\"30\" height=\"30\"> <\/center> <br> <center>";
-		for (let i = 0; i < 6; i++)
-		{
-			htmlText += "<psicon pokemon = \"" + this.bestOfThree.playerOneTeam[i] + "\"><\/psicon>";
-		}
-		htmlText += "|";
-		for (let i = 0; i < 6; i++)
-		{
-			htmlText += "<psicon pokemon = \"" + this.bestOfThree.playerTwoTeam[i] + "\"><\/psicon>";
-		}
-		htmlText += "<\/center> <center style=\"font-size: 15px\">";
-		for (let i = 0; i < 3; i++)
-		{
-			htmlText += "<a href=\"" + this.bestOfThree.games[i] + "\">Game " + (i+1) + "<\/a>";
-			if (this.bestOfThree.wins[i] !== undefined)
-			{
-				htmlText += " (" + this.bestOfThree.wins[i] + " - <span style=\"font-weight: bold; color:green\"> Win<\/span>)"
-			}
-			htmlText += "<br>";
-		}
-
-		//logic for checking if bo3 is complete
-		if (this.bestOfThree.wins.length == 3 || (this.bestOfThree.wins.length === 2 && this.bestOfThree.wins[0] === this.bestOfThree.wins[1]))
-		{
-			if (this.bestOfThree.wins[0] === this.bestOfThree.wins[1]) //if it was a 2-0
-			{
-				this.say(this.bestOfThree.games[2].substring(this.bestOfThree.games[2].lastIndexOf('/') + 1, this.bestOfThree.games[2].length), "/leave"); //leave game three if it was a 2-0
-				htmlText += "<br>" + this.bestOfThree.wins[0] + " wins!";
-			}
-			else
-			{
-				htmlText += "<br>" + this.bestOfThree.wins[2] + " wins!";
-			}
-			this.bestOfThree.havePlayerData = false;
-
-		}
-		htmlText += "</center>";
-		this.say("npa", "/addhtmlbox " + htmlText);
-	},*/
 	//B emoji: \ud83c\udd71\ufe0f
 };
