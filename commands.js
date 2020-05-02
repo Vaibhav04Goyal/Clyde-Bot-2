@@ -131,7 +131,7 @@ exports.commands =
 			const child_process = require('child_process');
 			try
 			{
-				child_process.execSync('git pull ' + config.git + ' master', {stdio: 'inherit'});
+				child_process.execSync("git pull " + config.git + " master", {stdio: "inherit"});
 				text = "git pull successful.";
 			}
 			catch (e)
@@ -160,39 +160,6 @@ exports.commands =
 	say: function(arg, by, room)
 	{
 		this.say(room, stripCommands(arg));
-	},
-
-	//Ask the bot a question, and it returns a random answer. Came with the bot.
-	"8ball": function(arg, by, room)
-	{
-		let text;
-		const rand = ~~(20 * Math.random()) + 1;
-
-		switch (rand)
-		{
-	 		case 1: text = "Signs point to yes."; break;
-	  		case 2: text = "Yes."; break;
-			case 3: text = "Reply hazy, try again."; break;
-			case 4: text = "Without a doubt."; break;
-			case 5: text = "My sources say no."; break;
-			case 6: text = "As I see it, yes."; break;
-			case 7: text = "You may rely on it."; break;
-			case 8: text = "Concentrate and ask again."; break;
-			case 9: text = "Outlook not so good."; break;
-			case 10: text = "It is decidedly so."; break;
-			case 11: text = "Better not tell you now."; break;
-			case 12: text = "Very doubtful."; break;
-			case 13: text = "Yes - definitely."; break;
-			case 14: text = "It is certain."; break;
-			case 15: text = "Cannot predict now."; break;
-			case 16: text = "Most likely."; break;
-			case 17: text = "Ask again later."; break;
-			case 18: text = "My reply is no."; break;
-			case 19: text = "Outlook good."; break;
-			case 20: text = "Don't count on it."; break;
-		}
-
-		this.say(room, text);
 	},
 
 	//Creates a tournament with custom options. Sample teams are provided for each format when applicable.
@@ -680,13 +647,13 @@ exports.commands =
 		let rand = Math.floor(Math.random() * 10);
 		if (rand === 1) //10% chance to roll
 		{
-			this.say(room, "/addhtmlbox <img src=\"https://images-ext-1.discordapp.net/external/jZ8e-Lcp6p2-GZb8DeeyShSvxT2ghTDz7nLMX8c1SKs/https/cdn.discordapp.com/attachments/320922154092986378/410460728999411712/getmished.png?width=260&height=300\" height=300 width=260>");
+			this.say(room, "/addhtmlbox <img src='https://images-ext-1.discordapp.net/external/jZ8e-Lcp6p2-GZb8DeeyShSvxT2ghTDz7nLMX8c1SKs/https/cdn.discordapp.com/attachments/320922154092986378/410460728999411712/getmished.png?width=260&height=300' height=300 width=260>");
 		}
 	},
 
 	blog: function(arg, by, room)
 	{
-		this.say(room, "/addhtmlbox <a href=\"https://spo.ink/ansena\">ansena's blog</a>");
+		this.say(room, "/addhtmlbox <a href='https://spo.ink/ansena'>ansena's blog</a>");
 	},
 
 	chef: function(arg, by, room)
@@ -726,7 +693,7 @@ exports.commands =
 	},
 	thinking: function(arg, by, room)
 	{
-		let text = "<img src = \"https://i.imgur.com/vXbla1s.png\" width=24 height=27>";
+		let text = "<img src = 'https://i.imgur.com/vXbla1s.png' width=24 height=27>";
 		this.say(room, "/addhtmlbox " + text);
 	},
 	delet: function(arg, by, room)
@@ -774,10 +741,10 @@ exports.commands =
 			width = 96;
 		}
 
-		let text = '<div style = "position: relative"><img src="https://steamuserimages-a.akamaihd.net/ugc/933813375174289297/19F16DBEDED8FF15F8D969EE714BD1319149EB9D/" height='
-		+ (height * 5) + ' width=' + (width * 5) + '>' 
-		+ '<img src = "' + pokemonSprite + '" height=' + (height * 5) + ' width=' + (width * 5)
-		+ ' style = "position: absolute; top: 0%; left: 0%"></div>';
+		let text = "<div style = 'position: relative'><img src='https://steamuserimages-a.akamaihd.net/ugc/933813375174289297/19F16DBEDED8FF15F8D969EE714BD1319149EB9D/' height="
+		+ (height * 5) + " width=" + (width * 5) + ">" 
+		+ "<img src = '" + pokemonSprite + "' height=" + (height * 5) + " width" + (width * 5)
+		+ " style = 'position: absolute; top: 0%; left: 0%'></div>";
 
 		this.say(room, "/addhtmlbox " + text);
 	},
