@@ -804,8 +804,7 @@ exports.commands =
 					validFormats.push(keys[key]);
 				}
 			}
-			text += validFormats.join(", ");
-			text = "all, " + text;
+			text += "all, " + validFormats.join(", ");
 		}
 		this.say(room, text);
 	},
