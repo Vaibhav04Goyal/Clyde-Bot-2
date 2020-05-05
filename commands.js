@@ -647,7 +647,7 @@ exports.commands =
 		let rand = Math.floor(Math.random() * 10);
 		if (rand === 1) //10% chance to roll
 		{
-			this.say(room, "/addhtmlbox <img src='https://images-ext-1.discordapp.net/external/jZ8e-Lcp6p2-GZb8DeeyShSvxT2ghTDz7nLMX8c1SKs/https/cdn.discordapp.com/attachments/320922154092986378/410460728999411712/getmished.png?width=260&height=300' height=300 width=260>");
+			this.say(room, "/addhtmlbox <img src=\"https://images-ext-1.discordapp.net/external/jZ8e-Lcp6p2-GZb8DeeyShSvxT2ghTDz7nLMX8c1SKs/https/cdn.discordapp.com/attachments/320922154092986378/410460728999411712/getmished.png?width=260&height=300\" height=300 width=260>");
 		}
 	},
 
@@ -693,7 +693,7 @@ exports.commands =
 	},
 	thinking: function(arg, by, room)
 	{
-		let text = "<img src = 'https://i.imgur.com/vXbla1s.png' width=24 height=27>";
+		let text = "<img src = \"https://i.imgur.com/vXbla1s.png\" width=24 height=27>";
 		this.say(room, "/addhtmlbox " + text);
 	},
 	delet: function(arg, by, room)
@@ -741,9 +741,9 @@ exports.commands =
 			width = 96;
 		}
 
-		let text = "<div style = 'position: relative'><img src='https://steamuserimages-a.akamaihd.net/ugc/933813375174289297/19F16DBEDED8FF15F8D969EE714BD1319149EB9D/' height="
+		let text = "<div style = 'position: relative'><img src=\"https://steamuserimages-a.akamaihd.net/ugc/933813375174289297/19F16DBEDED8FF15F8D969EE714BD1319149EB9D/\" height="
 		+ (height * 5) + " width=" + (width * 5) + ">" 
-		+ "<img src = '" + pokemonSprite + "' height=" + (height * 5) + " width" + (width * 5)
+		+ "<img src = \"" + pokemonSprite + "\" height=" + (height * 5) + " width" + (width * 5)
 		+ " style = 'position: absolute; top: 0%; left: 0%'></div>";
 
 		this.say(room, "/addhtmlbox " + text);
