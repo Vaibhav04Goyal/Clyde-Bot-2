@@ -608,7 +608,7 @@ exports.commands =
 
 			if (by.charAt(0) === ' ' || room.charAt(0) === ',') //regular user in room or PMs
 			{
-				room = config.rooms[0];
+				room = toID(config.rooms[0]);
 				text = "/pminfobox " + by + ", " + text; 
 			}
 			else
@@ -755,7 +755,7 @@ exports.commands =
 		let text = "";
 		if (room.charAt(0) === "," || by.charAt(0) === " ") //Regular user used command or via PM
 		{
-			room = config.rooms[0];
+			room = toID(config.rooms[0]);
 			by = toID(by);
 
 			if (tourJSON.hasOwnProperty(arg))
@@ -834,7 +834,7 @@ exports.commands =
 		if (room.charAt(0) === "," || by.charAt(0) === " ") //if PMs or regular user in room
 		{
 			text = this.generateHTMLContentCreators(creatorData, true);
-			room = config.rooms[0];
+			room = toID(config.rooms[0]);
 			text = "/pminfobox " + by + ", " + text;
 		}
 		else
