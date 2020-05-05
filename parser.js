@@ -875,6 +875,108 @@ exports.parse =
 
 		return htmlText;
 	},
+	//TODO refactor this into the normal usage command with an extra argument
+	generateHTMLUsagePM: async function(usageJSON, currentMonth, lastMonthRank)
+	{
+		let htmlText = "";
+		let pokemon = usageJSON.pokemon;
+		let rank = usageJSON.rank;
+		let usagePercent = usageJSON.usage;
+		let abilities = usageJSON.abilities;
+		let items = usageJSON.items;
+		let moves = usageJSON.moves;
+		let spreads = usageJSON.spreads;
+		let color;
+		let rankDifference;
+
+		if (Object.keys(abilities).length === 0) //if a Pokemon doesn't have ability data, it's not really being used
+		{
+			return "No usage data found for " + pokemon + ".";
+		}
+
+		//Rank since last month
+		if (rank - lastMonthRank < 0)
+		{
+			color = "green";
+			rankDifference = "+" + (lastMonthRank - rank);
+		}
+		else if (rank - lastMonthRank > 0)
+		{
+			color = "red";
+			rankDifference = "-" + (rank - lastMonthRank);
+		}
+		else
+		{
+			color = "darkblue";
+			rankDifference = "±0";
+		}
+
+		//Months
+		const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		let usageMonth =  months[currentMonth - 1];
+
+		//Name and sprite
+		htmlText += "<center>";
+		htmlText += "<psicon pokemon = \"" + pokemon + "\"></psicon>";
+		htmlText += "<h2 style = 'display: inline-block;'>" + pokemon + "</h2><br>";
+
+		//Ranking information
+		htmlText += "<strong>Showdown Rank (" + usageMonth + ") - #" + rank + "</strong><br>";
+		htmlText += "<span style = 'color: " + color + ";'><strong>" + rankDifference + "</strong></span> since " + (months !== 1 ? months[currentMonth - 2] : "December") + "</span>";
+		htmlText += "<br><strong>" + usagePercent  + " usage</strong>";
+		htmlText += "</center><br>";
+
+		//Abilities
+		htmlText += "<details><summary style = 'font-size: 14px'><strong>Abilities</strong></summary><ul style = 'margin: 0; padding-left: 18px'>"
+		let abilityNames = Object.keys(abilities);
+		for (i = 0; i < abilityNames.length; i++)
+		{
+			htmlText += "<li>" + abilityNames[i] + " - "  + abilities[abilityNames[i]] + "</li>";
+		}
+		htmlText += "</ul></details>";
+
+		//Moves
+		htmlText += "<details><summary style = 'font-size: 14px'><strong>Moves</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
+		let moveNames = Object.keys(moves);
+		for (i = 0; i < moveNames.length; i++)
+		{
+			htmlText += "<li>" + moveNames[i] + " - "  + moves[moveNames[i]] + "</li>";
+		}
+		htmlText += "</ul></details>";
+
+		//Items
+		htmlText += "<details><summary style = 'font-size: 14px'><strong>Items</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
+		let itemNames = Object.keys(items);
+		for (i = 0; i < itemNames.length; i++)
+		{
+			htmlText += "<li>" + itemNames[i] + " - "  + items[itemNames[i]] + "</li>";
+		}
+		htmlText += "</ul></details>";
+
+		//EV spreads
+		htmlText += "<details><summary style = 'font-size: 14px'><strong>EV Spreads</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
+		let natures = Object.keys(spreads);
+		for (i = 0; i < natures.length; i++)
+		{	
+			if (natures[i] !== "Other")
+			{
+				let particularNature = spreads[natures[i]];
+				let evs = Object.keys(particularNature);
+				for (j = 0; j < evs.length; j++)
+				{
+					htmlText += "<li>" + natures[i] + ": "  + evs[j] + " - " + particularNature[evs[j]] + "</li>";
+				}
+			}
+			else //Other is formatted differently.
+			{
+				htmlText += "<li>" + natures[i] + ": " + spreads[natures[i]] + "</li>";
+			}
+				
+		}
+		htmlText += "</ul></details>";
+
+		return htmlText;
+	},
 	generateTextUsage: async function(usageJSON, currentMonth, lastMonthRank)
 	{
 		let text = "";

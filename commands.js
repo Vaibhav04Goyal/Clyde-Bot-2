@@ -564,21 +564,24 @@ exports.commands =
 
 		if (arg) //Pokemon is specified
 		{
-			if (by.charAt(0) === ' ' && room.charAt(0) !== ',') //no permissions for htmlbox
-			{
-				send("|/pm " + toID(by) + ", Only room voices (+) and higher are allowed to use .usage in the " + room + " room. However, you can use .usage here in " + config.nick + "'s PMs to have usage statistics PMed to you (**warning**: it will be a lot of PMs).");
-			}
-			else if (room.charAt(0) === ',') //PMs
+			if (by.charAt(0) === ' ' || room.charAt(0) === ',') //regular user in room or PMs
 			{
 				arg = toID(arg);
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
 				if (wasSuccessful)
 				{
-					//Get last month's ranking, but don't override with old usage stats
-					let temp = JSONresponse;
-					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
-					JSONresponse = temp;
-					text = await this.generateTextUsage(JSONresponse, month, lastMonthRank);
+					arg = toID(arg);
+					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
+					if (wasSuccessful)
+					{
+						room = toID(config.rooms[0]);
+
+						//Get last month's ranking, but don't override with old usage stats
+						let temp = JSONresponse;
+						await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
+						JSONresponse = temp;
+						text = "/pminfobox " + by + ", " + await this.generateHTMLUsagePM(JSONresponse, month, lastMonthRank);
+					}
 				}
 			}
 			else //has permissions for htmlbox
