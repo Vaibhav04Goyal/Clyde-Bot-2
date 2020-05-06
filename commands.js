@@ -776,6 +776,21 @@ exports.commands =
 			{
 				text = "/pm " + toID(by) + ", VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
 			}
+			else
+			{
+				text = "Invalid format specified. Valid formats are: ";
+				let validFormats = [];
+				let keys = Object.keys(tourJSON);
+				for (key in keys)
+				{
+					if (tourJSON[keys[key]].formatname)
+					{
+						validFormats.push(keys[key]);
+					}
+				}
+				text += "all, " + validFormats.join(", ");
+				text = "/pm " + toID(by) + ", " + text;
+			}
 		}
 		else if (tourJSON.hasOwnProperty(arg))
 		{
