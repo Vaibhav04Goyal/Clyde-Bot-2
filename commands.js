@@ -580,7 +580,8 @@ exports.commands =
 						let temp = JSONresponse;
 						await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
 						JSONresponse = temp;
-						text = "/pminfobox " + by + ", " + await this.generateHTMLUsagePM(JSONresponse, month, lastMonthRank);
+						this.mostRecentUserPM = toID(by);
+						text = "/pminfobox " + this.mostRecentUserPM + ", " + await this.generateHTMLUsagePM(JSONresponse, month, lastMonthRank);
 					}
 				}
 			}
@@ -612,7 +613,8 @@ exports.commands =
 			if (by.charAt(0) === ' ' || room.charAt(0) === ',') //regular user in room or PMs
 			{
 				room = toID(config.rooms[0]);
-				text = "/pminfobox " + by + ", " + text; 
+				this.mostRecentUserPM = toID(by);
+				text = "/pminfobox " + this.mostRecentUserPM + ", " + text; 
 			}
 			else
 			{
@@ -759,19 +761,20 @@ exports.commands =
 		if (room.charAt(0) === "," || by.charAt(0) === " ") //Regular user used command or via PM
 		{
 			room = toID(config.rooms[0]);
-			by = toID(by);
 
 			if (tourJSON.hasOwnProperty(arg))
 			{
-				text = "/pminfobox " + by + ", " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true, true);
+				this.mostRecentUserPM = toID(by);
+				text = "/pminfobox " + this.mostRecentUserPM + ", " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true, true);
 			}
 			else if (arg === "")
 			{
-				text = "/pminfobox " + by + ", " + this.generateHTMLSample(tourJSON[defaultFormat].formatname, tourJSON[defaultFormat].formatDescription, tourJSON[defaultFormat].sampleTeams, true, true);
+				this.mostRecentUserPM = toID(by);
+				text = "/pminfobox " + this.mostRecentUserPM + ", " + this.generateHTMLSample(tourJSON[defaultFormat].formatname, tourJSON[defaultFormat].formatDescription, tourJSON[defaultFormat].sampleTeams, true, true);
 			}
 			else if (arg === "all")
 			{
-				text = "/pm " + by + ", VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
+				text = "/pm " + toID(by) + ", VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
 			}
 		}
 		else if (tourJSON.hasOwnProperty(arg))
@@ -838,7 +841,8 @@ exports.commands =
 		{
 			text = this.generateHTMLContentCreators(creatorData, true);
 			room = toID(config.rooms[0]);
-			text = "/pminfobox " + by + ", " + text;
+			this.mostRecentUserPM = toID(by);
+			text = "/pminfobox " + this.mostRecentUserPM + ", " + text;
 		}
 		else
 		{

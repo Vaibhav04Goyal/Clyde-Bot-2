@@ -34,6 +34,7 @@ exports.parse =
 {
 	actionUrl: url.parse("https://play.pokemonshowdown.com/~~" + config.serverid + "/action.php"),
 	room: "lobby",
+	mostRecentUserPM: "DaWoblefet",
 	chatData: {},
 	ranks: {},
 	msgQueue: [],
@@ -249,7 +250,7 @@ exports.parse =
 					console.log("PM from " + by + " at " + new Date().toLocaleString() + ": " + spl[4]); //Logs PMs to BoTTT III in the console.
 					if (toID(spl[4]) === "mish")
 					{
-						send("|/pm " + toID(by) + ", mish");
+						send("|/pm " + toID(by) + ", mish mish");
 					}
 				}
 				this.chatMessage(spl[4], by, ',' + by);
@@ -293,6 +294,10 @@ exports.parse =
 				if (spl[2].includes("valid tournament"))
 				{
 					this.say(room, spl[2]);
+				}
+				if (spl[2].includes("who are not in this room"))
+				{
+					send("|/pm " + this.mostRecentUserPM + ", You must be in the <<vgc>> room for this command to work in PMs (sorry, blame Showdown).");
 				}
 				error(new Date().toLocaleString() + ": Error message from Showdown: " + spl[2]);
 				break;
