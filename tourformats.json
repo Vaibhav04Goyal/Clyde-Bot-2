@@ -1,4 +1,14 @@
 {
+    "gen8gscup":
+    {
+        "tourformat": "gen8vgc2020",
+        "tourname": "[Gen 8] VGC GS Cup",
+        "tourrules": "!Standard GBU, Minimal GBU",
+        "formatname": "GS Cup",
+        "formatDescription": "Like VGC 2019 before it, GS Cup allows up to two non-mythical legendary Pokemon on their teams. Currently in Sword and Shield, this includes Mewtwo, Reshiram, Zekrom, Kyurem, Cosmog, Cosmoem, Solgaleo, Lunala, Necrozma, Zacian, Zamazenta, and Eternatus. Create teams for GS Cup by using the [Gen 8] VGC 2020 format.",
+        "sampleTeams": [],
+        "tournote": ""
+    },
     "gen8vgc2020":
     {
         "tourformat": "gen8vgc2020",

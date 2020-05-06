@@ -263,6 +263,11 @@ exports.commands =
 				case "vgc2011":
 					tourObject = tourJSON["gen5vgc2011"];
 					break;
+				case "gs":
+				case "gscup":
+				case "vgc2022":
+					tourObject = tourJSON["gen8gscup"]
+					break;
 				case "corsola":
 				case "corsolacup":
 				case "corsola cup":
