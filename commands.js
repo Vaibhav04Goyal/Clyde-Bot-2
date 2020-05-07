@@ -564,7 +564,7 @@ exports.commands =
 
 		if (arg) //Pokemon is specified
 		{
-			if (by.charAt(0) === ' ' || room.charAt(0) === ',') //regular user in room or PMs
+			if ((by.charAt(0) === ' ' || room.charAt(0) === ',') && toID(by) !== "fingerprint") //regular user in room or PMs
 			{
 				arg = toID(arg);
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
