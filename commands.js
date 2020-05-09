@@ -848,6 +848,7 @@ exports.commands =
 			["salamence-mega", "Paul Ruiz", "https://www.twitch.tv/ralfdude90", "ralfdude90", "https://www.youtube.com/channel/UC7GjRTGrjXJ9lMWhkFCstxw", "ralfdude90", "https://twitter.com/ralfdude90", "@ralfdude90"],
 			["conkeldurr", "Lee Provost", "https://www.twitch.tv/osirusstudios", "OsirusStudios", "https://www.youtube.com/channel/UCi3LrHS-zJDTEO1Acml0Hxg", "Osirus Studios", "https://twitter.com/osirusvgc", "@osirusvgc"],
 			["togepi", "Ashton Cox", "https://www.twitch.tv/ashtoncoxgaz", "AshtonCoxGAZ", false, false, "https://twitter.com/ashtoncoxgaz", "@AshtonCoxGAZ"],
+			["yveltal", "Joe Ugarte", "https://twitch.tv/joeux9", "JoeUX9", false, false, "https://twitter.com/joeux9", "@JoeUX9"],
 			["articuno", "Aldrich Yan Sutandra", "https://www.twitch.tv/aldrichyan", "aldrichyan", "https://www.youtube.com/channel/UCTN3uwcBhyid2iEOCD68cqg", "Aldrich Yan Sutandra", "https://twitter.com/AldrichYan", "@AldrichYan"],
 			["sylveon", "Rosemary Kelley", "https://www.twitch.tv/nekkragaming", "NekkraGaming", "https://www.youtube.com/channel/UCIlFSUs8MzCuYosEMq0WFeg", "Nekkra", "https://twitter.com/NekkraGaming", "@NekkraGaming"],
 			["wobbuffet", "Leonard Craft III", false, false, "https://www.youtube.com/dawoblefet", "DaWoblefet", "https://twitter.com/DaWoblefet", "@DaWoblefet"],
