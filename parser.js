@@ -548,8 +548,42 @@ exports.parse =
 			}
 
 			//Autocorrect regexes and corresponding autocorrections
-			let autocorrectRegexes = [/(n|N)in(tales|etails|tails)/,/(m|M)eowstick/, /(c|C)owmoo/, /tylee/, /(w|W)olfie/, /(A|a)m(o|oo)ngus([^s]|$)/, /(s|S)hedninja/, /(d|d)a(w|W)obblefet/, /(s|S)norelax/, /(d|D)racofish/, /(b|B)abytron/, /(g|G)roundon/, /(vcg|VCG|Vcg)/, /(t|T)oxitricity/, /(t|T)(c|C)(p|P)(i|I)/];
-			let autocorrectMessages = ["Ninetales", "Meowstic", "Kommo-o", "tlyee", "Wolfey", "Amoonguss", "Shedinja", "DaWoblefet", "Snorlax", "Dracovish", "Babbytron", "Groudon", "VGC", "Toxtricity", "TPCi"];
+			let autocorrectRegexes = [
+				/(A|a)m(o|oo)ngus([^s]|$)/,
+				/(b|B)abytron/,
+				/(c|C)owmoo/,
+				/(d|d)a(w|W)obblefet/,
+				/(d|D)racofish/,
+				/(g|G)roundon/,
+				/(m|M)eowstick/,
+				/(n|N)in(tales|etails|tails|tailes)/,
+				/(p|P)olitoad/,
+				/(s|S)hedninja/,
+				/(s|S)norelax/,
+				/(t|T)(c|C)(p|P)(i|I)/,
+				/(t|T)oxitricity/,
+				/tylee/,
+				/(vcg|VCG|Vcg)/,
+				/(w|W)olfie/
+			];
+			let autocorrectMessages = [
+				"Amoonguss",
+				"Babbytron",
+				"Kommo-o",
+				"DaWoblefet",
+				"Dracovish",
+				"Groudon",
+				"Meowstic",
+				"Ninetales",
+				"Politoed",
+				"Shedinja",
+				"Snorlax",
+				"TPCi",
+				"Toxtricity",
+				"tlyee",
+				"VGC",
+				"Wolfey",
+			];
 
 			for (let i = 0; i < autocorrectRegexes.length; i++)
 			{
