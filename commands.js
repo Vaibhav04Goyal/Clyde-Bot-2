@@ -211,12 +211,14 @@ exports.commands =
 			{
 				case "vgc20":
 				case "vgc2020":
+				case "20":
 					tourObject = tourJSON["gen8vgc2020"];
 					break;
 				case "ultra":
 				case "ultra series":
 				case "vgc19":
 				case "vgc2019":
+				case "19":
 					tourObject = tourJSON["gen7vgc2019ultraseries"];
 					break;
 				case "moon":
@@ -229,38 +231,47 @@ exports.commands =
 					break;
 				case "vgc18":
 				case "vgc2018":
+				case "18":
 					tourObject = tourJSON["gen7vgc2018"];
 					break;
 				case "vgc17":
 				case "vgc2017":
+				case "17":
 					tourObject = tourJSON["gen7vgc2017"];
 					break;
 				case "vgc16":
 				case "vgc2016":
+				case "16":
 					tourObject = tourJSON["gen6vgc2016"];
 					break;
 				case "vgc15":
 				case "vgc2015":
+				case "15":
 					tourObject = tourJSON["gen6vgc2015"];
 					break;
 				case "vgc14.5":
 				case "vgc2014.5":
+				case "14.5":
 					tourObject = tourJSON["gen6vgc2014.5"];
 					break;
 				case "vgc14":
 				case "vgc2014":
+				case "14":
 					tourObject = tourJSON["gen6vgc2014"];
 					break;
 				case "vgc13":
 				case "vgc2013":
+				case "13":
 					tourObject = tourJSON["gen5vgc2013"];
 					break;
 				case "vgc12":
 				case "vgc2012":
+				case "12":
 					tourObject = tourJSON["gen5vgc2012"];
 					break;
 				case "vgc11":
 				case "vgc2011":
+				case "11":
 					tourObject = tourJSON["gen5vgc2011"];
 					break;
 				case "corsola":
