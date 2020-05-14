@@ -759,7 +759,7 @@ exports.commands =
 
 		let text = "<div style = 'position: relative'><img src=\"https://steamuserimages-a.akamaihd.net/ugc/933813375174289297/19F16DBEDED8FF15F8D969EE714BD1319149EB9D/\" height="
 		+ (height * 5) + " width=" + (width * 5) + ">" 
-		+ "<img src = \"" + pokemonSprite + "\" height=" + (height * 5) + " width" + (width * 5)
+		+ "<img src = \"" + pokemonSprite + "\" height=" + (height * 5) + " width=" + (width * 5)
 		+ " style = 'position: absolute; top: 0%; left: 0%'></div>";
 
 		this.say(room, "/addhtmlbox " + text);
