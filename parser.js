@@ -961,7 +961,7 @@ exports.parse =
 
 		//Ranking information
 		htmlText += "<strong>Showdown Rank (" + usageMonth + ") - #" + rank + "</strong><br>";
-		htmlText += "<span style = 'color: " + color + ";'><strong>" + rankDifference + "</strong></span> since " + (months !== 1 ? months[currentMonth - 2] : "December") + "</span>";
+		htmlText += "<span style = 'color: " + color + ";'><strong>" + rankDifference + "</strong></span> since " + (months !== 1 ? months[currentMonth - 2] : "December");
 		htmlText += "<br><strong>" + usagePercent  + " usage</strong>";
 		htmlText += "</center><br>";
 
