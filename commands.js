@@ -378,7 +378,7 @@ exports.commands =
 		//Gives myself and the bot insult immunity. Prevents sneaky UTF-8 similar looking characters intended to avoid the insult.
 		if (toID(arglist[0]).includes("dawob") || toID(arglist[0]).includes("trey") || toID(arglist[0]).includes("leonard") || toID(arglist[0]).includes(toID(config.nick)) || /[^\u0000-\u007F]/g.test(arglist[0]))
 		{
-			if (!(toID(by) === "conicsans" && new Date.getDate() < 14))
+			if (!(toID(by) === "conicsans" && new Date().getDate() < 14))
 			{
 				arglist[0] = by.substring(1, by.length);
 			}	
