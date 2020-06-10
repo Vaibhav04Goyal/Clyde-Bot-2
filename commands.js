@@ -642,7 +642,7 @@ exports.commands =
 	{
 		this.say(room, "/uno create 10");
 		this.say(room, "/uno autostart 30");
-		let timer = by === "dingram" ? 5 : 10;
+		let timer = toID(by) === "dingram" ? 5 : 10;
 		this.say(room, "/uno timer " + timer);
 	},
 
