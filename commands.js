@@ -538,7 +538,7 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 5;
+		let month = 6;
 		let year = 2020;
 		const vgcstats = "https://vgcstats.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
