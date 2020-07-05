@@ -669,25 +669,17 @@ exports.commands =
 			this.say(room, "/addhtmlbox <img src=\"https://images-ext-1.discordapp.net/external/jZ8e-Lcp6p2-GZb8DeeyShSvxT2ghTDz7nLMX8c1SKs/https/cdn.discordapp.com/attachments/320922154092986378/410460728999411712/getmished.png?width=260&height=300\" height=300 width=260>");
 		}
 	},
-
 	blog: function(arg, by, room)
 	{
 		this.say(room, "/addhtmlbox <a href='https://spo.ink/ansena'>ansena's blog</a>");
 	},
-
 	chef: function(arg, by, room)
 	{
 		this.say(room, "!dt sheer cold");
 	},
-
 	platypus: function(arg, by, room)
 	{
 		this.say(room, "/addhtmlbox <center><img src=\"https://pngimage.net/wp-content/uploads/2018/06/platypus-png.png\" class=\"fa fa-spin\" width=\"100\" height=\"100\"><a style = \"font-size: 20px; \"href = \"https://www.youtube.com/watch?v=VaNbDYGmGwc\">Platypus on the Prowl</a><img src=\"https://pngimage.net/wp-content/uploads/2018/06/platypus-png.png\" class=\"fa fa-spin\" width=\"100\" height=\"100\"><br><br><img src=\"https://cdn.discordapp.com/attachments/394481120806305794/506966120482209792/platyprowl.gif\" height=175 width=170></center>");
-	},
-
-	mynameis: function(arg, by, room)
-	{
-		this.say(room, "CasedVictory");
 	},
 	epic: function(arg, by, room)
 	{
@@ -696,10 +688,6 @@ exports.commands =
 	nom: function(arg, by, room)
 	{
 		this.say(room, "Player not recognized. Perhaps you meant **seaco**.");
-	},
-	ezrael: function(arg, by, room)
-	{
-		this.say(room, ":teamjon:");
 	},
 	conics: function(arg, by, room)
 	{
