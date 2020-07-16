@@ -378,10 +378,10 @@ exports.commands =
 		//Gives myself and the bot insult immunity. Prevents sneaky UTF-8 similar looking characters intended to avoid the insult.
 		if (toID(arglist[0]).includes("dawob") || toID(arglist[0]).includes("trey") || toID(arglist[0]).includes("leonard") || toID(arglist[0]).includes(toID(config.nick)) || /[^\u0000-\u007F]/g.test(arglist[0]))
 		{
-			if (!(toID(by) === "baconvgc" && new Date().getDate() < 13))
-			{
+			//if (!(toID(by) === "baconvgc" && new Date().getDate() < 13))
+			//{
 				arglist[0] = by.substring(1, by.length);
-			}	
+			//}	
 		}
 
 		let insultList = [
@@ -400,6 +400,7 @@ exports.commands =
 			arglist[0] + " uses Facade Snorlax on teams with Tapu Fini.",
 			arglist[0] + " would struggle to pour water out of a boot with the directions on the bottom.",
 			arglist[0] + " has Van Gogh's ear for music.",
+			"__[[]]_NO SHOW__ outplaced " + arglist[0] + " in Player's Cup.",
 		];
 
 		let douInsultList = [
