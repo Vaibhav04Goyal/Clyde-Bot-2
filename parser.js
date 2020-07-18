@@ -547,7 +547,7 @@ exports.parse =
 				}
 			}
 
-			//Autocorrect regexes and corresponding autocorrections
+			/*//Autocorrect regexes and corresponding autocorrections
 			let autocorrectRegexes = [
 				/(A|a)m(o|oo)ngus([^s]|$)/,
 				/(b|B)abytron/,
@@ -592,7 +592,7 @@ exports.parse =
 					this.say(room, "*" + autocorrectMessages[i]);
 					roomData.triggeredAutocorrect++;
 				}
-			}
+			}*/
 
 			/* Room policy changed to not autocorrect on Pdon:
 			/(p|P)(d|D)(o|O)(n|N)([^(z|Z)]|$)/ (for Pdon -> Primal Groudon; needed to account for Pd0nZ's name)
