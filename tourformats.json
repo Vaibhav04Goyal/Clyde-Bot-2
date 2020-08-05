@@ -8,13 +8,13 @@
         "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar symbol in-game except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.",
         "sampleTeams":
         [
-            ["laprasgmax", "tyranitar", "arcanine", "mimikyu", "dusclops", "conkeldurr", "https://pokepast.es/7efb979aa3dccbf4", "fevzi's 1st Place Champions Cup Team"],
-            ["rotomwash", "togekiss", "incineroar", "excadrill", "dragapult", "venusaur", "https://pokepast.es/fab1e1231d632d1a", "EmbC's 2nd Place Champions Cup Team"],
-            ["hatterenegmax", "dusclops", "rhyperior", "torkoal", "butterfreegmax", "indeedeef", "https://pokepast.es/946fe38d3374194d", "TobySxE's 1st Place Regionals Team"],
-            ["gothitelle", "durant", "milotic", "tyranitar", "sylveon", "torracat", "https://pokepast.es/6576b590306a8f4c", "MattieMoo's Top 4 Regionals Team"],
-            ["dragapult", "mimikyu", "dusclops", "ferrothorn", "milotic", "arcanine", "https://pokepast.es/2e5de4a43439caf0", "Hirofumi's 1st Place February IC Team"],
-            ["dragapult", "coalossalgmax", "togekiss", "conkeldurr", "dusclops", "gastrodoneast", "https://pokepast.es/9e842dd75e50021e", "Wolfey's 1st Place March IC Team"],
-            ["charizardgmax", "venusaur", "torkoal", "conkeldurr", "mimikyu", "rotomwash", "https://pokepast.es/297f99eee9c7dadf", "Namuko Pro's Sun Team"],
+            ["dragapult", "togekiss", "tyranitar", "amoonguss", "excadrill", "incineroar", "https://pokepast.es/33ac4968f4c36ae2", "Desu's Top 4 EU Player's Cup Team"],
+            ["rillaboomgmax", "coalossalgmax", "urshifugmax", "incineroar", "togekiss", "dragapult", "https://pokepast.es/def797129cf5b13a", "Santi's Top 4 NA Player's Cup Team"],
+            ["venusaurgmax", "charizardgmax", "torkoal", "dusclops", "togekiss", "incineroar", "https://pokepast.es/dcaceeba4a681406", "Hamstermania's Top 4 EU Player's Cup Team"],
+            ["laprasgmax", "rillaboomgmax", "comfey", "incineroar", "goodra", "magnezone", "https://pokepast.es/9c60444056468b36", "mgmfa's Top 6 NA Player's Cup Team"],
+            ["cinderacegmax", "rillaboomgmax", "milotic", "tyranitar", "incineroar", "clefairy", "https://pokepast.es/1481948857a3d5b7", "Ezrael's Top 6 NA Player's Cup Team"],
+            ["rillaboomgmax", "urshifugmax", "porygonz", "duraludon", "togekiss", "talonflame", "https://pokepast.es/7ec261e1fc9bd3a8", "Namuko Pro's Top 16 NA Player's Cup Team"],
+            ["hatterenegmax", "dusclops", "rhyperior", "torkoal", "venusaurgmax", "indeedeef", "https://pokepast.es/2abb12ecc02f3618", "TobySxE's 1st Place Regionals Team"],
             ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
         ],
         "tournote": ""
