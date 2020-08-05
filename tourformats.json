@@ -5,7 +5,7 @@
         "tourname": "[Gen 8] VGC 2020",
         "tourrules": "",
         "formatname": "VGC 2020",
-        "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar symbol in-game except Zacian, Zamazenta, and Eternatus. In addition, only certain G-Max Pokemon are allowed.",
+        "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game except Zacian, Zamazenta, and Eternatus.",
         "sampleTeams":
         [
             ["dragapult", "togekiss", "tyranitar", "amoonguss", "excadrill", "incineroar", "https://pokepast.es/33ac4968f4c36ae2", "Desu's Top 4 EU Player's Cup Team"],
