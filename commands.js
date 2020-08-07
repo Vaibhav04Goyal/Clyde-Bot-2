@@ -214,6 +214,10 @@ exports.commands =
 				case "20":
 					tourObject = tourJSON["gen8vgc2020"];
 					break;
+				case "nodynamax":
+				case "nomax":
+					tourObject = tourJSON["gen8vgc2020nodynamax"]
+					break;
 				case "ultra":
 				case "ultra series":
 				case "vgc19":

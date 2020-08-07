@@ -273,5 +273,15 @@
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "VGC Inverse Battles! Type matchups are inverted. Now Fire-type attacks are super-effective against Water-type Pokemon!"
+    },
+    "gen8vgc2020nodynamax":
+    {
+        "tourformat": "gen8vgc2020",
+        "tourname": "[Gen 8] VGC 2020 (No Dynamax)",
+        "tourrules": "Dynamax Clause",
+        "formatname": "VGC 2020",
+        "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game except Zacian, Zamazenta, and Eternatus.",
+        "sampleTeams": [],
+        "tournote": "VGC 2020, but with no Dynamax or Gigantamax allowed!"
     }
 }
