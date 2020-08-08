@@ -610,9 +610,8 @@ exports.commands =
 			}
 			else //has permissions for htmlbox
 			{
-				oldArg = arg;
 				arg = toID(arg);
-				this.say(room, "/adduhtml " + arg + ", Loading usage stats data for " + oldArg + "...");
+				this.say(room, "/adduhtml " + arg + ", Loading usage stats data for " + arg + "...");
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
 				if (wasSuccessful)
 				{
