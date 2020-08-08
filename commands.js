@@ -33,7 +33,7 @@ exports.commands =
 		{
 			text = "There is no guide for this bot. PM the owner, " + config.owners[0] + " , with any questions.";
 		}
-		if (isRegUserOrPM(by, room))
+		if (this.isRegUserOrPM(by, room))
 		{
 			text = "/pm " + by + ", " + text;
 		}
@@ -51,7 +51,7 @@ exports.commands =
 		{
 			text = "There is no public source code for " + config.nick + ". However, the repository for the bot it is based on, BoTTT III, can be found here: https://github.com/DaWoblefet/BoTTT-III.";
 		}
-		if (isRegUserOrPM(by, room)) //Regular user used command in chatroom
+		if (this.isRegUserOrPM(by, room)) //Regular user used command in chatroom
 		{
 			text = "/pm " + by + ", " + text;
 		}
@@ -573,7 +573,7 @@ exports.commands =
 					{
 						text = "No usage data found for " + arg + ".";
 					}
-					if (isRegUserOrPM(by, room))
+					if (this.isRegUserOrPM(by, room))
 					{
 						text = "/pm " + by + ", " + text;
 					}
@@ -587,7 +587,7 @@ exports.commands =
 
 		if (arg) //Pokemon is specified
 		{
-			if (isRegUserOrPM(by, room))
+			if (this.isRegUserOrPM(by, room))
 			{
 				arg = toID(arg);
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
@@ -633,7 +633,7 @@ exports.commands =
 			text += "<li><a href = '" + babiri +"'>babiri.net's Showdown Ladder Teams</a></li>";
 			text += "</ul>";
 
-			if (isRegUserOrPM(by, room))
+			if (this.isRegUserOrPM(by, room))
 			{
 				room = toID(config.rooms[0]);
 				this.mostRecentUserPM = toID(by);
@@ -769,7 +769,7 @@ exports.commands =
 	{
 		let defaultFormat = "gen8vgc2020";
 		let text = "";
-		if (isRegUserOrPM(by, room))
+		if (this.isRegUserOrPM(by, room))
 		{
 			room = toID(config.rooms[0]);
 
@@ -866,7 +866,7 @@ exports.commands =
 			["wobbuffet", "Leonard Craft III", false, false, "https://www.youtube.com/dawoblefet", "DaWoblefet", "https://twitter.com/DaWoblefet", "@DaWoblefet"],
 			["honchkrow", "Marcos Perez", "https://www.twitch.tv/moxieboosted", "MoxieBoosted", "https://www.youtube.com/moxieboosted", "MoxieBoosted", "https://twitter.com/MoxieBoosted", "@MoxieBoosted"],
 		];
-		if (isRegUserOrPM(by, room))
+		if (this.isRegUserOrPM(by, room))
 		{
 			text = this.generateHTMLContentCreators(creatorData, true);
 			room = toID(config.rooms[0]);
