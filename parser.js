@@ -723,6 +723,10 @@ exports.parse =
 
 		return result;
 	},
+	isRegUserOrPM: function(by, room)
+	{
+		return (by.charAt(0) === ' ' || room.charAt(0) === ',');
+	},
 	
 	generateHTMLSample: function(formatname, formatDescription, sampleTeams, isOpen, isPM)
 	{
