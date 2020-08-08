@@ -572,7 +572,11 @@ exports.commands =
 					else
 					{
 						text = "No usage data found for " + arg + ".";
-					}	
+					}
+					if (isRegUserOrPM(by, room))
+					{
+						text = "/pm " + by + ", " + text;
+					}
 				}
 				else
 				{
