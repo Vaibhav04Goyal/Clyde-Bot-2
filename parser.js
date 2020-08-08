@@ -812,8 +812,16 @@ exports.parse =
 			return "No usage data found for " + pokemon + ".";
 		}
 
+		let pokemonSprite;
 		//Obtain sprite info
-		let pokemonSprite = "https://play.pokemonshowdown.com/sprites/ani/" + pokemon.toLowerCase().replace("'", "") + ".gif";
+		if (pokemon.toLowerCase().includes("urshifu"))
+		{
+			pokemonSprite = toID(pokemon).includes("rapidstrike") ? "https://play.pokemonshowdown.com/sprites/gen5/urshifu-rapidstrike.png" : "https://play.pokemonshowdown.com/sprites/gen5/urshifu.png";
+		}
+		else 
+		{
+			pokemonSprite = "https://play.pokemonshowdown.com/sprites/ani/" + pokemon.toLowerCase().replace("'", "") + ".gif";
+		}
 		let probe = require('probe-image-size');
 		let height;
 		let width;

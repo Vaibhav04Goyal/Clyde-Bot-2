@@ -610,7 +610,9 @@ exports.commands =
 			}
 			else //has permissions for htmlbox
 			{
+				oldArg = arg;
 				arg = toID(arg);
+				this.say(room, "/adduhtml " + arg + ", Loading usage stats data for " + oldArg + "...");
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
 				if (wasSuccessful)
 				{
@@ -618,7 +620,7 @@ exports.commands =
 					let temp = JSONresponse;
 					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
 					JSONresponse = temp;
-					text = "/addhtmlbox " + await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
+					text = "/changeuhtml " + arg + ", " + await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
 				}
 			}
 		}
