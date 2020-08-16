@@ -353,7 +353,7 @@ exports.parse =
 				}
 				else
 				{
-					this.say(room, "/pm " + by + ", You don't have access to this command.");
+					this.say(room, "You don't have access to this command.");
 				}
 			}
 			else
@@ -726,6 +726,14 @@ exports.parse =
 	isRegUserOrPM: function(by, room)
 	{
 		return (by.charAt(0) === ' ' || room.charAt(0) === ',');
+	},
+	isRegUser: function(by)
+	{
+		return by.charAt(0) === ' ';
+	},
+	isPM: function(room)
+	{
+		return room.charAt(0) === ',';
 	},
 	
 	generateHTMLSample: function(formatname, formatDescription, sampleTeams, isOpen, isPM)

@@ -9,7 +9,7 @@
  * @license MIT license
  */
 
-const { inspect } = require("util");
+const { inspect, isPrimitive } = require("util");
 const axios = require("axios");
 
 const tourJSON = require("./tourformats.json");
@@ -33,9 +33,9 @@ exports.commands =
 		{
 			text = "There is no guide for this bot. PM the owner, " + config.owners[0] + " , with any questions.";
 		}
-		if (this.isRegUserOrPM(by, room))
+		if (this.isRegUser(by) && !this.isPM(room))
 		{
-			text = "/pm " + by + ", " + text;
+			text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 		}
 		this.say(room, text);
 	},
@@ -51,9 +51,9 @@ exports.commands =
 		{
 			text = "There is no public source code for " + config.nick + ". However, the repository for the bot it is based on, BoTTT III, can be found here: https://github.com/DaWoblefet/BoTTT-III.";
 		}
-		if (this.isRegUserOrPM(by, room)) //Regular user used command in chatroom
+		if (this.isRegUser(by) && !this.isPM(room))
 		{
-			text = "/pm " + by + ", " + text;
+			text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 		}
 		this.say(room, text);
 	},
@@ -573,9 +573,9 @@ exports.commands =
 					{
 						text = "No usage data found for " + arg + ".";
 					}
-					if (this.isRegUserOrPM(by, room))
+					if (this.isRegUser(by) && !this.isPM(room))
 					{
-						text = "/pm " + by + ", " + text;
+						text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 					}
 				}
 				else
@@ -587,7 +587,11 @@ exports.commands =
 
 		if (arg) //Pokemon is specified
 		{
-			if (this.isRegUserOrPM(by, room))
+			if (this.isRegUser(by) && !this.isPM(room))
+			{
+				text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+			}
+			else if (this.isPM(room))
 			{
 				arg = toID(arg);
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
@@ -634,7 +638,11 @@ exports.commands =
 			text += "<li><a href = '" + babiri +"'>babiri.net's Showdown Ladder Teams</a></li>";
 			text += "</ul>";
 
-			if (this.isRegUserOrPM(by, room))
+			if (this.isRegUser(by) && !this.isPM(room))
+			{
+				text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+			}
+			else if (this.isPM(room))
 			{
 				room = toID(config.rooms[0]);
 				this.mostRecentUserPM = toID(by);
@@ -770,7 +778,11 @@ exports.commands =
 	{
 		let defaultFormat = "gen8vgc2020";
 		let text = "";
-		if (this.isRegUserOrPM(by, room))
+		if (this.isRegUser(by) && !this.isPM(room))
+		{
+			text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+		}
+		else if (this.isPM(room))
 		{
 			room = toID(config.rooms[0]);
 
@@ -867,7 +879,11 @@ exports.commands =
 			["wobbuffet", "Leonard Craft III", false, false, "https://www.youtube.com/dawoblefet", "DaWoblefet", "https://twitter.com/DaWoblefet", "@DaWoblefet"],
 			["honchkrow", "Marcos Perez", "https://www.twitch.tv/moxieboosted", "MoxieBoosted", "https://www.youtube.com/moxieboosted", "MoxieBoosted", "https://twitter.com/MoxieBoosted", "@MoxieBoosted"],
 		];
-		if (this.isRegUserOrPM(by, room))
+		if (this.isRegUser(by) && !this.isPM(room))
+		{
+			text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+		}
+		else if (this.isPM(room))
 		{
 			text = this.generateHTMLContentCreators(creatorData, true);
 			room = toID(config.rooms[0]);
