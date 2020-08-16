@@ -22,8 +22,7 @@ exports.status = "";
  * in addition to being the only ones who can access admin commands.  */
 exports.owners = [""];
 
-/* Rooms that should be joined in quotes, separated by commas. Showdown
- * policy is not to join lobby, so please don't do that. */
+/* Rooms that should be joined in quotes, separated by commas. */
 exports.rooms = ["exampleRoom", "another room"];
 
 /* Any private rooms that should be joined in quotes, separated by commas.

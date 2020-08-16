@@ -21,7 +21,7 @@ const FLOOD_MESSAGE_TIME = 6*1000;
 const MIN_CAPS_LENGTH = 18;
 const MIN_CAPS_PROPORTION = 0.8;
 
-let ranks = " +%@*&#~";
+let ranks = " +%@*&#";
 let rankMap = new Map();
 for (let i = 0, len = ranks.length; i < len; i++)
 {
@@ -219,13 +219,11 @@ exports.parse =
 				for (let i = 0, len = config.rooms.length; i < len; i++)
 				{
 					let room = config.rooms[i];
-					if (room === "lobby" && config.serverid === "showdown") continue; //Policy is to not auto-join lobby
 					send("|/join " + room);
 				}
 				for (let i = 0, len = config.privaterooms.length; i < len; i++)
 				{
 					let room = config.privaterooms[i];
-					if (room === "lobby" && config.serverid === "showdown") continue; //Policy is to not auto-join lobby
 					send("|/join " + room);
 				}
 				setInterval(this.cleanChatData.bind(this), 30 * 60 * 1000);
@@ -367,7 +365,7 @@ exports.parse =
 		let msg;
 		if (room.charAt(0) !== ',')
 		{
-			msg = (room !== "lobby" ? room : "") + '|' + text;
+			msg = room + '|' + text;
 			send(msg);
 		}
 		else //if room has a comma, it was done in PM
