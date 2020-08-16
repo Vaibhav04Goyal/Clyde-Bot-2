@@ -797,7 +797,7 @@ exports.parse =
 			}
 			if (!isPM) {htmlText += "</div>";}
 		}
-		htmlText += "<div><p style = 'font-size: x-small';>Note: This list is not comprehensive.</p></div>";
+		htmlText += "<div style = 'clear: both;'></div><div><p style = 'font-size: x-small';>Note: This list is not comprehensive.</p></div>";
 		return htmlText;
 	},
 	generateHTMLUsage: async function(usageJSON, currentMonth, lastMonthRank)
@@ -868,7 +868,7 @@ exports.parse =
 		let usageMonth =  months[currentMonth - 1];
 
 		//Name and sprite
-		htmlText += "<div><div style = 'float: left; border-right: 1px solid black;'><center style = 'margin-right: 5px;'>";
+		htmlText += "<div class = 'infobox'><div style = 'float: left; border-right: 1px solid black;'><center style = 'margin-right: 5px;'>";
 		htmlText += "<h2 style = 'margin: 0'>" + pokemon + "</h2>";
 		htmlText += "<img src = \"" + pokemonSprite + "\" height=\"" + height + "\" width=\"" + width + "\"></center></div>";
 
@@ -928,7 +928,7 @@ exports.parse =
 			}
 				
 		}
-		htmlText += "</ul></details></div></div></div>";
+		htmlText += "</ul></details></div></div><div style = 'clear: both;'></div></div>";
 
 		return htmlText;
 	},
