@@ -545,6 +545,8 @@ exports.commands =
 		let lastMonthRank;
 		let month = 7;
 		let year = 2020;
+		const defaultFormat = "gen8vgc2020";
+		const defaultRank = "1760";
 		const vgcstats = "https://vgcstats.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
 		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2020-1760.txt";
@@ -587,25 +589,28 @@ exports.commands =
 
 		if (arg) //Pokemon is specified
 		{
+			arglist = arg.split(',');
 			if (this.isRegUser(by) && !this.isPM(room))
 			{
 				text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 			}
 			else if (this.isPM(room))
 			{
-				arg = toID(arg);
-				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
+				mon = toID(arglist[0]);
+				format = arglist[1] ? toID(arglist[1]) : defaultFormat;
+				//OU and DOU are higher traffic, so they get a special ELO to search against 
+				rank = (format === "gen8ou" || format === "gen8doublesou") ? "1825" : defaultRank;
+				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/" + format + "/" + rank + "/" + mon);
 				if (wasSuccessful)
 				{
-					arg = toID(arg);
-					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
+					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/" + format + "/" + rank + "/" + mon);
 					if (wasSuccessful)
 					{
 						room = toID(config.rooms[0]);
 
 						//Get last month's ranking, but don't override with old usage stats
 						let temp = JSONresponse;
-						await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
+						await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/" + format + "/" + rank + "/" + mon);
 						JSONresponse = temp;
 						this.mostRecentUserPM = toID(by);
 						text = "/pminfobox " + this.mostRecentUserPM + ", " + await this.generateHTMLUsagePM(JSONresponse, month, lastMonthRank);
@@ -614,16 +619,19 @@ exports.commands =
 			}
 			else //has permissions for htmlbox
 			{
-				arg = toID(arg);
-				this.say(room, "/adduhtml " + arg + ", Loading usage stats data for " + arg + "...");
-				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/gen8vgc2020/1760/" + arg);
+				mon = toID(arglist[0]);
+				format = arglist[1] ? toID(arglist[1]) : defaultFormat;
+				//OU and DOU are higher traffic, so they get a special ELO to search against 
+				rank = (format === "gen8ou" || format === "gen8doublesou") ? "1825" : defaultRank;
+				this.say(room, "/adduhtml " + mon + ", Loading usage stats data for " + arg + "...");
+				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/" + format + "/" + rank + "/" + mon);
 				if (wasSuccessful)
 				{
 					//Get last month's ranking, but don't override with old usage stats
 					let temp = JSONresponse;
-					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/gen8vgc2020/1760/" + arg);
+					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/" + format + "/" + rank + "/" + mon);
 					JSONresponse = temp;
-					text = "/changeuhtml " + arg + ", " + await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
+					text = "/changeuhtml " + mon + ", " + await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
 				}
 			}
 		}
