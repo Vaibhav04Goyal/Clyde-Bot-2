@@ -729,6 +729,11 @@ exports.commands =
 		let text = "<img src = \"https://i.imgur.com/vXbla1s.png\" width=24 height=27>";
 		this.say(room, "/addhtmlbox " + text);
 	},
+	tympole: function(arg, by, room)
+	{
+		let text = "<img src = \"https://cdn.discordapp.com/emojis/483997875181715456.png\" width=32 height=32 style='border: 1px solid black;'>";
+		this.say(room, "/addhtmlbox " + text);
+	},
 	delet: function(arg, by, room)
 	{
 		this.say(room, arg + " **deleted**.");
