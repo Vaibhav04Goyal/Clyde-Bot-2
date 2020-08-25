@@ -283,5 +283,15 @@
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "VGC 2020, but with no Dynamax or Gigantamax allowed!"
+    },
+    "gen8vgc2020series6":
+    {
+        "tourformat": "gen8vgc2020",
+        "tourname": "[Gen 8] VGC 2020 Series 6",
+        "tourrules": "-Venusaur, -Gyarados, -Porygon2, -Tyranitar, -Torkoal, -Hippowdon, -Magnezone, -Togekiss, -Excadrill, -Whimsicott, -Incineroar, -Mimikyu, -Rillaboom, -Cinderace, -Indeedee, -Dragapult",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2020, but with the top 10 Pokemon from VGC and Battle Spot Singles banned!"
     }
 }
