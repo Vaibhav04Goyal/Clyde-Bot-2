@@ -512,6 +512,7 @@ exports.commands =
 			"A priest, a pastor, and a rabbit walk into a bar. The rabbit says, \"I must be a typo!\"",
 			"Why was the tennis club's website down? They had problems with their server.",
 			"What's the best time to buy a bird? When it's going cheep!",
+			"My friend hates it when I put his chocolate bars in other chocolate bar wrappers. It really gets his Snickers in a Twix."
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
