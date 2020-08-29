@@ -29,7 +29,6 @@ for (let i = 0, len = ranks.length; i < len; i++)
 }
 
 const commandsJSON = require("./commandpermissions.json");
-const { config } = require("process");
 
 exports.parse =
 {
@@ -422,21 +421,17 @@ exports.parse =
 
 		if (commandsObject)
 		{
-			//Check if the room has a direct rank for the command
+			//Check if the room has a direct rank for the command; allow explicitly defined regular user commands
 			if (commandsObject[cmd])
 			{
-				if (commandsObject[cmd]["rank"] === 0 && this.isRegUser(by))
-				{
-					canUse = 2;
-				}
-				else if (userRank >= commandsObject[cmd]["rank"])
+				if (userRank >= commandsObject[cmd]["rank"])
 				{
 					canUse = 1;
 				}
 			}
 
 			//Check if the room has a special user/arg condition for the command
-			if (!canUse && commandsObject["special"][cmd])
+			if (canUse === 0 && commandsObject["special"][cmd])
 			{
 				//TODO: make more generic
 				let userList = commandsObject["special"][cmd]["users"];
@@ -468,7 +463,12 @@ exports.parse =
 		//Fallback on global command settings if no local room commands were set
 		if (canUse === 0 && globalCommandsObject[cmd])
 		{
-			if (userRank >= globalCommandsObject[cmd]["rank"])
+			//Don't allow the command to be used directly in a room if it only has 0 globally
+			if (globalCommandsObject[cmd]["rank"] === 0 && this.isRegUser(user) && !this.isPM(room))
+			{
+				canUse = 2;
+			}
+			else if (userRank >= globalCommandsObject[cmd]["rank"])
 			{
 				canUse = 1;
 			}
