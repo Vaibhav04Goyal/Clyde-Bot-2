@@ -884,7 +884,7 @@ exports.commands =
 			["salazzle", "Jamie Boyt", "https://www.twitch.tv/jamieboyt", "JamieBoyt", "https://www.youtube.com/c/JamieBoytVGC", "JamieBoytVGC", false, false],
 			["hariyama", "Alex Gomez", "https://www.twitch.tv/pokealexvgc", "PokeAlexVGC", "https://www.youtube.com/user/Pokealexproductions", "PokeAlex Productions", "https://twitter.com/PokeAlex_", "@PokeAlex_"],
 			["buzzwole", "Graham Amedee", false, false, "https://www.youtube.com/channel/UCBvb1EZjYRLuTot13DCIDXA", "Graham Ammodee", "https://twitter.com/amedeegraham", "@AmedeeGraham"],
-			["pachirisu", "Sejun Park", "https://www.twitch.tv/Sejun_Park", "Sejun_Park", "https://twitter.com/pokemon_tcg", "@pokemon_tcg", false, false],
+			["pachirisu", "Sejun Park", "https://www.twitch.tv/Sejun_Park", "Sejun_Park", false, false, "https://twitter.com/pokemon_tcg", "@pokemon_tcg"],
 			["cresselia", "Collin Heier", "https://www.twitch.tv/TheBattleRoom", "TheBattleRoom", "https://www.youtube.com/channel/UCoum47pkrc2jtZ0uTcm5R-A", "BattleRoomVGC", "https://twitter.com/BattleRoom", "@BattleRoom"],
 			["stonjourner", "Barry Anderson", "https://www.twitch.tv/bazanderson", "BazAnderson", "https://www.youtube.com/user/bazandersonvgc", "Baz Anderson", "https://twitter.com/bazandersonvgc", "@bazandersonvgc"],
 			["salamence-mega", "Paul Ruiz", "https://www.twitch.tv/ralfdude90", "ralfdude90", "https://www.youtube.com/channel/UC7GjRTGrjXJ9lMWhkFCstxw", "ralfdude90", "https://twitter.com/ralfdude90", "@ralfdude90"],
