@@ -29,6 +29,7 @@ for (let i = 0, len = ranks.length; i < len; i++)
 }
 
 const commandsJSON = require("./commandpermissions.json");
+const { config } = require("process");
 
 exports.parse =
 {
@@ -345,13 +346,20 @@ exports.parse =
 			{
 				cmdr(cmdrMessage); //Logs the command information if specified in config.
 
-				if (this.canUse(cmd, room, by, arg))
+				let canUse = this.canUse(cmd, room, by, arg);
+				switch (canUse)
 				{
-					Commands[cmd].call(this, arg, by, room); //Run the command from commands.js
-				}
-				else
-				{
-					this.say(room, "/pm " + by + ", You don't have access to this command.");
+					case 0:
+						this.say(room, "/pm " + by + ", You don't have access to this command.");
+						break;
+					case 1:
+						Commands[cmd].call(this, arg, by, room); //Run the command from commands.js
+						break;
+					case 2:
+						this.say(room, "/pm " + by + ", You do not have sufficient rank to use this command in " + room + ", but you can use it in " + config.nick + "'s PMs.");
+						break;
+					default:
+						break;
 				}
 			}
 			else
@@ -388,16 +396,19 @@ exports.parse =
 		return rank.split("").indexOf(user.charAt(0)) !== -1;
 	},
 
-	//Modified by DaWoblefet
+	/* Can return 3 different values
+	 * 0 = cannot use at all
+	 * 1 = can use
+	 * 2 = can only use in PMs  */
 	canUse: function(cmd, room, user, arg)
 	{
-		let canUse = false;
+		let canUse = 0;
 		let userRank;
 		let userID = toID(this.trimStatus(user));
 		let commandsObject;
 		let globalCommandsObject = commandsJSON["global"];
 
-		//0 = regular user, 1 = voice, 2 = driver, 3 = mod, 4 = bot, 5 = leader, 6 = room owner, 7 = admin
+		//0 = regular user, 1 = voice, 2 = driver, 3 = mod, 4 = bot, 5 = leader, 6 = room owner
 		if (rankMap.get(user.charAt(0)) === -1)
 		{
 			userRank = 0;
@@ -414,11 +425,16 @@ exports.parse =
 			//Check if the room has a direct rank for the command
 			if (commandsObject[cmd])
 			{
-				if (userRank >= commandsObject[cmd]["rank"])
+				if (commandsObject[cmd]["rank"] === 0 && this.isRegUser(by))
 				{
-					canUse = true;
+					canUse = 2;
+				}
+				else if (userRank >= commandsObject[cmd]["rank"])
+				{
+					canUse = 1;
 				}
 			}
+
 			//Check if the room has a special user/arg condition for the command
 			if (!canUse && commandsObject["special"][cmd])
 			{
@@ -429,12 +445,12 @@ exports.parse =
 
 				if (userList.indexOf(userID) >= 0 && specialArg.indexOf(arg) >= 0)
 				{
-					canUse = true;
+					canUse = 1;
 				}
 			}			
 		}
 		//Check that room owners of a room can use .custom in PMs
-		if (!canUse && cmd === "custom" && room.charAt(0) === ",")
+		if (canUse === 0 && cmd === "custom" && room.charAt(0) === ",")
 		{
 			if (arg.indexOf("[") === 0 && arg.indexOf("]") > -1)
 			{
@@ -444,17 +460,17 @@ exports.parse =
 					let userList = commandsJSON[targetRoom]["roomowners"];
 					if (userList.indexOf(userID) >= 0)
 					{
-						canUse = true;
+						canUse = 1;
 					}
 				}
 			}
 		}
 		//Fallback on global command settings if no local room commands were set
-		if (!canUse && globalCommandsObject[cmd])
+		if (canUse === 0 && globalCommandsObject[cmd])
 		{
 			if (userRank >= globalCommandsObject[cmd]["rank"])
 			{
-				canUse = true;
+				canUse = 1;
 			}
 		}
 
@@ -465,7 +481,7 @@ exports.parse =
 			{
 				if (userID === toID(config.owners[i]))
 				{
-					canUse = true;
+					canUse = 1;
 					break;
 				}
 			}

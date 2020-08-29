@@ -33,10 +33,6 @@ exports.commands =
 		{
 			text = "There is no guide for this bot. PM the owner, " + config.owners[0] + " , with any questions.";
 		}
-		if (this.isRegUser(by) && !this.isPM(room))
-		{
-			text = "/pm " + by + ", You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
-		}
 		this.say(room, text);
 	},
 	git: function(arg, by, room)
@@ -50,10 +46,6 @@ exports.commands =
 		else
 		{
 			text = "There is no public source code for " + config.nick + ". However, the repository for the bot it is based on, BoTTT III, can be found here: https://github.com/DaWoblefet/BoTTT-III.";
-		}
-		if (this.isRegUser(by) && !this.isPM(room))
-		{
-			text = "/pm " + by + ", You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 		}
 		this.say(room, text);
 	},
@@ -580,10 +572,6 @@ exports.commands =
 					{
 						text = "No usage data found for " + arg + ".";
 					}
-					if (this.isRegUser(by) && !this.isPM(room))
-					{
-						text = "/pm " + by + ", You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
-					}
 				}
 				else
 				{
@@ -595,11 +583,7 @@ exports.commands =
 		if (arg) //Pokemon is specified
 		{
 			arglist = arg.split(',');
-			if (this.isRegUser(by) && !this.isPM(room))
-			{
-				text = "/pm " + by + ", You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
-			}
-			else if (this.isPM(room))
+			if (this.isPM(room))
 			{
 				mon = toID(arglist[0]);
 				format = arglist[1] ? toID(arglist[1]) : defaultFormat;
@@ -651,11 +635,7 @@ exports.commands =
 			text += "<li><a href = '" + babiri +"'>babiri.net's Showdown Ladder Teams</a></li>";
 			text += "</ul>";
 
-			if (this.isRegUser(by) && !this.isPM(room))
-			{
-				text = "/pm " + by + ", You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
-			}
-			else if (this.isPM(room))
+			if (this.isPM(room))
 			{
 				room = toID(config.rooms[0]);
 				this.mostRecentUserPM = toID(by);
@@ -796,11 +776,7 @@ exports.commands =
 	{
 		let defaultFormat = "gen8vgc2020";
 		let text = "";
-		if (this.isRegUser(by) && !this.isPM(room))
-		{
-			text = "/pm " + by + ", You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
-		}
-		else if (this.isPM(room))
+		if (this.isPM(room))
 		{
 			room = toID(config.rooms[0]);
 
@@ -897,11 +873,7 @@ exports.commands =
 			["wobbuffet", "Leonard Craft III", false, false, "https://www.youtube.com/dawoblefet", "DaWoblefet", "https://twitter.com/DaWoblefet", "@DaWoblefet"],
 			["honchkrow", "Marcos Perez", "https://www.twitch.tv/moxieboosted", "MoxieBoosted", "https://www.youtube.com/moxieboosted", "MoxieBoosted", "https://twitter.com/MoxieBoosted", "@MoxieBoosted"],
 		];
-		if (this.isRegUser(by) && !this.isPM(room))
-		{
-			text = "/pm " + by + ", You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
-		}
-		else if (this.isPM(room))
+		if (this.isPM(room))
 		{
 			text = this.generateHTMLContentCreators(creatorData, true);
 			room = toID(config.rooms[0]);
