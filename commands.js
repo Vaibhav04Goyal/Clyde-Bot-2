@@ -9,7 +9,7 @@
  * @license MIT license
  */
 
-const { inspect, isPrimitive } = require("util");
+const { inspect } = require("util");
 const axios = require("axios");
 
 const tourJSON = require("./tourformats.json");
@@ -35,7 +35,7 @@ exports.commands =
 		}
 		if (this.isRegUser(by) && !this.isPM(room))
 		{
-			text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+			text = "/pm " + by + "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 		}
 		this.say(room, text);
 	},
@@ -53,7 +53,7 @@ exports.commands =
 		}
 		if (this.isRegUser(by) && !this.isPM(room))
 		{
-			text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+			text = "/pm " + by + "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 		}
 		this.say(room, text);
 	},
@@ -582,7 +582,7 @@ exports.commands =
 					}
 					if (this.isRegUser(by) && !this.isPM(room))
 					{
-						text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+						text = "/pm " + by + "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 					}
 				}
 				else
@@ -597,7 +597,7 @@ exports.commands =
 			arglist = arg.split(',');
 			if (this.isRegUser(by) && !this.isPM(room))
 			{
-				text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+				text = "/pm " + by + "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 			}
 			else if (this.isPM(room))
 			{
@@ -653,7 +653,7 @@ exports.commands =
 
 			if (this.isRegUser(by) && !this.isPM(room))
 			{
-				text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+				text = "/pm " + by + "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 			}
 			else if (this.isPM(room))
 			{
@@ -798,7 +798,7 @@ exports.commands =
 		let text = "";
 		if (this.isRegUser(by) && !this.isPM(room))
 		{
-			text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+			text = "/pm " + by + "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 		}
 		else if (this.isPM(room))
 		{
@@ -899,7 +899,7 @@ exports.commands =
 		];
 		if (this.isRegUser(by) && !this.isPM(room))
 		{
-			text = "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
+			text = "/pm " + by + "You do not have sufficient rank to use this command in " + room + ", but you can use it in BoTTT III's PMs.";
 		}
 		else if (this.isPM(room))
 		{

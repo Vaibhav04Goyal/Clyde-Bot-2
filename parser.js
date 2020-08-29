@@ -351,7 +351,7 @@ exports.parse =
 				}
 				else
 				{
-					this.say(room, "You don't have access to this command.");
+					this.say(room, "/pm " + by + ", You don't have access to this command.");
 				}
 			}
 			else
