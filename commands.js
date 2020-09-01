@@ -173,7 +173,7 @@ exports.commands =
 			let tourformat;
 			let tourname;
 			let tourObject;
-			const defaultTour = "vgc2020";
+			const defaultTour = "series6";
 			
 			//Handle default case, double elim, and random format options.
 			switch (arglist[0])
