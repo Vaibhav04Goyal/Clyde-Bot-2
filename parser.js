@@ -293,6 +293,10 @@ exports.parse =
 				{
 					this.say(room, spl[2]);
 				}
+				if(spl[2].includes("restarting soon"))
+				{
+					this.say(room, spl[2]);
+				}
 				if (spl[2].includes("who are not in this room"))
 				{
 					send("|/pm " + this.mostRecentUserPM + ", You must be in the <<vgc>> room for this command to work in PMs (sorry, blame Showdown).");
