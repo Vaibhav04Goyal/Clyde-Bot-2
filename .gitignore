@@ -1,7 +1,4 @@
 config.js
 package-lock.json
 /node_modules
-/node_modules/*
-/sample_htmls/
-/sample_htmls/*
-*.csv
+/sample_htmls
