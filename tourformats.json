@@ -2,7 +2,7 @@
     "gen8vgc2020":
     {
         "tourformat": "gen8vgc2020",
-        "tourname": "[Gen 8] VGC 2020",
+        "tourname": "[Gen 8] VGC 2020 Series 5",
         "tourrules": "",
         "formatname": "VGC 2020",
         "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game except Zacian, Zamazenta, and Eternatus.",
@@ -19,6 +19,16 @@
         ],
         "tournote": ""
     },
+    "gen8vgc2020series6":
+    {
+        "tourformat": "gen8battlestadiumdoubles",
+        "tourname": "[Gen 8] VGC 2020 Series 6",
+        "tourrules": "",
+        "formatname": "VGC 2020",
+        "formatDescription": "VGC 2020, but with the top 10 Pokemon from VGC and Battle Spot Singles banned! Select \"Battle Stadium Doubles\" in the teambuilder when building for series 6!",
+        "sampleTeams": ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"],
+        "tournote": ""
+    }
     "gen7vgc2019ultraseries":
     {
         "tourformat": "gen7vgc2019",
@@ -283,15 +293,5 @@
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "VGC 2020, but with no Dynamax or Gigantamax allowed!"
-    },
-    "gen8vgc2020series6":
-    {
-        "tourformat": "gen8battlestadiumdoubles",
-        "tourname": "[Gen 8] VGC 2020 Series 6",
-        "tourrules": "",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2020, but with the top 10 Pokemon from VGC and Battle Spot Singles banned! Select \"Battle Stadium Doubles\" in the teambuilder when building for series 6!"
     }
 }
