@@ -173,7 +173,7 @@ exports.commands =
 			let tourformat;
 			let tourname;
 			let tourObject;
-			const defaultTour = "series6";
+			const defaultTour = "series5";
 			
 			//Handle default case, double elim, and random format options.
 			switch (arglist[0])
@@ -302,9 +302,9 @@ exports.commands =
 					break;
 				case "random battle":
 				case "randombattle":
-				case "gen7randombattle":
+				case "gen8randombattle":
 				case "randomdoubles":
-				case "gen7doublesrandombattle":
+				case "gen8doublesrandombattle":
 					this.say(room, "Cannot start random battle tours.");
 					return;
 				case "cap":
