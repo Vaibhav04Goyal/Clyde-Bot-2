@@ -631,13 +631,15 @@ exports.commands =
 		else //Generic links to usage stats
 		{
 			//HTML for generic usage
-			text += "<strong>VGC Usage Stats!</strong><ul style = 'margin: 0 0 0 -20px'>";
-			text += "<li><a href = '" + vgcstats +"'>VGC Stats Website</a></li>";
-			text += "<li><a href = '" + psUsage +"'>Showdown Usage</a></li>";
-			text += "<li><a href = '" + psDetailedUsage +"'>Showdown Detailed Usage</a></li>";
-			text += "<li><a href = '" + jorijnUsage +"'>Jorijn's Detailed Showdown Usage</a></li>";
-			text += "<li><a href = '" + babiri +"'>babiri.net's Showdown Ladder Teams</a></li>";
-			text += "</ul>";
+			text += 
+			'<strong>VGC Usage Stats!</strong> \
+			<ul style = "margin: 0 0 0 -20px"> \
+				<li><a href = "' + vgcstats + '">VGC Stats Website</a></li> \
+				<li><a href = "' + psUsage + '">Showdown Usage</a></li> \
+				<li><a href = "' + psDetailedUsage + '">Showdown Detailed Usage</a></li> \
+				<li><a href = "' + jorijnUsage + '">Jorijn\'s Detailed Showdown Usage</a></li> \
+				<li><a href = "' + babiri + '">babiri.net\'s Showdown Ladder Teams</a></li> \
+			</ul>';
 
 			if (this.isPM(room))
 			{
@@ -664,9 +666,11 @@ exports.commands =
 	objective: "objectively",
 	objectively: function(arg, by, room)
 	{
-		let text = "Something is \"objective\" when it is true independently of personal feelings or opinions, instead based on hard facts. For example, Flamethrower objectively has higher accuracy than Fire Blast, and Fire Blast objectively has a higher Base Power than Flamethrower.<br><br>";
-		text += "Subjective refers to personal preferences, opinions, or feelings. Anything subjective is subject to interpretation. For example, you might think Flamethrower is better than Fire Blast, but another player might think Fire Blast is better; the opinion is subjective.<br><br>";
-		text += "That's not to say opinions are bad! It's also ok to put forth reasoning into your opinions and defend them. It's not correct, however, to say some opinion you have is objectively true.";
+		let text = 
+		'<p>Something is "objective" when it is true independently of personal feelings or opinions, instead based on hard facts. For example, Flamethrower objectively has higher accuracy than Fire Blast, and Fire Blast objectively has a higher Base Power than Flamethrower.</p> \
+		<p>Subjective refers to personal preferences, opinions, or feelings. Anything subjective is subject to interpretation. For example, you might think Flamethrower is better than Fire Blast, but another player might think Fire Blast is better; the opinion is subjective.</p> \
+		<p>That\'s not to say opinions are bad! It\'s also ok to put forth reasoning into your opinions and defend them. It\'s not correct, however, to say some opinion you have is objectively true.<p> \
+		';
 		this.say(room, "/addhtmlbox " + text);
 	},
 
@@ -694,7 +698,16 @@ exports.commands =
 	},
 	platypus: function(arg, by, room)
 	{
-		this.say(room, "/addhtmlbox <center><img src=\"https://pngimage.net/wp-content/uploads/2018/06/platypus-png.png\" class=\"fa fa-spin\" width=\"100\" height=\"100\"><a style = \"font-size: 20px; \"href = \"https://www.youtube.com/watch?v=VaNbDYGmGwc\">Platypus on the Prowl</a><img src=\"https://pngimage.net/wp-content/uploads/2018/06/platypus-png.png\" class=\"fa fa-spin\" width=\"100\" height=\"100\"><br><br><img src=\"https://cdn.discordapp.com/attachments/394481120806305794/506966120482209792/platyprowl.gif\" height=175 width=170></center>");
+		const text = 
+		'<center> \
+			<img src = "https://i.ibb.co/ws6dDYg/rsz-platypus-png.png" class = "fa fa-spin" width = "100" height = "100"> \
+			<a href = "https://youtu.be/VaNbDYGmGwc" style = "font-size: 20px;">Platypus on the Prowl</a> \
+			<img src = "https://i.ibb.co/ws6dDYg/rsz-platypus-png.png" class = "fa fa-spin" width = "100" height = "100"> \
+			<br> \
+			<br> \
+			<img src = "https://cdn.discordapp.com/attachments/394481120806305794/506966120482209792/platyprowl.gif" height = "175" width = "170"> \
+		</center>';
+		this.say(room, "/addhtmlbox " + text);
 	},
 	epic: function(arg, by, room)
 	{
@@ -710,7 +723,47 @@ exports.commands =
 	},
 	diglett: function(arg, by, room)
 	{
-		let text = "<marquee scrollamount=\"15\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani\/diglett.gif\" class=\"fa fa-spin\" width=\"43\" height=\"35\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1e9.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1ee.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1ec.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1f1.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1ea.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1f9.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1f9.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <\/marquee> <center> <span style=\"font-size: 0.9em;\">Moves Like Diglett | Eye of the Diglett | I\'ll Make a Diglett Out of You<\/span> <\/center> <center> Click the Diglett -&gt; <a href=\"https:\/\/youtu.be\/6Zwu8i4bPV4\"><img src=\"https:\/\/images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com\/intermediary\/f\/578a8319-92b6-4d81-9d5f-d6914e6535a0\/d5o541m-54dae5d4-710c-44d4-a898-71ea71d7bd28.jpg\" width=\"85\" height=\"100\"><\/a> <a href=\"https:\/\/youtu.be\/8LYwT9Nf1Ic\"><img src=\"https:\/\/images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com\/intermediary\/f\/578a8319-92b6-4d81-9d5f-d6914e6535a0\/d5o541m-54dae5d4-710c-44d4-a898-71ea71d7bd28.jpg\" width=\"85\" height=\"100\"><\/a> <a href=\"https:\/\/youtu.be\/uzdvnB8SJV8\"><img src=\"https:\/\/images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com\/intermediary\/f\/578a8319-92b6-4d81-9d5f-d6914e6535a0\/d5o541m-54dae5d4-710c-44d4-a898-71ea71d7bd28.jpg\" width=\"85\" height=\"100\"><\/a> &lt;- Click the Diglett <\/center> <marquee scrollamount=\"15\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1e9.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1ee.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1ec.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1f1.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1ea.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1f9.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/images.emojiterra.com\/twitter\/v11\/512px\/1f1f9.png\" width=\"43\" height=\"35\" class=\"fa fa-spin\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <img src=\"https:\/\/play.pokemonshowdown.com\/sprites\/xyani-back\/diglett.gif\" class=\"fa fa-spin\" width=\"44\" height=\"35\"> <\/marquee>";
+		let text = 
+		'<marquee scrollamount = "15">';
+		for (i = 0; i < 13; i++)
+		{
+			text += '	<img src = "https://play.pokemonshowdown.com/sprites/ani/diglett.gif" class = "fa fa-spin" width = "43" height = "35"';
+		}
+		//D I G L E T T in emoji
+		text +=
+		'	<img src="https://images.emojiterra.com/twitter/v11/512px/1f1e9.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1ee.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1ec.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1f1.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1ea.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1f9.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1f9.png" class="fa fa-spin" width="43" height="35"> \
+		</marquee> \
+		<center> \
+			<span style = "font-size: 0.9em">Moves Like Diglett | Eye of the Diglett | I\'ll Make a Diglett Out of You"</span> \
+		</center> \
+		<center> \
+			Click the Diglett -&gt;\
+			<a href="https://youtu.be/6Zwu8i4bPV4"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/578a8319-92b6-4d81-9d5f-d6914e6535a0/d5o541m-54dae5d4-710c-44d4-a898-71ea71d7bd28.jpg" width="85" height="100"></a> \
+			<a href="https://youtu.be/8LYwT9Nf1Ic"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/578a8319-92b6-4d81-9d5f-d6914e6535a0/d5o541m-54dae5d4-710c-44d4-a898-71ea71d7bd28.jpg" width="85" height="100"></a> \
+			<a href="https://youtu.be/uzdvnB8SJV8"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/578a8319-92b6-4d81-9d5f-d6914e6535a0/d5o541m-54dae5d4-710c-44d4-a898-71ea71d7bd28.jpg" width="85" height="100"></a> \
+			&lt;- Click the Diglett \
+		</center> \
+		<marquee scrollamount = "15"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1e9.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1ee.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1ec.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1f1.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1ea.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1f9.png" class="fa fa-spin" width="43" height="35"> \
+			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1f9.png" class="fa fa-spin" width="43" height="35"> \
+		';
+		for (i = 0; i < 13; i++)
+		{
+			text += '	<img src = "https://play.pokemonshowdown.com/sprites/ani-back/diglett.gif" class = "fa fa-spin" width = "43" height = "35"';
+		}
+		text +=
+		'</marquee>';
 		this.say(room, "/addhtmlbox " + text);
 	},
 	sire: "quagsire",
@@ -794,10 +847,11 @@ exports.commands =
 			width = 96;
 		}
 
-		let text = "<div style = 'position: relative'><img src=\"https://steamuserimages-a.akamaihd.net/ugc/933813375174289297/19F16DBEDED8FF15F8D969EE714BD1319149EB9D/\" height="
-		+ (height * 5) + " width=" + (width * 5) + ">" 
-		+ "<img src = \"" + pokemonSprite + "\" height=" + (height * 5) + " width=" + (width * 5)
-		+ " style = 'position: absolute; top: 0%; left: 0%'></div>";
+		let text = 
+		'<div style = "position: relative"> \
+			<img src = "https://steamuserimages-a.akamaihd.net/ugc/933813375174289297/19F16DBEDED8FF15F8D969EE714BD1319149EB9D/" height = "'+ (height * 5) +'" width = "' + (width * 5) + '"> \
+			<img src = "' + pokemonSprite + '" height = "' + (height * 5) + '" width = "' + (width * 5) + '" style = "position: absolute; top: 0%; left: 0%"> \
+		</div>';
 
 		this.say(room, "/addhtmlbox " + text);
 	},
