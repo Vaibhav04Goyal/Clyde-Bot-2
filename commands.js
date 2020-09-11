@@ -742,7 +742,7 @@ exports.commands =
 			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1f9.png" class="fa fa-spin" width="43" height="35"> \
 		</marquee> \
 		<center> \
-			<span style = "font-size: 0.9em">Moves Like Diglett | Eye of the Diglett | I\'ll Make a Diglett Out of You"</span> \
+			<span style = "font-size: 0.9em">Moves Like Diglett | Eye of the Diglett | I\'ll Make a Diglett Out of You</span> \
 		</center> \
 		<center> \
 			Click the Diglett -&gt;\
