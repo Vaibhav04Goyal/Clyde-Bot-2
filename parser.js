@@ -314,7 +314,7 @@ exports.parse =
 		message = message.trim();
 
 		//Auto-accepts invites to rooms if the global rank is % or higher.
-		if (room.charAt(0) === ',' && message.substr(0,8) === "/invite " && this.hasRank(by, "%@*&~"))
+		if (room.charAt(0) === ',' && message.substr(0,8) === "/invite " && this.hasRank(by, "%@*&"))
 		{
 			send("|/join " + message.substr(8));
 		}
@@ -525,7 +525,7 @@ exports.parse =
 		roomData.times.push(now);
 
 		//This deals with punishing rulebreakers. Note that the bot can't think, however, so it might make mistakes. It will not punish drivers+.
-		if (config.allowmute && config.whitelist.indexOf(user) === -1 && "%@*&#~".indexOf(auth) === -1)
+		if (config.allowmute && toID(room) === 'vgc' && config.whitelist.indexOf(user) === -1 && "%@*&#".indexOf(auth) === -1)
 		{
 			let pointVal = 0;
 			let muteMessage = "";
@@ -638,7 +638,7 @@ exports.parse =
 				}
 
 				//If the bot has % instead of @ or %, it will default to hourmuting as its highest level of punishment instead of roombanning
-				if (roomData.points >= 4 && !this.hasRank(this.ranks[room] || " ", "@*&#~"))
+				if (roomData.points >= 4 && !this.hasRank(this.ranks[room] || " ", "@*&#"))
 				{
 					cmd = "hourmute";
 				}
@@ -654,7 +654,7 @@ exports.parse =
 				if (userData.zeroTol > 4)
 				{
 					muteMessage = ", Automated response: zero tolerance user";
-					cmd = this.hasRank(this.ranks[room] || " ", "@*&#~") ? "roomban" : "hourmute";
+					cmd = this.hasRank(this.ranks[room] || " ", "@*&#") ? "roomban" : "hourmute";
 				}
 				if (roomData.points > 1)
 				{
