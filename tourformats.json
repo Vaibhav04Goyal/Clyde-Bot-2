@@ -26,7 +26,9 @@
         "tourrules": "",
         "formatname": "VGC 2020",
         "formatDescription": "VGC 2020, but with the top 10 Pokemon from VGC and Battle Spot Singles banned! Select \"Battle Stadium Doubles\" in the teambuilder when building for series 6!",
-        "sampleTeams": ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"],
+        "sampleTeams": [
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
+        ],
         "tournote": ""
     },
     "gen7vgc2019ultraseries":
