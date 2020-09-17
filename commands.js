@@ -508,7 +508,8 @@ exports.commands =
 			"A priest, a pastor, and a rabbit walk into a bar. The rabbit says, \"I must be a typo!\"",
 			"Why was the tennis club's website down? They had problems with their server.",
 			"What's the best time to buy a bird? When it's going cheep!",
-			"My friend hates it when I put his chocolate bars in other chocolate bar wrappers. It really gets his Snickers in a Twix."
+			"My friend hates it when I put his chocolate bars in other chocolate bar wrappers. It really gets his Snickers in a Twix.",
+			"There is a new government intiative to replace all cars with paper by 2030. This comes after a recently released study showing that 99% of car accidents could be prevented if all vehicles were stationery."
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
