@@ -295,5 +295,15 @@
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "VGC 2020, but with no Dynamax or Gigantamax allowed!"
+    },
+    "gen8vgc2020halloween":
+    {
+        "tourformat": "gen8vgc2020",
+        "tourname": "[Gen 8] VGC 2020 (Halloween)",
+        "tourrules": "-All Pokemon, +Aegislash, +Chandelure, +Cofagrigus, +Corsola-Galar, +Cursola, +Decidueye, +Dhelmise, +Doublade, +Dragapult, +Drakloak, +Dreepy, +Drifblim, +Drifloon, +Dusclops, +Dusknoir, +Duskull, +Frillish, +Froslass, +Gastly, +Gengar, +Golett, +Golurk, +Gourgeist, +Haunter, +Honedge, +Jellicent, +Lampent, +Litwick, +Lunala, +Marowak-Alola, +Marshadow, +Mimikyu, +Necrozma-Dawn-Wings, +Palossand, +Phantump, +Polteageist, +Pumpkaboo, +Rotom, +Runerigus, +Sableye, +Sandygast, +Shedinja, +Silvally-Ghost, +Sinistea, +Trevenant, +Yamask",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "VGC 2020, but only Ghost-types are allowed!"
     }
 }

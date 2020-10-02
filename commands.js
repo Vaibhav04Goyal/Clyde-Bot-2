@@ -300,6 +300,9 @@ exports.commands =
 				case "vgc inverse":
 					tourObject = tourJSON["gen8inversevgc"];
 					break;
+				case "halloween":
+					tourObject = tourJSON["gen8vgc2020halloween"];
+					break;
 				case "random battle":
 				case "randombattle":
 				case "gen8randombattle":
