@@ -303,7 +303,10 @@
         "tourrules": "-All Pokemon, +Aegislash, +Chandelure, +Cofagrigus, +Corsola-Galar, +Cursola, +Decidueye, +Dhelmise, +Doublade, +Dragapult, +Drakloak, +Dreepy, +Drifblim, +Drifloon, +Dusclops, +Dusknoir, +Duskull, +Frillish, +Froslass, +Gastly, +Gengar, +Golett, +Golurk, +Gourgeist, +Haunter, +Honedge, +Jellicent, +Lampent, +Litwick, +Lunala, +Marowak-Alola, +Marshadow, +Mimikyu, +Necrozma-Dawn-Wings, +Palossand, +Phantump, +Polteageist, +Pumpkaboo, +Rotom, +Runerigus, +Sableye, +Sandygast, +Shedinja, +Silvally-Ghost, +Sinistea, +Trevenant, +Yamask",
         "formatname": "[Gen 8] VGC 2020 (Halloween)",
         "formatDescription": "VGC 2020, but only Ghost-types are allowed!",
-        "sampleTeams": ["Lunala", "Marshadow", "Dragapult", "Necrozma-Dawn-Wings", "Mimikyu", "Drifblim", "https://pokepast.es/dbd0d1a624effde1"],
+        "sampleTeams":
+        [
+            ["Lunala", "Marshadow", "Dragapult", "Necrozma-Dawn-Wings", "Mimikyu", "Drifblim", "https://pokepast.es/dbd0d1a624effde1"]
+        ],
         "tournote": ""
     }
 }
