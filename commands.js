@@ -967,7 +967,7 @@ exports.commands =
 			["sylveon", "Rosemary Kelley", "https://www.twitch.tv/nekkragaming", "NekkraGaming", "https://www.youtube.com/channel/UCIlFSUs8MzCuYosEMq0WFeg", "Nekkra", "https://twitter.com/NekkraGaming", "@NekkraGaming"],
 			["wobbuffet", "Leonard Craft III", false, false, "https://www.youtube.com/dawoblefet", "DaWoblefet", "https://twitter.com/DaWoblefet", "@DaWoblefet"],
 			["honchkrow", "Marcos Perez", "https://www.twitch.tv/moxieboosted", "MoxieBoosted", "https://www.youtube.com/moxieboosted", "MoxieBoosted", "https://twitter.com/MoxieBoosted", "@MoxieBoosted"],
-			["goodra", "Adi Subramanian", false, false, "https://www.youtube.com/channel/UCXGqNEvshgc-85K_1go2ETw", "ck49", "https://twitter.com/adisubra", "@adisubra"],
+			["metagross", "Adi Subramanian", false, false, "https://www.youtube.com/channel/UCXGqNEvshgc-85K_1go2ETw", "ck49", "https://twitter.com/adisubra", "@adisubra"],
 		];
 		if (this.isPM(room))
 		{
