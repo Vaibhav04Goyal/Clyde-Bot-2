@@ -288,6 +288,8 @@ exports.commands =
 				case "tapu bulu cup":
 				case "bulucup":
 				case "bulu cup":
+				case "bulubash":
+				case "bulu bash":
 					tourObject = tourJSON["gen7bulucup"];
 					break;
 				case "crab":

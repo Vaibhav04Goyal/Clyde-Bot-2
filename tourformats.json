@@ -256,9 +256,9 @@
     "gen7bulucup":
     {
         "tourformat": "gen71v1",
-        "tourname": "[Gen 7] Tapu Bulu Cup",
+        "tourname": "[Gen 7] Bulu Bash",
         "tourrules": "-All Pokemon, +Tapu Bulu, +Focus Sash, -Hidden Power, !evasion moves clause, !accuracy moves clause",
-        "formatname": "Tapu Bulu Cup",
+        "formatname": "Bulu Bash",
         "formatDescription": "Tapu Bulu only! Hidden Power is banned. Create teams in the [Gen 7] 1v1 format, and make sure it's level 100!",
         "sampleTeams":
         [
