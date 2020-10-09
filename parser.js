@@ -73,12 +73,18 @@ exports.parse =
 				let roomJoined = spl[2].substr(7);
 				if (roomTypeJoined === "battle")
 				{
-					ok("joined battle " + spl[2].substr(7));
+					return ok("joined battle " + spl[2].substr(7));
 				}
 				else if (roomTypeJoined === "chat")
 				{
-					//Don't hang out in staff
-					roomJoined === "Staff" ? send("|/leave staff") : ok("joined " + roomJoined);
+					if (roomJoined === "Staff")
+					{
+						send("|/leave staff");
+					}
+					else
+					{
+						return ok("joined " + roomJoined);
+					}
 				}
 			}
 			room = spl.shift().substr(1);
