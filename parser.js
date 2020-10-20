@@ -773,7 +773,7 @@ exports.parse =
 			{
 				htmlText += "<psicon ";
 				if (isPM) {htmlText += "style = 'width: 35px;'";}
-				htmlText += "pokemon='" + sampleTeams[i][j] + "'></psicon>";
+				htmlText += "pokemon='" + sampleTeams[i][j] + "'>";
 				if (j !== 5) {htmlText += "|";}
 			}
 			htmlText += "<a href= '" + sampleTeams[i][j] + "'>"; //pokepaste link
@@ -1002,7 +1002,7 @@ exports.parse =
 
 		//Name and sprite
 		htmlText += "<center>";
-		htmlText += "<psicon pokemon = \"" + pokemon + "\"></psicon>";
+		htmlText += "<psicon pokemon = \"" + pokemon + "\">";
 		htmlText += "<h2 style = 'display: inline-block;'>" + pokemon + "</h2><br>";
 
 		//Ranking information

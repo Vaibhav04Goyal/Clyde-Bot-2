@@ -784,9 +784,9 @@ exports.commands =
 		let text =
 		'<div style = "width: 485px; margin: auto; margin-bottom: 5px;"> \
     		<a href = "https://www.youtube.com/watch?v=buc64u6Q_oA" style = "text-align: center; font-size: 200%; display: block; color: black;border: 3px solid black; margin: auto; border-radius: 10px; background-color: #a4d1e8; padding: 5px 0;"> \
-				<psicon pokemon="wooper"></psicon> \
+				<psicon pokemon="wooper"> \
 				<strong>Acquire the Sire</strong> \
-				<psicon pokemon="wooper"></psicon> \
+				<psicon pokemon="wooper"> \
     		</a> \
 		</div> \
 		<div style = "width: 485px; margin: auto;"> \
