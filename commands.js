@@ -173,7 +173,7 @@ exports.commands =
 			let tourformat;
 			let tourname;
 			let tourObject;
-			const defaultTour = "series5";
+			const defaultTour = "vgc2021";
 			
 			//Handle default case, double elim, and random format options.
 			switch (arglist[0])
@@ -201,6 +201,13 @@ exports.commands =
 			//Prepare tournament format.
 			switch (arglist[0])
 			{
+				case "vgc21":
+				case "vgc2021":
+				case "21":
+				case "7":
+				case "s7":
+				case "series7":
+					tourObject = tourJSON["gen8vgc2021"];
 				case "vgc20":
 				case "vgc2020":
 				case "20":
@@ -211,12 +218,7 @@ exports.commands =
 					break;
 				case "nodynamax":
 				case "nomax":
-					tourObject = tourJSON["gen8vgc2020nodynamax"]
-					break;
-				case "series6":
-				case "s6":
-				case "6":
-					tourObject = tourJSON["gen8vgc2020series6"]
+					tourObject = tourJSON["gen8vgc2021nodynamax"]
 					break;
 				case "ultra":
 				case "ultra series":
@@ -303,7 +305,7 @@ exports.commands =
 					tourObject = tourJSON["gen8inversevgc"];
 					break;
 				case "halloween":
-					tourObject = tourJSON["gen8vgc2020halloween"];
+					tourObject = tourJSON["gen8vgc2021halloween"];
 					break;
 				case "random battle":
 				case "randombattle":

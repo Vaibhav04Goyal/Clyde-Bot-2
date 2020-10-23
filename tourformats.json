@@ -1,4 +1,14 @@
 {
+    "gen8vgc2021":
+    {
+        "tourformat": "gen8vgc2021",
+        "tourname": "[Gen 8] VGC 2021",
+        "tourrules": "",
+        "formatname": "VGC 2021",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "AKA VGC Series 7, with Crown Tundra DLC!"
+    },
     "gen8vgc2020":
     {
         "tourformat": "gen8vgc2020",
@@ -15,18 +25,6 @@
             ["cinderacegmax", "rillaboomgmax", "milotic", "tyranitar", "incineroar", "clefairy", "https://pokepast.es/1481948857a3d5b7", "Ezrael's Top 6 NA Player's Cup Team"],
             ["rillaboomgmax", "urshifurapidstrikegmax", "porygonz", "duraludon", "togekiss", "talonflame", "https://pokepast.es/7ec261e1fc9bd3a8", "Namuko Pro's Top 16 NA Player's Cup Team"],
             ["hatterenegmax", "dusclops", "rhyperior", "torkoal", "venusaurgmax", "indeedeef", "https://pokepast.es/2abb12ecc02f3618", "TobySxE's 1st Place Regionals Team"],
-            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
-        ],
-        "tournote": ""
-    },
-    "gen8vgc2020series6":
-    {
-        "tourformat": "gen8battlestadiumdoubles",
-        "tourname": "[Gen 8] VGC 2020 Series 6",
-        "tourrules": "",
-        "formatname": "VGC 2020",
-        "formatDescription": "VGC 2020, but with the top 10 Pokemon from VGC and Battle Spot Singles banned! Select \"Battle Stadium Doubles\" in the teambuilder when building for series 6!",
-        "sampleTeams": [
             ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2020 Teams"]
         ],
         "tournote": ""
@@ -278,31 +276,31 @@
     },
     "gen8inversevgc":
     {
-        "tourformat": "gen8vgc2020",
-        "tourname": "[Gen 8] VGC 2020 Inverse Battle",
+        "tourformat": "gen8vgc2021",
+        "tourname": "[Gen 8] VGC 2021 Inverse Battle",
         "tourrules": "inverse mod",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "VGC Inverse Battles! Type matchups are inverted. Now Fire-type attacks are super-effective against Water-type Pokemon!"
     },
-    "gen8vgc2020nodynamax":
+    "gen8vgc2021nodynamax":
     {
-        "tourformat": "gen8vgc2020",
-        "tourname": "[Gen 8] VGC 2020 (No Dynamax)",
+        "tourformat": "gen8vgc2021",
+        "tourname": "[Gen 8] VGC 2021 (No Dynamax)",
         "tourrules": "Dynamax Clause",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
-        "tournote": "VGC 2020, but with no Dynamax or Gigantamax allowed!"
+        "tournote": "VGC 2021, but with no Dynamax or Gigantamax allowed!"
     },
-    "gen8vgc2020halloween":
+    "gen8vgc2021halloween":
     {
-        "tourformat": "gen8vgc2020",
-        "tourname": "[Gen 8] VGC 2020 (Halloween)",
-        "tourrules": "-All Pokemon, +Aegislash, +Chandelure, +Cofagrigus, +Corsola-Galar, +Cursola, +Decidueye, +Dhelmise, +Doublade, +Dragapult, +Drakloak, +Dreepy, +Drifblim, +Drifloon, +Dusclops, +Dusknoir, +Duskull, +Frillish, +Froslass, +Gastly, +Gengar, +Golett, +Golurk, +Gourgeist, +Haunter, +Honedge, +Jellicent, +Lampent, +Litwick, +Lunala, +Marowak-Alola, +Marshadow, +Mimikyu, +Necrozma-Dawn-Wings, +Palossand, +Phantump, +Polteageist, +Pumpkaboo, +Rotom, +Runerigus, +Sableye, +Sandygast, +Shedinja, +Silvally-Ghost, +Sinistea, +Trevenant, +Yamask",
-        "formatname": "[Gen 8] VGC 2020 (Halloween)",
-        "formatDescription": "VGC 2020, but only Ghost-types are allowed!",
+        "tourformat": "gen8vgc2021",
+        "tourname": "[Gen 8] VGC 2021 (Halloween)",
+        "tourrules": "-All Pokemon, +Aegislash, +Blacephalon, +Calyrex-Shadow, +Chandelure, +Cofagrigus, +Corsola-Galar, +Cursola, +Decidueye, +Dhelmise, +Doublade, +Dragapult, +Drakloak, +Dreepy, +Drifblim, +Drifloon, +Dusclops, +Dusknoir, +Duskull, +Frillish, +Froslass, +Gastly, +Gengar, +Giratina, +Golett, +Golurk, +Gourgeist, +Haunter, +Honedge, +Jellicent, +Lampent, +Litwick, +Lunala, +Marowak-Alola, +Marshadow, +Mimikyu, +Necrozma-Dawn-Wings, +Palossand, +Phantump, +Polteageist, +Pumpkaboo, +Rotom, +Runerigus, +Sableye, +Sandygast, +Shedinja, +Silvally-Ghost, +Sinistea, +Spectrier, +Trevenant, +Yamask",
+        "formatname": "[Gen 8] VGC 2021 (Halloween)",
+        "formatDescription": "VGC 2021, but only Ghost-types are allowed!",
         "sampleTeams":
         [
             ["Lunala", "Marshadow", "Dragapult", "Necrozma-Dawn-Wings", "Mimikyu", "Drifblim", "https://pokepast.es/dbd0d1a624effde1", "Halloween Offense"]
