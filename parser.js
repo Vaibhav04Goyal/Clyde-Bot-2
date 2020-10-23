@@ -69,14 +69,22 @@ exports.parse =
 		{
 			if (spl[1].substr(1, 4) === "init")
 			{
-				let roomJoined = spl[1].substr(6);
-				if (roomJoined === "battle")
+				let roomTypeJoined = spl[1].substr(6);
+				let roomJoined = spl[2].substr(7);
+				if (roomTypeJoined === "battle")
 				{
-					ok("joined battle " + spl[2].substr(7));
+					return ok("joined battle " + spl[2].substr(7));
 				}
-				else
+				else if (roomTypeJoined === "chat")
 				{
-					return ok("joined " + spl[2].substr(7));
+					if (roomJoined === "Staff")
+					{
+						send("|/leave staff");
+					}
+					else
+					{
+						return ok("joined " + roomJoined);
+					}
 				}
 			}
 			room = spl.shift().substr(1);
@@ -765,7 +773,7 @@ exports.parse =
 			{
 				htmlText += "<psicon ";
 				if (isPM) {htmlText += "style = 'width: 35px;'";}
-				htmlText += "pokemon='" + sampleTeams[i][j] + "'></psicon>";
+				htmlText += "pokemon='" + sampleTeams[i][j] + "'>";
 				if (j !== 5) {htmlText += "|";}
 			}
 			htmlText += "<a href= '" + sampleTeams[i][j] + "'>"; //pokepaste link
@@ -994,7 +1002,7 @@ exports.parse =
 
 		//Name and sprite
 		htmlText += "<center>";
-		htmlText += "<psicon pokemon = \"" + pokemon + "\"></psicon>";
+		htmlText += "<psicon pokemon = \"" + pokemon + "\">";
 		htmlText += "<h2 style = 'display: inline-block;'>" + pokemon + "</h2><br>";
 
 		//Ranking information

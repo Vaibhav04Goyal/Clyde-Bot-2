@@ -306,5 +306,15 @@
             ["Lunala", "Marshadow", "Dragapult", "Necrozma-Dawn-Wings", "Mimikyu", "Drifblim", "https://pokepast.es/dbd0d1a624effde1", "Halloween Offense"]
         ],
         "tournote": ""
+    },
+    "gen8battleoflegends":
+    {
+        "tourformat": "gen8battleoflegends",
+        "tourname": "[Gen 8] Battle of Legends",
+        "tourrules": "",
+        "formatname": "[Gen 8] Battle of Legends",
+        "formatDescription": "",
+        "sampleTeams": "",
+        "tournote": "VGC 2020 Series 5, but you are allowed 1 of any legendary! See more details: https://www.smogon.com/forums/threads/battle-of-legends.3671265/"
     }
 }
