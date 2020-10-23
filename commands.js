@@ -307,10 +307,6 @@ exports.commands =
 				case "halloween":
 					tourObject = tourJSON["gen8vgc2021halloween"];
 					break;
-				case "bol":
-				case "battleoflegends":
-					tourObject = tourJSON["gen8battleoflegends"];
-					break;
 				case "random battle":
 				case "randombattle":
 				case "gen8randombattle":
