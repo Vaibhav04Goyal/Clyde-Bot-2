@@ -511,10 +511,7 @@ exports.parse =
 		let now = Date.now();
 		if (!this.chatData[user])
 		{
-			this.chatData[user] =
-			{
-				zeroTol: 0,
-			};
+			this.chatData[user] = {};
 		}
 		let userData = this.chatData[user];
 
@@ -645,7 +642,7 @@ exports.parse =
 					cmd = "mute";
 				}
 
-				//If the bot has % instead of @ or %, it will default to hourmuting as its highest level of punishment instead of roombanning
+				//If the bot has % instead of @ or *, it will default to hourmuting as its highest level of punishment instead of roombanning
 				if (roomData.points >= 4 && !this.hasRank(this.ranks[room] || " ", "@*&#"))
 				{
 					cmd = "hourmute";
@@ -658,16 +655,6 @@ exports.parse =
 					roomData.triggeredAutocorrect = 2; //resets the count so it won't continually spam warnings
 				}
 
-				//If zero tolerance users break a rule, they get an instant roomban or hourmute
-				if (userData.zeroTol > 4)
-				{
-					muteMessage = ", Automated response: zero tolerance user";
-					cmd = this.hasRank(this.ranks[room] || " ", "@*&#") ? "roomban" : "hourmute";
-				}
-				if (roomData.points > 1)
-				{
-					userData.zeroTol++; //Getting muted or higher increases your zero tolerance level (warns do not)
-				}
 				roomData.lastAction = now;
 				this.say(room, '/' + cmd + " " + user + muteMessage);
 				console.log(cmd + ": " + user + " at " + new Date().toLocaleString());
