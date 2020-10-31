@@ -324,21 +324,32 @@ exports.commands =
 					break;
 			}
 
+			let todaysDate = new Date();
+			let halloween = new Date("10/31/2020")
+
+			if (todaysDate.setHours(0,0,0,0) === halloween.setHours(0,0,0,0))
+			{
+				tourObject = tourJSON["gen8vgc2021halloween"];
+			}
+
 			//If no extra settings are specified, make the tour single elim with 128 player cap.
 			if (arglist[1] === undefined)
 			{
 				arglist[1] = "elimination";
 			}
+
 			if (arglist[1] === "double")
 			{
 				arglist[1] = "elimination";
 				arglist[2] = "128";
 				arglist[3] = "2";
 			}
+
 			if (arglist[2] === undefined || isNaN(arglist[2]))
 			{
 				arglist[2] = "128";
 			}
+
 			if (arglist[3] === undefined|| isNaN(arglist[3]))
 			{
 				arglist[3] = "1";
