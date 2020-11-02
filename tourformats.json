@@ -293,18 +293,5 @@
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "VGC 2021, but with no Dynamax or Gigantamax allowed!"
-    },
-    "gen8vgc2021halloween":
-    {
-        "tourformat": "gen8vgc2021",
-        "tourname": "[Gen 8] VGC 2021 (Halloween)",
-        "tourrules": "-All Pokemon, +Aegislash, +Blacephalon, +Calyrex-Shadow, +Chandelure, +Cofagrigus, +Corsola-Galar, +Cursola, +Decidueye, +Dhelmise, +Doublade, +Dragapult, +Drakloak, +Dreepy, +Drifblim, +Drifloon, +Dusclops, +Dusknoir, +Duskull, +Frillish, +Froslass, +Gastly, +Gengar, +Giratina, +Golett, +Golurk, +Gourgeist, +Haunter, +Honedge, +Jellicent, +Lampent, +Litwick, +Lunala, +Marowak-Alola, +Marshadow, +Mimikyu, +Necrozma-Dawn-Wings, +Palossand, +Phantump, +Polteageist, +Pumpkaboo, +Rotom, +Runerigus, +Sableye, +Sandygast, +Shedinja, +Silvally-Ghost, +Sinistea, +Spectrier, +Trevenant, +Yamask",
-        "formatname": "[Gen 8] VGC 2021 (Halloween)",
-        "formatDescription": "VGC 2021, but only Ghost-types are allowed!",
-        "sampleTeams":
-        [
-            ["Lunala", "Marshadow", "Dragapult", "Necrozma-Dawn-Wings", "Mimikyu", "Drifblim", "https://pokepast.es/dbd0d1a624effde1", "Halloween Offense"]
-        ],
-        "tournote": ""
     }
 }

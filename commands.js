@@ -305,9 +305,6 @@ exports.commands =
 				case "vgc inverse":
 					tourObject = tourJSON["gen8inversevgc"];
 					break;
-				case "halloween":
-					tourObject = tourJSON["gen8vgc2021halloween"];
-					break;
 				case "random battle":
 				case "randombattle":
 				case "gen8randombattle":
@@ -322,14 +319,6 @@ exports.commands =
 					tourformat = arglist[0];
 					tourname = "";
 					break;
-			}
-
-			let todaysDate = new Date();
-			let halloween = new Date("10/31/2020")
-
-			if (todaysDate.setHours(0,0,0,0) === halloween.setHours(0,0,0,0))
-			{
-				tourObject = tourJSON["gen8vgc2021halloween"];
 			}
 
 			//If no extra settings are specified, make the tour single elim with 128 player cap.
