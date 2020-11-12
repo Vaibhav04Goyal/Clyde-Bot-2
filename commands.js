@@ -13,6 +13,7 @@ const { inspect } = require("util");
 const axios = require("axios");
 
 const tourJSON = require("./tourformats.json");
+const { config } = require("process");
 
 exports.commands =
 {
@@ -994,8 +995,9 @@ exports.commands =
 		}
 		else
 		{
-			text = this.generateHTMLContentCreators(creatorData, false);
-			text = "/addhtmlbox " + text;	
+			text = "This command can only be used in " + config.nick + "'s PMs.";
+			//text = this.generateHTMLContentCreators(creatorData, false);
+			//text = "/addhtmlbox " + text;	
 		}
 		this.say(room, text);
 	},
