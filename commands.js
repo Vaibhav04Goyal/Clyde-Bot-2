@@ -11,9 +11,7 @@
 
 const { inspect } = require("util");
 const axios = require("axios");
-
 const tourJSON = require("./tourformats.json");
-const { config } = require("process");
 
 exports.commands =
 {
@@ -973,10 +971,12 @@ exports.commands =
 			["buzzwole", "Graham Amedee", false, false, "https://www.youtube.com/channel/UCBvb1EZjYRLuTot13DCIDXA", "Graham Ammodee", "https://twitter.com/amedeegraham", "@AmedeeGraham"],
 			["pachirisu", "Sejun Park", "https://www.twitch.tv/Sejun_Park", "Sejun_Park", false, false, "https://twitter.com/pokemon_tcg", "@pokemon_tcg"],
 			["cresselia", "Collin Heier", "https://www.twitch.tv/TheBattleRoom", "TheBattleRoom", "https://www.youtube.com/channel/UCoum47pkrc2jtZ0uTcm5R-A", "BattleRoomVGC", "https://twitter.com/BattleRoom", "@BattleRoom"],
+			["lugia", "Fiona Szymkiewicz", "https://www.twitch.tv/yoshi_and_lugia", "yoshi_and_lugia", "https://www.youtube.com/user/Yoshiandlugia", "Yoshiandlugia", "https://twitter.com/Yoshiandlugia", "@Yoshiandlugia"],
 			["stonjourner", "Barry Anderson", "https://www.twitch.tv/bazanderson", "BazAnderson", "https://www.youtube.com/user/bazandersonvgc", "Baz Anderson", "https://twitter.com/bazandersonvgc", "@bazandersonvgc"],
 			["salamence-mega", "Paul Ruiz", "https://www.twitch.tv/ralfdude90", "ralfdude90", "https://www.youtube.com/channel/UC7GjRTGrjXJ9lMWhkFCstxw", "ralfdude90", "https://twitter.com/ralfdude90", "@ralfdude90"],
 			["conkeldurr", "Lee Provost", "https://www.twitch.tv/osirusstudios", "OsirusStudios", "https://www.youtube.com/channel/UCi3LrHS-zJDTEO1Acml0Hxg", "Osirus Studios", "https://twitter.com/osirusvgc", "@osirusvgc"],
 			["maractus", "James Eakes", "https://www.twitch.tv/eakestv", "EakesTV", "https://www.youtube.com/eakestv", "EakesTV", "https://twitter.com/eakestv", "@EakesTV"],
+			["bidoof", "Gabby Snyder", "https://www.twitch.tv/simplyGabby", "simplyGabby", "https://www.youtube.com/GabbySnyder", "Gabby Snyder", "https://twitter.com/GabbySnyder", "@GabbySnyder"],
 			["togepi", "Ashton Cox", "https://www.twitch.tv/ashtoncoxgaz", "AshtonCoxGAZ", "https://www.youtube.com/channel/UCy5DFEpL1St735uHmMXz1xg", "AshtonCoxGAZ", "https://twitter.com/ashtoncoxgaz", "@AshtonCoxGAZ"],
 			["yveltal", "Joe Ugarte", "https://twitch.tv/joeux9", "JoeUX9", "https://youtube.com/joeux9", "JoeUX9", "https://twitter.com/joeux9", "@JoeUX9"],
 			["articuno", "Aldrich Yan Sutandra", "https://www.twitch.tv/aldrichyan", "aldrichyan", "https://www.youtube.com/channel/UCTN3uwcBhyid2iEOCD68cqg", "Aldrich Yan Sutandra", "https://twitter.com/AldrichYan", "@AldrichYan"],
@@ -995,9 +995,8 @@ exports.commands =
 		}
 		else
 		{
-			text = "This command can only be used in " + config.nick + "'s PMs.";
-			//text = this.generateHTMLContentCreators(creatorData, false);
-			//text = "/addhtmlbox " + text;	
+			text = this.generateHTMLContentCreators(creatorData, false);
+			text = "/addhtmlbox " + text;	
 		}
 		this.say(room, text);
 	},

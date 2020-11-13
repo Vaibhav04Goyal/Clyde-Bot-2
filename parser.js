@@ -776,13 +776,22 @@ exports.parse =
 		const youtubeLogo = "https://image.flaticon.com/icons/svg/1384/1384060.svg";
 		const twitterLogo = "https://image.flaticon.com/icons/svg/124/124021.svg";
 		const socialMediaLineSize = 13;
+		const remainder = creatorData.length % 3;
+		let listStart;
+		let listEnd;
 
 		let htmlText = "<center style = 'margin-bottom: 10px;'><h2 style = 'margin: 0'>Sample of VGC Content Creators</h2>";
 		htmlText += "<em style = 'font-style: italic;'>Click the arrows to see links to a content creator's YouTube, Twitch, and Twitter!</em></center>";
-		for (j = 0; j < 2; j++)
+		htmlText += "<p style = 'font-size: x-small';>This sample of VGC content creators is a resource for new players to learn from. It is not intended to be an exhaustive list of all VGC content creators. If you are an active, primarily VGC content creator with a moderate following and wish to be added, please contact a member of VGC room staff for consideration. Not all applications will be accepted.</p>";
+		if (!isPM) {htmlText += "<details><summary>Click to expand the list of content creators</summary>";}
+		for (j = 0; j < 3; j++)
 		{
-			if (!isPM) {htmlText += "<div style = 'width: 50%; float: left;'>";}
-			for (let i = j === 0 ? 0 : 1; i < creatorData.length; i = i + 2)
+			listStart = (listEnd) ? listEnd : 0;
+			listEnd = listStart + Math.floor(creatorData.length / 3);
+			if ((remainder === 1 || remainder === 2) && j !== 2) {listEnd++;}
+			
+			if (!isPM) {htmlText += "<div style = 'width: 33%; float: left;'>";}
+			for (let i = listStart; i < listEnd; i++)
 			{
 				htmlText += "<details><summary><psicon pokemon = \"" + creatorData[i][0] + "\">" + creatorData[i][1] + "</summary>";
 				htmlText += "<ul style = 'list-style-type: none; padding: 0;'>";
@@ -812,7 +821,8 @@ exports.parse =
 			}
 			if (!isPM) {htmlText += "</div>";}
 		}
-		htmlText += "<div style = 'clear: both;'></div><div><p style = 'font-size: x-small';>Note: This list is not comprehensive.</p></div>";
+		if (!isPM) {htmlText += "</details>";}
+		htmlText += "<div style = 'clear: both'></div>";
 		return htmlText;
 	},
 	generateHTMLUsage: async function(usageJSON, currentMonth, lastMonthRank)
