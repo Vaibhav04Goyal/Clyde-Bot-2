@@ -552,9 +552,9 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 9;
+		let month = 10;
 		let year = 2020;
-		const defaultFormat = "gen8vgc2020";
+		const defaultFormat = "gen8vgc2021";
 		const defaultRank = "1760";
 		const vgcstats = "https://vgcstats.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
