@@ -516,7 +516,8 @@ exports.commands =
 			"Why was the tennis club's website down? They had problems with their server.",
 			"What's the best time to buy a bird? When it's going cheep!",
 			"My friend hates it when I put his chocolate bars in other chocolate bar wrappers. It really gets his Snickers in a Twix.",
-			"There is a new government intiative to replace all cars with paper by 2030. This comes after a recently released study showing that 99% of car accidents could be prevented if all vehicles were stationery."
+			"There is a new government intiative to replace all cars with paper by 2030. This comes after a recently released study showing that 99% of car accidents could be prevented if all vehicles were stationery.",
+			"My brother can't seem to get anything completed. They say he's got a black belt in partial arts.",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
@@ -552,14 +553,14 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 10;
+		let month = 11;
 		let year = 2020;
 		const defaultFormat = "gen8vgc2021";
 		const defaultRank = "1760";
 		const vgcstats = "https://vgcstats.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
 		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2020-1760.txt";
-		const jorijnUsage = "https://drive.google.com/drive/folders/1lQr-HyxCjQJF_uoZVBqi7IfZFiAQwb2A";
+		const jorijnUsage = "https://drive.google.com/drive/folders/11gYc6-CN2mm96-cmmBYdNfBmhYSZSNGY";
 		const babiri = "https://babiri.net";
 
 		//Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
