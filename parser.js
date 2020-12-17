@@ -297,15 +297,11 @@ exports.parse =
 				}
 				break;
 			case "error": //this protocol is triggered whenever Showdown's errorReply() function is called
-				if (spl[2].includes("valid tournament"))
+				if (spl[2].includes("valid tournament") || spl[2].includes("restarting soon") || spl[2].includes("current room activity"))
 				{
 					this.say(room, spl[2]);
 				}
-				if(spl[2].includes("restarting soon"))
-				{
-					this.say(room, spl[2]);
-				}
-				if (spl[2].includes("who are not in this room"))
+				else if (spl[2].includes("who are not in this room"))
 				{
 					send("|/pm " + this.mostRecentUserPM + ", You must be in the <<vgc>> room for this command to work in PMs (sorry, blame Showdown).");
 				}
