@@ -564,8 +564,8 @@ exports.commands =
 		const defaultFormat = "gen8vgc2021";
 		const defaultRank = "1760";
 		const vgcstats = "https://vgcstats.com";
-		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2020-1760.txt";
-		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2020-1760.txt";
+		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2021-1760.txt";
+		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2021-1760.txt";
 		const jorijnUsage = "https://drive.google.com/drive/folders/11gYc6-CN2mm96-cmmBYdNfBmhYSZSNGY";
 		const babiri = "https://babiri.net";
 
@@ -890,7 +890,7 @@ exports.commands =
 	sample: "samples",
 	samples: function(arg, by, room)
 	{
-		let defaultFormat = "gen8vgc2020";
+		let defaultFormat = "gen8vgc2021";
 		let text = "";
 		if (this.isPM(room))
 		{

@@ -5,7 +5,7 @@
         "tourname": "[Gen 8] VGC 2021",
         "tourrules": "",
         "formatname": "VGC 2021",
-        "formatDescription": "",
+        "formatDescription": "VGC 2021 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, except restricted legendary Pokemon like Zacian, Kyogre, etc.",
         "sampleTeams":
         [
             ["coalossalgmax", "dragapult", "urshifurapidstrikegmax", "rillaboomgmax", "moltresgalar", "incineroar", "https://pokepast.es/19a57fd3a6db2e4d", "Wolfey's 1st Place Players Cup II Team"],
@@ -24,7 +24,7 @@
         "tourname": "[Gen 8] VGC 2020 Series 5",
         "tourrules": "",
         "formatname": "VGC 2020",
-        "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game except Zacian, Zamazenta, and Eternatus.",
+        "formatDescription": "VGC 2020 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, except restricted legendary Pokemon like Zacian, Necrozma, etc., up until the Isle of Armor DLC (DLC1, Series 5).",
         "sampleTeams":
         [
             ["dragapult", "togekiss", "tyranitar", "amoonguss", "excadrill", "incineroar", "https://pokepast.es/33ac4968f4c36ae2", "Desu's Top 4 EU Player's Cup Team"],
