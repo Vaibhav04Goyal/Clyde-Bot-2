@@ -190,7 +190,7 @@ exports.commands =
 					break;
 				case "random":
 				case "random vgc":
-					let vgcFormats = ["vgc11", "vgc12", "vgc13", "vgc14", "vgc14.5", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20"];
+					let vgcFormats = ["vgc11", "vgc12", "vgc13", "vgc14", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20"];
 					arglist[0] = vgcFormats[Math.floor(Math.random() * vgcFormats.length)];
 					break;
 				default:
