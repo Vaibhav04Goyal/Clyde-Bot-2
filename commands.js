@@ -377,9 +377,6 @@ exports.commands =
 					this.say(room, "/addhtmlbox " + htmlText);
 				}
 			}
-			
-			this.say(room, "/tour autostart 2");
-			this.say(room, "/tour autodq 0.75");
 		}
 		else
 		{
