@@ -260,16 +260,16 @@
         ],
         "tournote": ""
     },
-    "gen7bulucup":
+    "gen8bulucup":
     {
-        "tourformat": "gen71v1",
-        "tourname": "[Gen 7] Bulu Bash",
-        "tourrules": "-All Pokemon, +Tapu Bulu, +Focus Sash, -Hidden Power, !evasion moves clause, !accuracy moves clause",
+        "tourformat": "gen81v1",
+        "tourname": "[Gen 8] Bulu Bash",
+        "tourrules": "-All Pokemon, +Tapu Bulu, +Focus Sash, !evasion moves clause, !accuracy moves clause",
         "formatname": "Bulu Bash",
-        "formatDescription": "Tapu Bulu only! Hidden Power is banned. Create teams in the [Gen 7] 1v1 format, and make sure it's level 100!",
+        "formatDescription": "Tapu Bulu only! Create teams in the [Gen 8] 1v1 format, and make sure it's level 100!",
         "sampleTeams":
         [
-            ["tapubulu", "tapubulu", "tapubulu", "tapubulu", "tapubulu", "tapubulu", "https://pokepast.es/9abdac8c09b0538e", "Steelium Z Tapu Bulu"]
+            ["tapubulu", "tapubulu", "tapubulu", "tapubulu", "tapubulu", "tapubulu", "https://pokepast.es/5e8781c9ecf2200e", "Choice Band Tapu Bulu"]
         ],
         "tournote": ""
     },
