@@ -521,6 +521,7 @@ exports.commands =
 			"My friend hates it when I put his chocolate bars in other chocolate bar wrappers. It really gets his Snickers in a Twix.",
 			"There is a new government intiative to replace all cars with paper by 2030. This comes after a recently released study showing that 99% of car accidents could be prevented if all vehicles were stationery.",
 			"My brother can't seem to get anything completed. They say he's got a black belt in partial arts.",
+			"Did you hear Old McDonald had a son in the military? His name was E.I. G.I. Joe.",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
