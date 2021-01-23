@@ -303,7 +303,7 @@ exports.commands =
 				case "crab":
 				case "craboff":
 				case "crab off":
-					tourObject = tourJSON["gen7craboff"];
+					tourObject = tourJSON["gen8craboff"];
 					break;
 				case "inverse":
 				case "inverse vgc":
