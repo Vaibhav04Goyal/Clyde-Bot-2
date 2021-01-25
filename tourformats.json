@@ -273,15 +273,15 @@
         ],
         "tournote": ""
     },
-    "gen7craboff":
+    "gen8craboff":
     {
-        "tourformat": "gen7vgc2018",
-        "tourname": "[Gen 7] Crab Off VGC",
-        "tourrules": "-All Pokemon, +Armaldo, +Clawitzer, +Crabominable, +Crawdaunt, +Crustle, +Kingler, +Parasect, +Anorith, +Clauncher, +Corphish, +Crabrawler, +Krabby, +Paras, +Dwebble, !species clause, !item clause",
+        "tourformat": "gen8vgc2021",
+        "tourname": "[Gen 8] Crab Off VGC",
+        "tourrules": "-All Pokemon, +Armaldo, +Clawitzer, +Crawdaunt, +Crustle, +Kingler, +Anorith, +Clauncher, +Corphish, +Krabby, +Dwebble, +Regidrago, !species clause, !item clause",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
-        "tournote": "Crab off! No Species or Item Clause! Legal Pokemon are: Armaldo, Clawitzer, Crabominable, Crawdaunt, Crustle, Kingler, Parasect, and their pre-evolutions."
+        "tournote": "Crab off! No Species or Item Clause! Legal Pokemon are: Armaldo, Clawitzer, Crawdaunt, Crustle, Kingler, Regidrago, and their pre-evolutions."
     },
     "gen8inversevgc":
     {
