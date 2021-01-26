@@ -697,10 +697,6 @@ exports.commands =
 
 	mish: function(arg, by, room)
 	{
-		if (room === "vgc")
-		{
-			return false; //Policy is not to mish in VGC
-		}
 		this.say(room, "mish mish");
 
 		let rand = Math.floor(Math.random() * 10);
