@@ -254,7 +254,7 @@ exports.parse =
 				if (toID(by) !== toID(config.nick))
 				{
 					console.log("PM from " + by + " at " + new Date().toLocaleString() + ": " + spl[4]); //Logs PMs to BoTTT III in the console.
-					if (toID(spl[4]) === "mish")
+					if (toID(spl[4]) === "mish" && spl[4] !== ".mish")
 					{
 						send("|/pm " + toID(by) + ", mish mish");
 					}
