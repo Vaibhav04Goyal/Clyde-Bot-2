@@ -52,6 +52,10 @@
             "uno":
             {
                 "users": ["dingram"]
+            },
+            "mish":
+            {
+                "users": ["demantoid"]
             }
         }
 
