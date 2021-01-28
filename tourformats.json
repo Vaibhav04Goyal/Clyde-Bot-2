@@ -5,6 +5,15 @@
         "tourname": "[Gen 8] VGC 2021",
         "tourrules": "",
         "formatname": "VGC 2021",
+        "formatDescription": "",
+        "tournote": "VGC 2021, but 1 restricted Pokemon is allowed! "
+    },
+    "gen8vgc2021series7":
+    {
+        "tourformat": "gen8vgc2021",
+        "tourname": "[Gen 8] VGC 2021",
+        "tourrules": "",
+        "formatname": "VGC 2021",
         "formatDescription": "VGC 2021 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, except restricted legendary Pokemon like Zacian, Kyogre, etc.",
         "sampleTeams":
         [
@@ -307,20 +316,10 @@
     {
         "tourformat": "gen8vgc2021",
         "tourname": "[Gen 8] GS Cup",
-        "tourrules": "!Standard GBU, Minimal GBU",
+        "tourrules": "!Single Restricted GBU, Minimal GBU",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "VGC 2021, but two restricted legendary Pokemon are allowed!"
     },
-    "gen8vgc2021series8":
-    {
-        "tourformat": "gen8vgc2021",
-        "tourname": "[Gen 8] VGC 2021 Series 8",
-        "tourrules": "!Standard GBU, Minimal GBU",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2021, but 1 restricted Pokemon is allowed! If you use 2, you'll be disqualified!"
-    }
 }
