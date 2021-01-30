@@ -697,6 +697,7 @@ exports.commands =
 
 	mish: function(arg, by, room)
 	{
+		if (room === 'vgc') {return false;}
 		this.say(room, "mish mish");
 
 		let rand = Math.floor(Math.random() * 10);
