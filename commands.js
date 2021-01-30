@@ -90,9 +90,8 @@ exports.commands =
 
 		if (arg.substr(0, 25) === "https://pastebin.com/raw/")
 		{
-			const rp = require("request-promise-native");
-			const contents = await rp(arg);
-			arg = contents;
+			const contents = await axios.get(arg);
+			arg = contents.data;
 		}
 
 		//If no target room is specified, it just sends it back as a PM.
