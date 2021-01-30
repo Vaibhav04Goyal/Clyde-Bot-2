@@ -21,6 +21,7 @@ const FLOOD_MESSAGE_TIME = 6*1000;
 const MIN_CAPS_LENGTH = 18;
 const MIN_CAPS_PROPORTION = 0.8;
 
+let initial_login = true;
 let ranks = " +%@*&#";
 let rankMap = new Map();
 for (let i = 0, len = ranks.length; i < len; i++)
@@ -102,7 +103,7 @@ exports.parse =
 
 	message: function(message, room)
 	{
-		//console.log(message);
+		// console.log(message);
 		let spl = message.split('|');
 		let by; //The user sending the message
 		switch (spl[1])
@@ -205,15 +206,21 @@ exports.parse =
 				req.end();
 				break;
 			case "updateuser":	
-				if (toID(spl[2]) !== toID(config.nick)) return;
-
-				if (spl[3] !== '1')
+				if (spl[3] !== '1' && !initial_login) // if marked as a Guest and it's not the start of the login process
 				{
-					error("failed to log in, still guest");
-					process.exit(-1);
+					error("Switched off of main account " + config.nick + ". Reconnecting...");
+					Connection.close();
+					initial_login = true;
+					return;
+				}
+				// if it is the start of the login process, don't do anything until we're off of the Guest account
+				else if (initial_login && (toID(spl[2]) !== toID(config.nick)))
+				{
+					return;
 				}
 
 				ok("logged in as " + spl[2]);
+				initial_login = false;
 				if (config.avatar)
 				{
 					send("|/avatar " + config.avatar);
@@ -251,7 +258,7 @@ exports.parse =
 				{
 					this.ranks[room] = by.charAt(0);
 				}
-				if (toID(by) !== toID(config.nick))
+				if (toID(by) !== toID(config.nick) && (toID(spl[3]) === toID(config.nick)))
 				{
 					console.log("PM from " + by + " at " + new Date().toLocaleString() + ": " + spl[4]); //Logs PMs to BoTTT III in the console.
 					if (toID(spl[4]) === "mish" && spl[4] !== ".mish")
