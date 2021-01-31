@@ -1,4 +1,6 @@
-﻿/**
+﻿"use strict";
+
+/**
  * This is the main file for the Pokemon Showdown bot.
  *
  * Modified by DaWoblefet for use with BoTTT III with original work by TalkTakesTime, Quinella, and Morfent.

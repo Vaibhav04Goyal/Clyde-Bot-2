@@ -1,3 +1,5 @@
+"use strict";
+
 /* Websocket server and port the bot should connect to. Check the 'Request URL'
  * of the websocket. If you don't know what that means, just leave this as-is. */
 exports.server = "sim3.psim.us";

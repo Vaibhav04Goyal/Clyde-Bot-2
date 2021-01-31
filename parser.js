@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * This is the file where commands get parsed.
  *
@@ -30,6 +32,7 @@ for (let i = 0, len = ranks.length; i < len; i++)
 }
 
 const commandsJSON = require("./commandpermissions.json");
+const globalCommandsObject = commandsJSON["global"];
 
 exports.parse =
 {
@@ -384,6 +387,7 @@ exports.parse =
 	},
 	say: function(room, text)
 	{
+		text = "" + text; // ensure it's a string
 		let msg;
 		if (room.charAt(0) !== ',')
 		{
@@ -394,7 +398,7 @@ exports.parse =
 		{
 			room = room.substr(1);
 			text = text.split('\n');
-			for (i = 0; i < text.length; i++)
+			for (let i = 0; i < text.length; i++)
 			{
 				msg = "|/pm " + room + ", " + text[i];
 				send(msg);
@@ -420,7 +424,6 @@ exports.parse =
 		let userRank;
 		let userID = toID(this.trimStatus(user));
 		let commandsObject;
-		let globalCommandsObject = commandsJSON["global"];
 
 		//0 = regular user, 1 = voice, 2 = driver, 3 = mod, 4 = bot, 5 = leader, 6 = room owner
 		if (rankMap.get(user.charAt(0)) === -1)
@@ -464,7 +467,7 @@ exports.parse =
 		{
 			if (arg.indexOf("[") === 0 && arg.indexOf("]") > -1)
 			{
-				targetRoom = arg.slice(1, arg.indexOf("]"));
+				const targetRoom = arg.slice(1, arg.indexOf("]"));
 				if (commandsJSON[targetRoom])
 				{
 					let userList = commandsJSON[targetRoom]["roomowners"];
@@ -492,7 +495,7 @@ exports.parse =
 		//Owners have access to every command.
 		if (config.owners)
 		{
-			for (i = 0; i < config.owners.length; i++)
+			for (let i = 0; i < config.owners.length; i++)
 			{
 				if (userID === toID(config.owners[i]))
 				{
@@ -755,7 +758,6 @@ exports.parse =
 	generateHTMLSample: function(formatname, formatDescription, sampleTeams, isOpen, isPM)
 	{
 		let htmlText = "<strong>" + formatname + "</strong> <br> <details> <summary>Rules for " + formatname + " (click to view)</summary> " + formatDescription +  "</details> <details" + (isOpen ? " open" : "") + "> <summary>Sample Teams</summary>";
-		
 		for (let i = 0; i < sampleTeams.length; i++)
 		{
 			let j;
@@ -787,7 +789,7 @@ exports.parse =
 		htmlText += "<em style = 'font-style: italic;'>Click the arrows to see links to a content creator's YouTube, Twitch, and Twitter!</em></center>";
 		htmlText += "<p style = 'font-size: x-small';>This sample of VGC content creators is a resource for new players to learn from. It is not intended to be an exhaustive list of all VGC content creators. If you are an active, primarily VGC content creator with a moderate following and wish to be added, please contact a member of VGC room staff for consideration. Not all applications will be accepted.</p>";
 		if (!isPM) {htmlText += "<details><summary>Click to expand the list of content creators</summary>";}
-		for (j = 0; j < 3; j++)
+		for (let j = 0; j < 3; j++)
 		{
 			listStart = (listEnd) ? listEnd : 0;
 			listEnd = listStart + Math.floor(creatorData.length / 3);
@@ -909,7 +911,7 @@ exports.parse =
 		//Abilities
 		htmlText += "<details open><summary style = 'font-size: 14px'><strong>Abilities</strong></summary><ul style = 'margin: 0; padding-left: 18px'>"
 		let abilityNames = Object.keys(abilities);
-		for (i = 0; i < abilityNames.length; i++)
+		for (let i = 0; i < abilityNames.length; i++)
 		{
 			htmlText += "<li>" + abilityNames[i] + " - "  + abilities[abilityNames[i]] + "</li>";
 		}
@@ -919,7 +921,7 @@ exports.parse =
 		htmlText += "<div style = 'float: left;  width: 40%;'><div style = 'margin-right: 5px;'>";
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Moves</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let moveNames = Object.keys(moves);
-		for (i = 0; i < moveNames.length; i++)
+		for (let i = 0; i < moveNames.length; i++)
 		{
 			htmlText += "<li>" + moveNames[i] + " - "  + moves[moveNames[i]] + "</li>";
 		}
@@ -929,7 +931,7 @@ exports.parse =
 		htmlText += "<div style = 'float: left;  width: 40%;'><div style = 'margin-right: 5px;'>";
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Items</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let itemNames = Object.keys(items);
-		for (i = 0; i < itemNames.length; i++)
+		for (let i = 0; i < itemNames.length; i++)
 		{
 			htmlText += "<li>" + itemNames[i] + " - "  + items[itemNames[i]] + "</li>";
 		}
@@ -939,13 +941,13 @@ exports.parse =
 		htmlText += "<div style = 'float: left;'><div style = 'margin-right: 5px;'>";
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>EV Spreads</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let natures = Object.keys(spreads);
-		for (i = 0; i < natures.length; i++)
+		for (let i = 0; i < natures.length; i++)
 		{	
 			if (natures[i] !== "Other")
 			{
 				let particularNature = spreads[natures[i]];
 				let evs = Object.keys(particularNature);
-				for (j = 0; j < evs.length; j++)
+				for (let j = 0; j < evs.length; j++)
 				{
 					htmlText += "<li>" + natures[i] + ": "  + evs[j] + " - " + particularNature[evs[j]] + "</li>";
 				}
@@ -1014,7 +1016,7 @@ exports.parse =
 		//Abilities
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Abilities</strong></summary><ul style = 'margin: 0; padding-left: 18px'>"
 		let abilityNames = Object.keys(abilities);
-		for (i = 0; i < abilityNames.length; i++)
+		for (let i = 0; i < abilityNames.length; i++)
 		{
 			htmlText += "<li>" + abilityNames[i] + " - "  + abilities[abilityNames[i]] + "</li>";
 		}
@@ -1023,7 +1025,7 @@ exports.parse =
 		//Moves
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Moves</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let moveNames = Object.keys(moves);
-		for (i = 0; i < moveNames.length; i++)
+		for (let i = 0; i < moveNames.length; i++)
 		{
 			htmlText += "<li>" + moveNames[i] + " - "  + moves[moveNames[i]] + "</li>";
 		}
@@ -1032,7 +1034,7 @@ exports.parse =
 		//Items
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>Items</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let itemNames = Object.keys(items);
-		for (i = 0; i < itemNames.length; i++)
+		for (let i = 0; i < itemNames.length; i++)
 		{
 			htmlText += "<li>" + itemNames[i] + " - "  + items[itemNames[i]] + "</li>";
 		}
@@ -1041,13 +1043,13 @@ exports.parse =
 		//EV spreads
 		htmlText += "<details><summary style = 'font-size: 14px'><strong>EV Spreads</strong></summary><ul style = 'margin: 0; padding-left: 18px'>";
 		let natures = Object.keys(spreads);
-		for (i = 0; i < natures.length; i++)
+		for (let i = 0; i < natures.length; i++)
 		{	
 			if (natures[i] !== "Other")
 			{
 				let particularNature = spreads[natures[i]];
 				let evs = Object.keys(particularNature);
-				for (j = 0; j < evs.length; j++)
+				for (let j = 0; j < evs.length; j++)
 				{
 					htmlText += "<li>" + natures[i] + ": "  + evs[j] + " - " + particularNature[evs[j]] + "</li>";
 				}
@@ -1102,7 +1104,7 @@ exports.parse =
 		text += pokemon + " was on " + usagePercent + " of teams; its rank has adjusted by " + rankDifference + " since " + (months !== 1 ? months[currentMonth - 2] : "December") + ".\n";
 		text += "**Abilities**:";
 		let abilityNames = Object.keys(abilities);
-		for (i = 0; i < abilityNames.length; i++)
+		for (let i = 0; i < abilityNames.length; i++)
 		{
 			text += abilityNames[i] + " - "  + abilities[abilityNames[i]] + "; ";
 		}
@@ -1110,7 +1112,7 @@ exports.parse =
 
 		text += "**Moves**:";
 		let moveNames = Object.keys(moves);
-		for (i = 0; i < moveNames.length; i++)
+		for (let i = 0; i < moveNames.length; i++)
 		{
 			text += moveNames[i] + " - "  + moves[moveNames[i]] + "; ";
 			if (i % 3 === 0 && i !== 0)
@@ -1122,7 +1124,7 @@ exports.parse =
 
 		text += "**Items**:";
 		let itemNames = Object.keys(items);
-		for (i = 0; i < itemNames.length; i++)
+		for (let i = 0; i < itemNames.length; i++)
 		{
 			text += itemNames[i] + " - "  + items[itemNames[i]] + "; ";
 			if (i % 3 === 0 && i !== 0)
@@ -1134,13 +1136,13 @@ exports.parse =
 
 		text += "**EV Spreads**:";
 		let natures = Object.keys(spreads);
-		for (i = 0; i < natures.length; i++)
+		for (let i = 0; i < natures.length; i++)
 		{	
 			if (natures[i] !== "Other")
 			{
 				let particularNature = spreads[natures[i]];
 				let evs = Object.keys(particularNature);
-				for (j = 0; j < evs.length; j++)
+				for (let j = 0; j < evs.length; j++)
 				{
 					text += natures[i] + ": "  + evs[j] + " - " + particularNature[evs[j]] + "; ";
 				}

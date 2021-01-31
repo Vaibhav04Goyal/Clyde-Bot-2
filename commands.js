@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * This is the file where the bot commands are located.
  *
@@ -604,13 +606,13 @@ exports.commands =
 
 		if (arg) //Pokemon is specified
 		{
-			arglist = arg.split(',');
+			const arglist = arg.split(',');
 			if (this.isPM(room))
 			{
-				mon = toID(arglist[0]);
-				format = arglist[1] ? toID(arglist[1]) : defaultFormat;
+				const mon = toID(arglist[0]);
+				const format = arglist[1] ? toID(arglist[1]) : defaultFormat;
 				//OU and DOU are higher traffic, so they get a special ELO to search against 
-				rank = (format === "gen8ou" || format === "gen8doublesou") ? "1825" : defaultRank;
+				const rank = (format === "gen8ou" || format === "gen8doublesou") ? "1825" : defaultRank;
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/" + format + "/" + rank + "/" + mon);
 				if (wasSuccessful)
 				{
@@ -630,10 +632,10 @@ exports.commands =
 			}
 			else //has permissions for htmlbox
 			{
-				mon = toID(arglist[0]);
-				format = arglist[1] ? toID(arglist[1]) : defaultFormat;
+				const mon = toID(arglist[0]);
+				const format = arglist[1] ? toID(arglist[1]) : defaultFormat;
 				//OU and DOU are higher traffic, so they get a special ELO to search against 
-				rank = (format === "gen8ou" || format === "gen8doublesou") ? "1825" : defaultRank;
+				const rank = (format === "gen8ou" || format === "gen8doublesou") ? "1825" : defaultRank;
 				this.say(room, "/adduhtml " + mon + ", Loading usage stats data for " + arg + "...");
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/" + format + "/" + rank + "/" + mon);
 				if (wasSuccessful)
@@ -742,7 +744,7 @@ exports.commands =
 	{
 		let text = 
 		'<marquee scrollamount = "15">';
-		for (i = 0; i < 13; i++)
+		for (let i = 0; i < 13; i++)
 		{
 			text += '	<img src = "https://play.pokemonshowdown.com/sprites/ani/diglett.gif" class = "fa fa-spin" width = "43" height = "35">';
 		}
@@ -775,7 +777,7 @@ exports.commands =
 			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1f9.png" class="fa fa-spin" width="43" height="35"> \
 			<img src="https://images.emojiterra.com/twitter/v11/512px/1f1f9.png" class="fa fa-spin" width="43" height="35"> \
 		';
-		for (i = 0; i < 13; i++)
+		for (let i = 0; i < 13; i++)
 		{
 			text += '	<img src = "https://play.pokemonshowdown.com/sprites/ani-back/diglett.gif" class = "fa fa-spin" width = "43" height = "35">';
 		}
@@ -896,7 +898,7 @@ exports.commands =
 		{
 			room = toID(config.rooms[0]);
 
-			if (tourJSON.hasOwnProperty(arg))
+			if (tourJSON.hasOwnProperty(arg) && tourJSON[arg].sampleTeams.length)
 			{
 				this.mostRecentUserPM = toID(by);
 				text = "/pminfobox " + this.mostRecentUserPM + ", " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true, true);
@@ -912,21 +914,20 @@ exports.commands =
 			}
 			else
 			{
-				text = "Invalid format specified. Valid formats are: ";
+				text = "/pminfobox " + this.mostRecentUserPM + ", " + "Invalid format specified. Valid formats are: ";
 				let validFormats = [];
 				let keys = Object.keys(tourJSON);
-				for (key in keys)
+				for (const key in keys)
 				{
-					if (tourJSON[keys[key]].formatname)
+					if (tourJSON[keys[key]].sampleTeams.length)
 					{
 						validFormats.push(keys[key]);
 					}
 				}
 				text += "all, " + validFormats.join(", ");
-				text = "/pm " + toID(by) + ", " + text;
 			}
 		}
-		else if (tourJSON.hasOwnProperty(arg))
+		else if (tourJSON.hasOwnProperty(arg) && tourJSON[arg].sampleTeams.length)
 		{
 			text = "/addhtmlbox " + this.generateHTMLSample(tourJSON[arg].formatname, tourJSON[arg].formatDescription, tourJSON[arg].sampleTeams, true, false);
 		}
@@ -939,9 +940,9 @@ exports.commands =
 			text = "/addhtmlbox ";
 			let keys = Object.keys(tourJSON);
 			
-			for (key in keys)
+			for (const key in keys)
 			{
-				if (tourJSON[keys[key]].formatname)
+				if (tourJSON[keys[key]].sampleTeams.length)
 				{
 					text += this.generateHTMLSample(tourJSON[keys[key]].formatname, tourJSON[keys[key]].formatDescription, tourJSON[keys[key]].sampleTeams, false, false);
 				}
@@ -952,9 +953,9 @@ exports.commands =
 			text = "Invalid format specified. Valid formats are: ";
 			let validFormats = [];
 			let keys = Object.keys(tourJSON);
-			for (key in keys)
+			for (const key in keys)
 			{
-				if (tourJSON[keys[key]].formatname)
+				if (tourJSON[keys[key]].sampleTeams.length)
 				{
 					validFormats.push(keys[key]);
 				}
