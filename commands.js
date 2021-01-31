@@ -141,7 +141,7 @@ exports.commands =
 
 	kill: function(arg, by, room)
 	{
-		console.log(config.nick + " terminated at " + new Date().toLocaleString());
+		info(config.nick + " terminated at " + new Date().toLocaleString());
 		process.exit(-1);
 	},
 
@@ -164,7 +164,7 @@ exports.commands =
 			hasTourStarted = false;
 			this.say(room, "Tournament creation should be working again.");
 			send("|/pm " + toID(by) + ", Please let DaWoblefet know tours were broken.");
-			console.log("Tour reset was called. Better check it out. " + new Date().toLocaleString());
+			error("Tour reset was called. Better check it out. " + new Date().toLocaleString());
 			return;
 		}
 
@@ -599,7 +599,7 @@ exports.commands =
 				}
 				else
 				{
-					console.log(new Date().toLocaleString() + error);
+					error(new Date().toLocaleString() + error);
 				}
 			}
 		};
