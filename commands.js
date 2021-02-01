@@ -915,6 +915,7 @@ exports.commands =
 			}
 			else
 			{
+				this.mostRecentUserPM = toID(by);
 				text = "/pminfobox " + this.mostRecentUserPM + ", " + "Invalid format specified. Valid formats are: ";
 				let validFormats = [];
 				let keys = Object.keys(tourJSON);
