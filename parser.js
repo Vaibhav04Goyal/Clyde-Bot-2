@@ -670,13 +670,11 @@ exports.parse =
 	cleanChatData: function()
 	{
 		let chatData = this.chatData;
-		for (user in chatData)
+		for (const user in chatData)
 		{
-			for (room in chatData[user])
+			for (const room in chatData[user])
 			{
 				let roomData = chatData[user][room];
-				if (!Object.isObject(roomData)) continue;
-
 				if (!roomData.times || !roomData.times.length)
 				{
 					delete chatData[user][room];
