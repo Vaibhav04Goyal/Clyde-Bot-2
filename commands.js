@@ -529,6 +529,7 @@ exports.commands =
 			"My brother can't seem to get anything completed. They say he's got a black belt in partial arts.",
 			"Did you hear Old McDonald had a son in the military? His name was E.I. G.I. Joe.",
 			"What do you call someone who immigrates to Sweden? Artifical Swedener!",
+			"My son told me he wanted to study burrowing rodents in college. I told him to gopher it!",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
