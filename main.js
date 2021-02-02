@@ -271,7 +271,7 @@ let connect = function(retry)
 
 		con.on("close", function()
 		{
-			error("connection closed: " + inspect(arguments));
+			error("connection closed: " + inspect(arguments) + " at " + new Date().toLocaleString());
 			info("retrying in " + config.timeout + " seconds");
 			hasTourStarted = false;
 

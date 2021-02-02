@@ -222,7 +222,7 @@ exports.parse =
 					return;
 				}
 
-				ok("logged in as " + spl[2]);
+				ok("logged in as " + spl[2] + " at " + new Date().toLocaleString());
 				initial_login = false;
 				if (config.avatar)
 				{
