@@ -32,6 +32,7 @@ for (let i = 0, len = ranks.length; i < len; i++)
 }
 
 const commandsJSON = require("./commandpermissions.json");
+const { createSecureServer } = require("http2");
 const globalCommandsObject = commandsJSON["global"];
 
 exports.parse =
@@ -903,7 +904,7 @@ exports.parse =
 		//Ranking information
 		htmlText += "<div style = 'float: left; width: 55%;'><div style = 'margin-left: 5px;'>";
 		htmlText += "<div style = 'float: right;'><h3 style = 'margin: 0'>Showdown Rank (" + usageMonth + ") - #" + rank + "</h3></div><div style = 'clear: both;'></div>";
-		htmlText += "<span style = 'float: right;'><span style = 'float: right;'><span style = 'color: " + color + ";'><strong>" + rankDifference + "</strong></span> since " + (months !== 1 ? months[currentMonth - 2] : "December") + "</span>";
+		htmlText += "<span style = 'float: right;'><span style = 'float: right;'><span style = 'color: " + color + ";'><strong>" + rankDifference + "</strong></span> since " + (currentMonth === 1 ? "December" : months[currentMonth - 2]) + "</span>";
 		htmlText += "<br><strong>" + usagePercent  + " usage</strong></span><div style = 'clear: both'></div><br>";
 
 		//Abilities
@@ -1007,7 +1008,7 @@ exports.parse =
 
 		//Ranking information
 		htmlText += "<strong>Showdown Rank (" + usageMonth + ") - #" + rank + "</strong><br>";
-		htmlText += "<span style = 'color: " + color + ";'><strong>" + rankDifference + "</strong></span> since " + (months !== 1 ? months[currentMonth - 2] : "December");
+		htmlText += "<span style = 'color: " + color + ";'><strong>" + rankDifference + "</strong></span> since " + (currentMonth === 1 ? "December" : months[currentMonth - 2]);
 		htmlText += "<br><strong>" + usagePercent  + " usage</strong>";
 		htmlText += "</center><br>";
 

@@ -565,8 +565,8 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 12;
-		let year = 2020;
+		let month = 1;
+		let year = 2021;
 		const defaultFormat = "gen8vgc2021";
 		const defaultRank = "1760";
 		const vgcstats = "https://vgcstats.com";
@@ -624,8 +624,9 @@ exports.commands =
 
 						//Get last month's ranking, but don't override with old usage stats
 						let temp = JSONresponse;
-						await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/" + format + "/" + rank + "/" + mon);
+						await getData("https://smogon-usage-stats.herokuapp.com/" + (month === 1 ? year - 1 : year) + "/" + (month === 1 ? 12 : month - 1) + "/" + format + "/" + rank + "/" + mon);
 						JSONresponse = temp;
+						console.log("https://smogon-usage-stats.herokuapp.com/" + (month === 1 ? year - 1 : year) + "/" + (month === 1 ? 12 : month - 1) + "/" + format + "/" + rank + "/" + mon);
 						this.mostRecentUserPM = toID(by);
 						text = "/pminfobox " + this.mostRecentUserPM + ", " + await this.generateHTMLUsagePM(JSONresponse, month, lastMonthRank);
 					}
@@ -643,7 +644,7 @@ exports.commands =
 				{
 					//Get last month's ranking, but don't override with old usage stats
 					let temp = JSONresponse;
-					await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + (month !== 1 ? (month - 1) : 12) + "/" + format + "/" + rank + "/" + mon);
+					await getData("https://smogon-usage-stats.herokuapp.com/" + (month === 1 ? year - 1 : year) + "/" + (month === 1 ? 12 : month - 1) + "/" + format + "/" + rank + "/" + mon);
 					JSONresponse = temp;
 					text = "/changeuhtml " + mon + ", " + await this.generateHTMLUsage(JSONresponse, month, lastMonthRank);
 				}
