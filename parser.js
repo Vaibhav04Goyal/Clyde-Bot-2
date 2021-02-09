@@ -308,7 +308,7 @@ exports.parse =
 				}
 				break;
 			case "error": //this protocol is triggered whenever Showdown's errorReply() function is called
-				if (spl[2].includes("valid tournament") || spl[2].includes("restarting soon") || spl[2].includes("current room activity"))
+				if (spl[2].includes("valid tournament") || spl[2].includes("restarting soon") || spl[2].includes("current room activity") || spl[2].includes("technical difficulties"))
 				{
 					this.say(room, spl[2]);
 				}
