@@ -530,6 +530,7 @@ exports.commands =
 			"Did you hear Old McDonald had a son in the military? His name was E.I. G.I. Joe.",
 			"What do you call someone who immigrates to Sweden? Artifical Swedener!",
 			"My son told me he wanted to study burrowing rodents in college. I told him to gopher it!",
+			"In breaking news, the new Peak-a-Boo virus has infected a local baby. The baby was rushed to the ICU.",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
