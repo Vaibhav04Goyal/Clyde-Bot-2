@@ -829,6 +829,11 @@ exports.commands =
 		let text = "<img src = \"https://cdn.discordapp.com/emojis/418886687180062720.png\" width=50 height=50>";
 		this.say(room, "/addhtmlbox " + text);
 	},
+	sunglasses: function(arg, by, room)
+	{
+		let text = "<img src = \"https://discord.com/assets/5f80f04e6ee97feebdd00feff92ced82.svg\" width=50 height=50>";
+		this.say(room, "/addhtmlbox " + text);
+	},
 	tympole: function(arg, by, room)
 	{
 		let text = "<img src = \"https://cdn.discordapp.com/emojis/483997875181715456.png\" width=32 height=32 style='border: 1px solid black;'>";
