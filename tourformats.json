@@ -1,13 +1,23 @@
 {
-    "gen8vgc2021":
+    "gen8vgc2021series8":
     {
         "tourformat": "gen8vgc2021",
-        "tourname": "[Gen 8] VGC 2021",
+        "tourname": "[Gen 8] VGC 2021 Series 8",
         "tourrules": "",
-        "formatname": "VGC 2021",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "VGC 2021, but 1 restricted Pokemon is allowed! Sample teams: https://www.smogon.com/forums/threads/series-8-sample-team-thread.3677426/"
+        "formatname": "VGC 2021 (Series 8)",
+        "formatDescription": "VGC 2021 Series 8 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, including up to one restricted legendary Pokemon like Zacian, Kyogre, etc.",
+        "sampleTeams":
+        [
+            ["kyogre", "regieleki", "tornadus", "kartana", "incineroar", "amoonguss", "https://pokepast.es/5e88f01a1d8ea7a8", "GeniusVGC's 1st Place X9 Championship Team"],
+            ["zaciancrowned", "laprasgmax", "tapukoko", "landorustherian", "incineroar", "amoonguss", "https://pokepast.es/4f9af8618b93b5d0", "Feis / fevzi's 2nd / Top 4 X9 Championship Team"],
+            ["groudon", "charizardgmax", "porygon2", "indeedeef", "kartana", "umbreon", "https://pokepast.es/0f91b0963a09eea0", "gracideae's 1st Place Women's Cup Team"],
+            ["necrozmaduskmane", "laprasgmax", "incineroar", "ferrothorn", "togekiss", "tyranitar", "https://pokepast.es/96d4fb1f1ea731ab", "Yoko's Top 8 Women's Cup Team"],
+            ["dialga", "grimmsnarl", "zapdos", "landorustherian", "incineroar", "amoonguss", "https://pokepast.es/47112c6fa44792e7", "BattleRoom's Top 16 X9 Championship Team"],
+            ["solgaleo", "spectrier", "zapdos", "grimmsnarl", "porygon2", "rillaboom", "https://pokepast.es/e5b116ec13084b13", "zeefable's Top 10 Battle Stadium Team"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2021 Teams [Victory Road]"],
+            ["koffing", "koffing", "koffing", "koffing", "koffing", "koffing", "https://www.smogon.com/forums/threads/series-8-sample-team-thread-accepting-submissions.3677426/", "More VGC 2021 Teams [Smogon]"]
+        ],
+        "tournote": ""
     },
     "gen8vgc2021series7":
     {

@@ -207,7 +207,7 @@ exports.commands =
 				case "8":
 				case "s8":
 				case "series8":
-					tourObject = tourJSON["gen8vgc2021"];
+					tourObject = tourJSON["gen8vgc2021series8"];
 					break;
 				case "7":
 				case "s7":
@@ -900,7 +900,7 @@ exports.commands =
 	sample: "samples",
 	samples: function(arg, by, room)
 	{
-		let defaultFormat = "gen8vgc2021series7";
+		let defaultFormat = "gen8vgc2021series8";
 		let text = "";
 		if (this.isPM(room))
 		{
