@@ -567,7 +567,7 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 1;
+		let month = 2;
 		let year = 2021;
 		const defaultFormat = "gen8vgc2021";
 		const defaultRank = "1760";
