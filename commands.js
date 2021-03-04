@@ -421,6 +421,7 @@ exports.commands =
 			arglist[0] + " would struggle to pour water out of a boot with the directions on the heel.",
 			arglist[0] + " has Van Gogh's ear for music.",
 			"__[[]]_NO SHOW__ outplaced " + arglist[0] + " in Player's Cup.",
+			"How many of " + arglist[0] + " does it take to change a lightbulb? Just one - all they have to do is hold the lightbulb in place while the world revolves around them.",
 		];
 
 		let douInsultList = [
