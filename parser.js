@@ -14,7 +14,6 @@
 
 const { inspect } = require("util");
 const https = require("https");
-const url = require("url");
 
 const ACTION_COOLDOWN = 3*1000;
 const FLOOD_MESSAGE_NUM = 5;
@@ -32,12 +31,11 @@ for (let i = 0, len = ranks.length; i < len; i++)
 }
 
 const commandsJSON = require("./commandpermissions.json");
-const { createSecureServer } = require("http2");
 const globalCommandsObject = commandsJSON["global"];
 
 exports.parse =
 {
-	actionUrl: url.parse("https://play.pokemonshowdown.com/~~" + config.serverid + "/action.php"),
+	actionUrl: new URL("~~" + config.serverid + "/action.php", "https://play.pokemonshowdown.com"),
 	room: "lobby",
 	mostRecentUserPM: "DaWoblefet",
 	chatData: {},
