@@ -22,10 +22,10 @@
     "gen8vgc2021series7":
     {
         "tourformat": "gen8vgc2021",
-        "tourname": "[Gen 8] VGC 2021 Series 7",
+        "tourname": "[Gen 8] VGC 2021 Series 9",
         "tourrules": "!singlerestrictedgbu, standardgbu",
-        "formatname": "VGC 2021 (Series 7)",
-        "formatDescription": "VGC 2021 Series 7 allowed all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, except restricted legendary Pokemon like Zacian, Kyogre, etc.",
+        "formatname": "VGC 2021 (Series 9)",
+        "formatDescription": "VGC 2021 Series 7 & 9 allowed all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, except restricted legendary Pokemon like Zacian, Kyogre, etc.",
         "sampleTeams":
         [
             ["coalossalgmax", "dragapult", "urshifurapidstrikegmax", "rillaboomgmax", "moltresgalar", "incineroar", "https://pokepast.es/19a57fd3a6db2e4d", "Wolfey's 1st Place Players Cup II Team"],
