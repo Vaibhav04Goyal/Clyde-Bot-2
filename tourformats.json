@@ -298,10 +298,13 @@
         "tourformat": "gen8vgc2021",
         "tourname": "[Gen 8] Crab Off VGC",
         "tourrules": "-All Pokemon, +Armaldo, +Clawitzer, +Crawdaunt, +Crustle, +Kingler, +Anorith, +Clauncher, +Corphish, +Krabby, +Dwebble, +Regidrago, !species clause, !item clause",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "Crab off! No Species or Item Clause! Legal Pokemon are: Armaldo, Clawitzer, Crawdaunt, Crustle, Kingler, Regidrago, and their pre-evolutions."
+        "formatname": "Crab Off",
+        "formatDescription": "Crab off! No Species or Item Clause! Legal Pokemon are: Armaldo, Clawitzer, Crawdaunt, Crustle, Kingler, Regidrago, and their pre-evolutions.",
+        "sampleTeams":
+        [
+            ["regidrago", "regidrago", "regidrago", "regidrago", "crustle", "clawitzer", "https://pokepast.es/00a55ec41bb676a1", "6 crabs"]
+        ],
+        "tournote": ""
     },
     "gen8inversevgc":
     {
