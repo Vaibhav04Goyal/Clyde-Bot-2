@@ -591,7 +591,7 @@ exports.parse =
 				}
 
 				let msgIDlength = toID(msg).length;
-				if ((numBoldedCharacters >= MIN_BOLD_LENGTH) || (numBoldedCharacters >= ~~(msgIDlength * MIN_BOLD_PROPORTION)))
+				if (msgIDlength > MIN_BOLD_LENGTH && ((numBoldedCharacters >= MIN_BOLD_LENGTH) || (numBoldedCharacters >= ~~(msgIDlength * MIN_BOLD_PROPORTION))))
 				{
 					if (pointVal < 1)
 					{
