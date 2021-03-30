@@ -5,15 +5,14 @@
  *
  * Modified by DaWoblefet for use with BoTTT III with original work by TalkTakesTime, Quinella, and Morfent.
  *
- * Some parts of this code are taken from the Pokémon Showdown server code, so
- * credits also go to Guangcong Luo and other Pokémon Showdown contributors.
- * https://github.com/Zarel/Pokemon-Showdown
+ * Some parts of this code are taken from the Pokémon Showdown server code, so credits also go to Guangcong Luo and other Pokémon Showdown contributors.
+ * https://github.com/smogon/pokemon-showdown
  *
  * @license MIT license
  */
 
 
-//Logs various bits of information to the console based on config settings.
+// Logs various bits of information to the console based on config settings.
 global.info = function(text)
 {
 	if (config.debuglevel > 3) return;
@@ -35,7 +34,7 @@ global.recv = function(text)
 	console.log("recv".grey + "  " + text);
 };
 
-global.cmdr = function(text) //Receiving commands
+global.cmdr = function(text) // Receiving commands
 {
 	if (config.debuglevel !== 1) return;
 	if (!colors) global.colors = require("colors");
@@ -62,13 +61,13 @@ global.ok = function(text)
 	console.log("ok".green + "    " + text);
 };
 
-//Turns string to its lowercase equivalent, then removes all non-alphanumeric characters.
+// Turns string to its lowercase equivalent, then removes all non-alphanumeric characters.
 global.toID = function(text)
 {
 	return text.toLowerCase().replace(/[^a-z0-9]/g, "");
 };
 
-//Prevent the bot from being fed commands to say maliciously
+// Prevent the bot from being fed commands to say maliciously
 global.stripCommands = function(text)
 {
 	text = text.trim();
@@ -80,7 +79,7 @@ global.stripCommands = function(text)
 			return '!' + text;
 		case '>':
 			if (text.substr(0, 3) === ">> " || text.substr(0, 4) === ">>> ") return " " + text;
-			/* fall through */
+			// fall through
 		default:
 			return text;
 	}
@@ -112,7 +111,7 @@ function runNpm(command)
 	});
 }
 
-//Check if everything that is needed is available
+// Check if everything that is needed is available
 try
 {
 	require("colors");
@@ -123,7 +122,7 @@ catch (e)
 	return runNpm("install");
 }
 
-//First dependencies and welcome message
+// First dependencies and welcome message
 const { inspect } = require("util");
 global.colors = require("colors");
 
@@ -132,7 +131,7 @@ console.log("| Welcome to Pokemon Showdown Bot! |".yellow);
 console.log("------------------------------------".yellow);
 console.log();
 
-//Config and config.js watching...
+// Config and config.js watching...
 global.fs = require('fs');
 if (!('existsSync' in fs))
 {
@@ -185,7 +184,7 @@ if (config.watchconfig)
 	});
 }
 
-//The actual connection.
+// The actual connection.
 info("starting server");
 
 let WebSocketClient = require("websocket").client;

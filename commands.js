@@ -5,9 +5,6 @@
  *
  * Modified by DaWoblefet for use with BoTTT III with original work by TalkTakesTime, Quinella, and Morfent.
  *
- * Useful references:
- * https://github.com/Zarel/Pokemon-Showdown/blob/1ef018c93bbfe8d86cb895b57151b27a080abccb/chat-commands.js
- * https://github.com/Zarel/Pokemon-Showdown/tree/1ef018c93bbfe8d86cb895b57151b27a080abccb/chat-plugins
  * @license MIT license
  */
 
@@ -17,9 +14,9 @@ const tourJSON = require("./tourformats.json");
 
 exports.commands =
 {
-	//Information/Help Commands
+	// Information/Help Commands
 
-	//Links to a more detailed pastebin for the user to read about the bot's commands.
+	// Links to a more detailed pastebin for the user to read about the bot's commands.
 	about: "commands",
 	guide: "commands",
 	help: "commands",
@@ -51,9 +48,10 @@ exports.commands =
 		this.say(room, text);
 	},
 
-	/*Developer Commands
-	 *These commands are useful for bot upkeep, or generally speaking, any arbitrary action.
-	 *They are very powerful and not intended for the average user. */
+	/* Developer Commands
+	 * These commands are useful for bot upkeep, or generally speaking, any arbitrary action.
+	 * They are very powerful and not intended for the average user.
+	 */
 
 	// Refreshes the command list and parser. To refresh something else, you must stop the bot completely. Only dev has access.
 	rl: "reload",
@@ -74,13 +72,13 @@ exports.commands =
 	},
 
 	/* Tells BoTTT III to say whatever you want, including PS commands. Restricted to room owners. Must be done in PM.
-	Usage: .custom [room] thing you want BoTTT III to say/do
-	Example: ".custom [vgc] !dt pikachu" will cause BoTTT III to say !dt pikachu in the VGC room.
+	 * To use: .custom [room] thing you want BoTTT III to say/do
+	 * Example: ".custom [vgc] !dt pikachu" will cause BoTTT III to say !dt pikachu in the VGC room.
 
-	If you need to display HTML or do some other sequence of commands that is too long for a PM, you can link the bot
-	a pastebin.com/raw/ link and it will read and execute that instead.
-	Example: ".custom [vgc] https://pastebin.com/raw/therestofthePastebinURL"
-	*/
+	 * If you need to display HTML or do some other sequence of commands that is too long for a PM, you can link the bot
+	 * a pastebin.com/raw/ link and it will read and execute that instead.
+	 * Example: ".custom [vgc] https://pastebin.com/raw/theRestOfThePastebinURL"
+	 */
 	custom: async function(arg, by, room)
 	{
 		let targetRoom;
@@ -96,11 +94,11 @@ exports.commands =
 			arg = contents.data;
 		}
 
-		//If no target room is specified, it just sends it back as a PM.
+		// If no target room is specified, it just sends it back as a PM.
 		this.say(targetRoom || room, arg);
 	},
 
-	//Executes arbitrary javascript. Only dev can use it.
+	// Executes arbitrary javascript. Only dev can use it.
 	js: function(arg, by, room)
 	{
 		try
@@ -114,7 +112,7 @@ exports.commands =
 		}
 	},
 
-	//Updates bot to the latest version from git. Only dev can use it. Taken from: https://github.com/TheMezStrikes/uopbot/blob/master/commands.js
+	// Updates bot to the latest version from git. Only dev can use it. Taken from: https://github.com/TheMezStrikes/uopbot/blob/master/commands.js
 	gitpull: function(arg, by, room)
 	{
 		let text;
@@ -145,16 +143,16 @@ exports.commands =
 		process.exit(-1);
 	},
 
-	//General commands
+	// General commands
 
-	//Tells the bot something to say, and it says it. Won't say commands.
+	// Tells the bot something to say, and it says it. Won't say commands.
 	tell: "say",
 	say: function(arg, by, room)
 	{
 		this.say(room, stripCommands(arg));
 	},
 
-	//Creates a tournament with custom options. Sample teams are provided for each format when applicable.
+	// Creates a tournament with custom options. Sample teams are provided for each format when applicable.
 	tour: function(arg, by, room)
 	{
 		let arglist = arg.split(', ');
@@ -175,10 +173,10 @@ exports.commands =
 			let tourObject;
 			const defaultTour = "vgc2021";
 			
-			//Handle default case, double elim, and random format options.
+			// Handle default case, double elim, and random format options.
 			switch (arglist[0])
 			{
-				case "": //No argument specified, use default tour.
+				case "": // No argument specified, use default tour.
 					arglist[0] = defaultTour;
 					break;
 				case "double":
@@ -198,7 +196,7 @@ exports.commands =
 					break;
 			}
 
-			//Prepare tournament format.
+			// Prepare tournament format.
 			switch (arglist[0])
 			{
 				case "vgc21":
@@ -332,7 +330,7 @@ exports.commands =
 					break;
 			}
 
-			//If no extra settings are specified, make the tour single elim with 128 player cap.
+			// If no extra settings are specified, make the tour single elim with 128 player cap.
 			if (arglist[1] === undefined)
 			{
 				arglist[1] = "elimination";
@@ -371,7 +369,7 @@ exports.commands =
 				{
 					this.say(room, "/tour rules " + tourObject.tourrules);
 				}
-				//Note: this will always display tournote, even if the tour wasn't started because of invalid data.
+				// Note: this will always display tournote, even if the tour wasn't started.
 				if (tourObject.tournote)
 				{
 					this.say(room, "/wall " + tourObject.tournote);
@@ -390,18 +388,15 @@ exports.commands =
 		}
 	},
 
-	//Applies a random insult to the target user.
+	// Applies a random insult to the target user.
 	insult: function(arg, by, room)
 	{
 		let arglist = arg.split(',');
 
-		//Gives myself and the bot insult immunity. Prevents sneaky UTF-8 similar looking characters intended to avoid the insult.
+		// Gives myself and the bot insult immunity. Prevents sneaky UTF-8 similar looking characters intended to avoid the insult.
 		if (toID(arglist[0]).includes("dawob") || toID(arglist[0]).includes("trey") || toID(arglist[0]).includes("leonard") || toID(arglist[0]).includes(toID(config.nick)) || /[^\u0000-\u007F]/g.test(arglist[0]))
 		{
-			//if (!(toID(by) === "baconvgc" && new Date().getDate() < 13))
-			//{
-				arglist[0] = by.substring(1, by.length);
-			//}	
+			arglist[0] = by.substring(1, by.length);
 		}
 
 		let insultList = [
@@ -476,7 +471,7 @@ exports.commands =
 		this.say(room, text);
 	},
 
-	//Randomly picks one of my very funny jokes.
+	// Randomly picks one of my very funny jokes.
 	joke: function(arg, by, room)
 	{
 		let jokeList = [
@@ -553,14 +548,14 @@ exports.commands =
 		this.say(room, text);
 	},
 
-	//Displays a notice in case I need to tweak the bot.
+	// Displays a notice in case I need to tweak the bot.
 	notice: function(arg, by, room)
 	{
 		let text = "/wall Please note that " + config.nick + " may be tweaked periodically. Please be patient if a tour is canceled; it's probably just to test something.";
 		this.say(room, text);
 	},
 
-	//Displays recent VGC usage stats. Also works in PM.
+	// Displays recent VGC usage stats. Also works in PM.
 	usgae: "usage",
 	usage: async function(arg, by, room)
 	{
@@ -578,7 +573,7 @@ exports.commands =
 		const jorijnUsage = "https://drive.google.com/drive/folders/11gYc6-CN2mm96-cmmBYdNfBmhYSZSNGY";
 		const babiri = "https://babiri.net";
 
-		//Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
+		// Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
 		const getData = async url =>
 		{
 			try
@@ -608,14 +603,14 @@ exports.commands =
 			}
 		};
 
-		if (arg) //Pokemon is specified
+		if (arg) // Pokemon is specified
 		{
 			const arglist = arg.split(',');
 			if (this.isPM(room))
 			{
 				const mon = toID(arglist[0]);
 				const format = arglist[1] ? toID(arglist[1]) : defaultFormat;
-				//OU and DOU are higher traffic, so they get a special ELO to search against 
+				// OU and DOU are higher traffic, so they get a special ELO to search against 
 				const rank = (format === "gen8ou" || format === "gen8doublesou") ? "1825" : defaultRank;
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/" + format + "/" + rank + "/" + mon);
 				if (wasSuccessful)
@@ -625,7 +620,7 @@ exports.commands =
 					{
 						room = toID(config.rooms[0]);
 
-						//Get last month's ranking, but don't override with old usage stats
+						// Get last month's ranking, but don't override with old usage stats
 						let temp = JSONresponse;
 						await getData("https://smogon-usage-stats.herokuapp.com/" + (month === 1 ? year - 1 : year) + "/" + (month === 1 ? 12 : month - 1) + "/" + format + "/" + rank + "/" + mon);
 						JSONresponse = temp;
@@ -634,17 +629,17 @@ exports.commands =
 					}
 				}
 			}
-			else //has permissions for htmlbox
+			else // has permissions for htmlbox
 			{
 				const mon = toID(arglist[0]);
 				const format = arglist[1] ? toID(arglist[1]) : defaultFormat;
-				//OU and DOU are higher traffic, so they get a special ELO to search against 
+				// OU and DOU are higher traffic, so they get a special ELO to search against 
 				const rank = (format === "gen8ou" || format === "gen8doublesou") ? "1825" : defaultRank;
 				this.say(room, "/adduhtml " + mon + ", Loading usage stats data for " + arg + "...");
 				await getData("https://smogon-usage-stats.herokuapp.com/" + year + "/" + month + "/" + format + "/" + rank + "/" + mon);
 				if (wasSuccessful)
 				{
-					//Get last month's ranking, but don't override with old usage stats
+					// Get last month's ranking, but don't override with old usage stats
 					let temp = JSONresponse;
 					await getData("https://smogon-usage-stats.herokuapp.com/" + (month === 1 ? year - 1 : year) + "/" + (month === 1 ? 12 : month - 1) + "/" + format + "/" + rank + "/" + mon);
 					JSONresponse = temp;
@@ -652,9 +647,9 @@ exports.commands =
 				}
 			}
 		}
-		else //Generic links to usage stats
+		else // Generic links to usage stats
 		{
-			//HTML for generic usage
+			// HTML for generic usage
 			text += 
 			'<strong>VGC Usage Stats!</strong> \
 			<ul style = "margin: 0 0 0 -20px"> \
@@ -705,8 +700,7 @@ exports.commands =
 		if (room === 'vgc') {return false;}
 		this.say(room, "mish mish");
 
-		let rand = Math.floor(Math.random() * 10);
-		if (rand === 1) //10% chance to roll
+		if (Math.floor(Math.random() * 10) === 1) // 10% chance to roll
 		{
 			this.say(room, "/addhtmlbox <img src=\"https://images-ext-1.discordapp.net/external/jZ8e-Lcp6p2-GZb8DeeyShSvxT2ghTDz7nLMX8c1SKs/https/cdn.discordapp.com/attachments/320922154092986378/410460728999411712/getmished.png?width=260&height=300\" height=300 width=260>");
 		}
@@ -1021,53 +1015,53 @@ exports.commands =
 	},
 	testpermissions: function(arg, by, room)
 	{
-		//Normal cases in VGC room
+		// Normal cases in VGC room
 		this.say(room, "Normal cases in VGC");
 		this.say(room, "Driver");
-		this.say(room, this.canUse("joke", "vgc", "%ansena", "")); //1
-		this.say(room, this.canUse("custom", "vgc", "%ansena", "")); //0
-		this.say(room, this.canUse("samples", "vgc", "%ansena", "")); //1
-		this.say(room, this.canUse("tour", "vgc", "%ansena", "")); //1
+		this.say(room, this.canUse("joke", "vgc", "%ansena", "")); // 1
+		this.say(room, this.canUse("custom", "vgc", "%ansena", "")); // 0
+		this.say(room, this.canUse("samples", "vgc", "%ansena", "")); // 1
+		this.say(room, this.canUse("tour", "vgc", "%ansena", "")); // 1
 
 		this.say(room, "Voice");
-		this.say(room, this.canUse("joke", "vgc", "+ansena", "")); //0
-		this.say(room, this.canUse("custom", "vgc", "+ansena", "")); //0
-		this.say(room, this.canUse("samples", "vgc", "+ansena", "")); //1
-		this.say(room, this.canUse("tour", "vgc", "+ansena", "")); //1
+		this.say(room, this.canUse("joke", "vgc", "+ansena", "")); // 0
+		this.say(room, this.canUse("custom", "vgc", "+ansena", "")); // 0
+		this.say(room, this.canUse("samples", "vgc", "+ansena", "")); // 1
+		this.say(room, this.canUse("tour", "vgc", "+ansena", "")); // 1
 
 		this.say(room, "Reg");
-		this.say(room, this.canUse("joke", "vgc", " ansena", "")); //0
-		this.say(room, this.canUse("custom", "vgc", " ansena", "")); //0
-		this.say(room, this.canUse("samples", "vgc", " ansena", "")); //2
-		this.say(room, this.canUse("tour", "vgc", " ansena", "")); //0
+		this.say(room, this.canUse("joke", "vgc", " ansena", "")); // 0
+		this.say(room, this.canUse("custom", "vgc", " ansena", "")); // 0
+		this.say(room, this.canUse("samples", "vgc", " ansena", "")); // 2
+		this.say(room, this.canUse("tour", "vgc", " ansena", "")); // 0
 
-		//Normal cases not in VGC room
+		// Normal cases not in VGC room
 		this.say(room, "Normal cases not in VGC");
 		this.say(room, "Driver");
-		this.say(room, this.canUse("joke", "notvgc", "%ansena", "")); //1
-		this.say(room, this.canUse("custom", "notvgc", "%ansena", "")); //0
-		this.say(room, this.canUse("samples", "notvgc", "%ansena", "")); //1
-		this.say(room, this.canUse("tour", "notvgc", "%ansena", "")); //1
+		this.say(room, this.canUse("joke", "notvgc", "%ansena", "")); // 1
+		this.say(room, this.canUse("custom", "notvgc", "%ansena", "")); // 0
+		this.say(room, this.canUse("samples", "notvgc", "%ansena", "")); // 1
+		this.say(room, this.canUse("tour", "notvgc", "%ansena", "")); // 1
 
 		this.say(room, "Voice");
-		this.say(room, this.canUse("joke", "notvgc", "+ansena", "")); //0
-		this.say(room, this.canUse("custom", "notvgc", "+ansena", "")); //0
-		this.say(room, this.canUse("samples", "notvgc", "+ansena", "")); //1
-		this.say(room, this.canUse("tour", "notvgc", "+ansena", "")); //0
+		this.say(room, this.canUse("joke", "notvgc", "+ansena", "")); // 0
+		this.say(room, this.canUse("custom", "notvgc", "+ansena", "")); // 0
+		this.say(room, this.canUse("samples", "notvgc", "+ansena", "")); // 1
+		this.say(room, this.canUse("tour", "notvgc", "+ansena", "")); // 0
 
 		this.say(room, "Reg");
-		this.say(room, this.canUse("joke", "notvgc", " ansena", "")); //0
-		this.say(room, this.canUse("custom", "notvgc", " ansena", "")); //0
-		this.say(room, this.canUse("samples", "notvgc", " ansena", "")); //2
-		this.say(room, this.canUse("tour", "notvgc", " ansena", "")); //0
+		this.say(room, this.canUse("joke", "notvgc", " ansena", "")); // 0
+		this.say(room, this.canUse("custom", "notvgc", " ansena", "")); // 0
+		this.say(room, this.canUse("samples", "notvgc", " ansena", "")); // 2
+		this.say(room, this.canUse("tour", "notvgc", " ansena", "")); // 0
 
-		//Special case tests
+		// Special case tests
 		this.say(room, "Special cases");
-		this.say(room, this.canUse("blog", "notvgc", "%ansena", "")); //0
-		this.say(room, this.canUse("blog", "vgc", "%ansena", "")); //1
-		this.say(room, this.canUse("blog", "vgc", "%mish", "")); //0
-		this.say(room, this.canUse("blog", "notvgc", "%mish", "")); //0
-		this.say(room, this.canUse("tour", "vgc", " legavgc", "vgc13")); //1
-		this.say(room, this.canUse("custom", ",notvgc", "+blarajan", "[vgc] hello")); //1
+		this.say(room, this.canUse("blog", "notvgc", "%ansena", "")); // 0
+		this.say(room, this.canUse("blog", "vgc", "%ansena", "")); // 1
+		this.say(room, this.canUse("blog", "vgc", "%mish", "")); // 0
+		this.say(room, this.canUse("blog", "notvgc", "%mish", "")); // 0
+		this.say(room, this.canUse("tour", "vgc", " legavgc", "vgc13")); // 1
+		this.say(room, this.canUse("custom", ",notvgc", "+blarajan", "[vgc] hello")); // 1
 	}
 };
