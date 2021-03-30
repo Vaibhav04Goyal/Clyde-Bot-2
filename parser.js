@@ -20,6 +20,8 @@ const FLOOD_PER_MSG_MIN = 500; // This is the minimum time between messages for 
 const FLOOD_MESSAGE_TIME = 6*1000;
 const MIN_CAPS_LENGTH = 18;
 const MIN_CAPS_PROPORTION = 0.8;
+const MIN_BOLD_LENGTH = 18;
+const MIN_BOLD_PROPORTION = 0.8;
 
 let initial_login = true;
 let ranks = " +%@*&#";
@@ -30,6 +32,7 @@ for (let i = 0, len = ranks.length; i < len; i++)
 }
 
 const commandsJSON = require("./commandpermissions.json");
+const { bold } = require("colors");
 const globalCommandsObject = commandsJSON["global"];
 
 exports.parse =
@@ -565,6 +568,39 @@ exports.parse =
 					muteMessage = ", Watch the caps";
 				}
 			}
+
+			// Moderation for bold (over x% of the letters in a line of y characters are bold)
+			if (msg.includes("**"))
+			{
+				// This almost certainly could be done with a regex but I'm bad
+				let i = msg.indexOf('**');
+				let boldIndexes = [i];
+				while (~(i = msg.indexOf("**", ++i)))
+				{
+					boldIndexes.push(i);
+				}
+				if (boldIndexes.length % 2 === 1)
+				{
+					boldIndexes.pop(); // in case they just had ** somewhere with no other formatting, remove the last instance
+				}
+
+				let numBoldedCharacters = 0;
+				for (i = 0; i < boldIndexes.length; i = i + 2)
+				{
+					numBoldedCharacters += boldIndexes[i + 1] - boldIndexes[i] - 2; // -2 is to avoid the first two asterisks
+				}
+
+				let msgIDlength = toID(msg).length;
+				if ((numBoldedCharacters >= MIN_BOLD_LENGTH) || (numBoldedCharacters >= ~~(msgIDlength * MIN_BOLD_PROPORTION)))
+				{
+					if (pointVal < 1)
+					{
+						pointVal = 1;
+						muteMessage = ", Don't make everything in bold";
+					}
+				}
+			}
+
 			// Moderation for stretching (over x consecutive characters in the message are the same)
 			let stretchMatch = /(.)\1{7,}/gi.test(msg) || /(..+)\1{4,}/gi.test(msg); // Matches the same character (or group of characters) 8 (or 5) or more times in a row
 			if (stretchMatch)

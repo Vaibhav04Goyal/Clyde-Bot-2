@@ -74,14 +74,15 @@ exports.git = "";
 
 /* Turns on moderation capabilities for the bot. THE BOT IS NOT HUMAN AND
  * DOES NOT MAKE A PERFECT MODERATOR. If enabled, I encourage roomstaff to
- * override the bot if it is being unfair. Use with caution.
+ * override the bot if it is being unfair. There is a relatively serious bug
+ * where rarely on disconnects, two instances of the bot will rejoin a room, so
+ * it doubly counts chat input and advances punishments accordingly. Use with caution.
  *
- * -Spamming/flooding is considered to be users who send 6 lines or more in 6 or fewer seconds.
- * -CAPS abuse is considered to be a chat line with at least 18 letters in CAPS and
- * with 80% of their total letters being in CAPS.
- * -Stretching is considered to be using the same character 8 times in a row, or some
- * group of characters 5 times in a row.
- * - Punishments are accelerated if a user continues to activate the bot's warnings/mutes.   */
+ * Spamming/flooding is considered to be users who send 6 lines or more in 6 or fewer seconds.
+ * CAPS abuse is considered to be a chat line with at least 18 letters in CAPS and with 80% of their total letters being in CAPS.
+ * Stretching is considered to be using the same character 8 times in a row, or some group of characters 5 times in a row.
+ * Bold abuse is considered to be a chat line with at least 18 letters in bold OR 80% of their total letters being in bold.
+ * Punishments are accelerated if a user continues to activate the bot's warnings/mutes.   */
 exports.allowmute = false;
 
 /* You can customize what punishments are appropriate after repeated offenses here.*/
