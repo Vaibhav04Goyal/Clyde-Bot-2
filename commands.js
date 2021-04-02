@@ -566,14 +566,14 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 2;
+		let month = 3;
 		let year = 2021;
 		const defaultFormat = "gen8vgc2021";
 		const defaultRank = "1760";
 		const vgcstats = "https://vgcstats.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2021-1760.txt";
 		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2021-1760.txt";
-		const jorijnUsage = "https://drive.google.com/drive/folders/11gYc6-CN2mm96-cmmBYdNfBmhYSZSNGY";
+		const jorijnUsage = "https://drive.google.com/drive/folders/1bX8exQcxDBenqNfUbhMyRtx6YG1MxWHf";
 		const babiri = "https://babiri.net";
 
 		// Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
