@@ -1038,7 +1038,7 @@ exports.commands =
 				break;
 			case "add":
 			case "change":
-				startingMessage = arg === 'add' ? "You have been added to the bo3 list " : "Your preferences have been updated ";
+				const startingMessage = arg === 'add' ? "You have been added to the bo3 list " : "Your preferences have been updated ";
 				text = "/pm " + by + ", " + startingMessage + "with the formats " + "[would be here]";
 				break;
 			case "remove":
