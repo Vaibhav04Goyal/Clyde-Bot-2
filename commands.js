@@ -531,6 +531,7 @@ exports.commands =
 			"My son told me he wanted to study burrowing rodents in college. I told him to gopher it!",
 			"In breaking news, the new Peak-a-Boo virus has infected a local baby. The baby was rushed to the ICU.",
 			"I asked a librarian if they had any books about paranoia. Whispering, she replied, \\\\\"They're right behind you\".\\\\",
+			"What did the Spanish firefighter name his two sons? José and Hose B!",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
