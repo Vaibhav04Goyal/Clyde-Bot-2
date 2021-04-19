@@ -864,6 +864,11 @@ exports.commands =
 		let text = '/addhtmlbox <img src = "https://play.pokemonshowdown.com/sprites/ani-shiny/yveltal.gif" width = 201 height = 188>';
 		this.say(room, text);
 	},
+	vgc: function(arg, by, room)
+	{
+		let text = 'indeed \ud83c\udd71\ufe0frother, vgc';
+		this.say(room, text);
+	},
 	dynamax: async function(arg, by, room)
 	{
 		arg = arg.toLowerCase().replace("'", "");
