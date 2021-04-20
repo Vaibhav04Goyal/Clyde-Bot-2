@@ -312,6 +312,11 @@ exports.commands =
 				case "crab off":
 					tourObject = tourJSON["gen8craboff"];
 					break;
+				case "chansey":
+				case "chanseycup":
+				case "chansey cup":
+					tourObject = tourJSON["gen8chanseycup"];
+					break;
 				case "inverse":
 				case "inverse vgc":
 				case "vgc inverse":
