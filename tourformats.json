@@ -309,7 +309,7 @@
     {
         "tourformat": "gen81v1",
         "tourname": "[Gen 8] Chansey Cup",
-        "tourrules": "-All Pokemon, +Chansey, +Focus Sash, !evasion moves clause, !accuracy moves clause, !endless battle clause",
+        "tourrules": "-All Pokemon, +Chansey, +Focus Sash, -Recycle, !evasion moves clause, !accuracy moves clause, !endless battle clause",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
