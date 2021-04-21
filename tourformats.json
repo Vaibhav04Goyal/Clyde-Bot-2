@@ -305,10 +305,10 @@
         ],
         "tournote": ""
     },
-    "gen8chanseycup":
+    "gen8chanseyclash":
     {
         "tourformat": "gen81v1",
-        "tourname": "[Gen 8] Chansey Cup",
+        "tourname": "[Gen 8] Chansey Clash",
         "tourrules": "-All Pokemon, +Chansey, +Focus Sash, -Recycle, !evasion moves clause, !accuracy moves clause, !endless battle clause",
         "formatname": "",
         "formatDescription": "",

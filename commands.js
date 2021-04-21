@@ -315,7 +315,9 @@ exports.commands =
 				case "chansey":
 				case "chanseycup":
 				case "chansey cup":
-					tourObject = tourJSON["gen8chanseycup"];
+				case "chanseyclash":
+				case "chansey clash":
+					tourObject = tourJSON["gen8chanseyclash"];
 					break;
 				case "inverse":
 				case "inverse vgc":
