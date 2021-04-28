@@ -171,6 +171,7 @@ exports.commands =
 			let tourformat;
 			let tourname;
 			let tourObject;
+			let isOfficial = false;
 			const defaultTour = "vgc2021";
 			
 			// Handle default case, double elim, and random format options.
@@ -186,6 +187,15 @@ exports.commands =
 					arglist[1] = "elimination";
 					arglist[2] = "128";
 					arglist[3] = "2";
+					break;
+				case "official":
+					if (!this.hasRank(by, "%@*&#"))
+					{
+						this.say(room, "/pm " + by + ", You do not have permission to start official tours.");
+						return;
+					}
+					arglist[0] = defaultTour;
+					isOfficial = true;
 					break;
 				case "random":
 				case "random vgc":
@@ -389,6 +399,11 @@ exports.commands =
 				{
 					let htmlText = this.generateHTMLSample(tourObject.formatname, tourObject.formatDescription, tourObject.sampleTeams, true);
 					this.say(room, "/addhtmlbox " + htmlText);
+				}
+
+				if (isOfficial)
+				{
+					this.say(room,'/addhtmlbox <div style="text-align: center"> <img src="https://www.smogon.com/media/zracknel-beta.svg.m.1" width="50" height="50"> <h3 style="display: inline">Official Smogon VGC Room Tournament</h3> <img src="https://www.smogon.com/media/zracknel-beta.svg.m.1" width="50" height="50"> <br> <p>See this <a href="https://www.smogon.com/forums/threads/official-room-tournaments-on-pokemon-showdown.3683264/#post-8837920" target="_blank" rel="noopener">Smogon VGC thread</a> for more details.</p> </div>')
 				}
 			}
 		}
