@@ -20,9 +20,9 @@
     },
     "gen8vgc2021series8":
     {
-        "tourformat": "gen8vgc2021",
+        "tourformat": "gen8vgc2021series9",
         "tourname": "[Gen 8] VGC 2021 Series 8",
-        "tourrules": "",
+        "tourrules": "!Standard GBU, Single Restricted GBU",
         "formatname": "VGC 2021 (Series 8)",
         "formatDescription": "VGC 2021 Series 8 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, including up to one restricted legendary Pokemon like Zacian, Kyogre, etc.",
         "sampleTeams":
@@ -294,7 +294,7 @@
     },
     "gen8craboff":
     {
-        "tourformat": "gen8vgc2021",
+        "tourformat": "gen8vgc2021series9",
         "tourname": "[Gen 8] Crab Off VGC",
         "tourrules": "-All Pokemon, +Armaldo, +Clawitzer, +Crawdaunt, +Crustle, +Kingler, +Anorith, +Clauncher, +Corphish, +Krabby, +Dwebble, +Regidrago, !species clause, !item clause",
         "formatname": "Crab Off",
@@ -317,7 +317,7 @@
     },
     "gen8inversevgc":
     {
-        "tourformat": "gen8vgc2021",
+        "tourformat": "gen8vgc2021series9",
         "tourname": "[Gen 8] VGC 2021 Inverse Battle",
         "tourrules": "inverse mod",
         "formatname": "",
@@ -327,7 +327,7 @@
     },
     "gen8vgc2021nodynamax":
     {
-        "tourformat": "gen8vgc2021",
+        "tourformat": "gen8vgc2021series9",
         "tourname": "[Gen 8] VGC 2021 (No Dynamax)",
         "tourrules": "Dynamax Clause",
         "formatname": "",
@@ -337,9 +337,9 @@
     },
     "gen8gscup":
     {
-        "tourformat": "gen8vgc2021",
+        "tourformat": "gen8vgc2021series9",
         "tourname": "[Gen 8] GS Cup",
-        "tourrules": "!Single Restricted GBU, Minimal GBU",
+        "tourrules": "!Standard GBU, Minimal GBU",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],

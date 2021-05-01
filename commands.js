@@ -589,13 +589,13 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 3;
+		let month = 4;
 		let year = 2021;
-		const defaultFormat = "gen8vgc2021";
+		const defaultFormat = "gen8vgc2021series9";
 		const defaultRank = "1760";
 		const vgcstats = "https://vgcstats.com";
-		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2021-1760.txt";
-		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2021-1760.txt";
+		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2021series9-1760.txt";
+		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2021series9-1760.txt";
 		const jorijnUsage = "https://drive.google.com/drive/folders/1bX8exQcxDBenqNfUbhMyRtx6YG1MxWHf";
 		const babiri = "https://babiri.net";
 
@@ -926,7 +926,7 @@ exports.commands =
 	sample: "samples",
 	samples: function(arg, by, room)
 	{
-		let defaultFormat = "gen8vgc2021series8";
+		let defaultFormat = "gen8vgc2021series9";
 		let text = "";
 		if (this.isPM(room))
 		{
@@ -985,7 +985,7 @@ exports.commands =
 		}
 		else
 		{
-			text = "Invalid format specified. Valid formats are: ";
+			text = "/addhtmlbox Invalid format specified. Valid formats are: ";
 			let validFormats = [];
 			let keys = Object.keys(tourJSON);
 			for (const key in keys)
