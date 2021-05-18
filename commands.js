@@ -555,6 +555,7 @@ exports.commands =
 			"I asked a librarian if they had any books about paranoia. Whispering, she replied, \\\\\"They're right behind you\".\\\\",
 			"What did the Spanish firefighter name his two sons? José and Hose B!",
 			"My fear of palindromes is really starting to affect my life, so I asked my doctor if they could prescribe me anything. Unfortunately, the doctor gave me Xanax :(",
+			"I've been training to be a magician. For my first trick, I will make the following things disappear:",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
