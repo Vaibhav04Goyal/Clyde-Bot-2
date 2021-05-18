@@ -283,7 +283,7 @@
     {
         "tourformat": "gen81v1",
         "tourname": "[Gen 8] Bulu Bash",
-        "tourrules": "-All Pokemon, +Tapu Bulu, +Focus Sash, !evasion moves clause, !accuracy moves clause",
+        "tourrules": "-All Pokemon, +Tapu Bulu, +Focus Sash, !Evasion Moves Clause, !Accuracy Moves Clause",
         "formatname": "Bulu Bash",
         "formatDescription": "Tapu Bulu only! Create teams in the [Gen 8] 1v1 format, and make sure it's level 100!",
         "sampleTeams":
@@ -298,7 +298,7 @@
         "tourname": "[Gen 8] Crab Off VGC",
         "tourrules": "-All Pokemon, +Armaldo, +Clawitzer, +Crawdaunt, +Crustle, +Kingler, +Anorith, +Clauncher, +Corphish, +Krabby, +Dwebble, +Regidrago, !species clause, !item clause",
         "formatname": "Crab Off",
-        "formatDescription": "Crab off! No Species or Item Clause! Legal Pokemon are: Armaldo, Clawitzer, Crawdaunt, Crustle, Kingler, Regidrago, and their pre-evolutions.",
+        "formatDescription": "Crab Off! No Species or Item Clause! Legal Pokemon are: Armaldo, Clawitzer, Crawdaunt, Crustle, Kingler, Regidrago, and their pre-evolutions.",
         "sampleTeams":
         [
             ["regidrago", "regidrago", "regidrago", "regidrago", "crustle", "clawitzer", "https://pokepast.es/00a55ec41bb676a1", "6 crabs"]
@@ -309,11 +309,17 @@
     {
         "tourformat": "gen81v1",
         "tourname": "[Gen 8] Chansey Clash",
-        "tourrules": "-All Pokemon, +Chansey, +Focus Sash, -Recycle, !accuracy moves clause, !endless battle clause",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "Chansey only!"
+        "tourrules": "-All Pokemon, +Chansey, +Focus Sash, +Focus Band, +Bright Powder, +Lax Incense, +Quick Claw, -Recycle, !Accuracy Moves Clause, !Endless Battle Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
+        "formatname": "Chansey Clash",
+        "formatDescription": "Chansey Clash! Only Chansey is allowed. Evasion moves and Recycle are also not allowed.",
+        "sampleTeams":
+        [
+            ["chansey", "chansey", "chansey", "chansey", "chansey", "chansey", "https://pokepast.es/4a83b00bd7b03417", "Stored Power Chansey"],
+            ["chansey", "chansey", "chansey", "chansey", "chansey", "chansey", "https://pokepast.es/a4876c557e6a5ba0", "Laser Focus SubPunch Chansey"],
+            ["chansey", "chansey", "chansey", "chansey", "chansey", "chansey", "https://pokepast.es/5b8d35bc148dd168", "Uproar Toxic Chansey"],
+            ["chansey", "chansey", "chansey", "chansey", "chansey", "chansey", "https://pokepast.es/0feaf85b93fcd69b", "Paraflinch Chansey"]
+        ],
+        "tournote": ""
     },
     "gen8inversevgc":
     {
