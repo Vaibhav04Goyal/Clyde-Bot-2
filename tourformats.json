@@ -269,7 +269,7 @@
     {
         "tourformat": "gen81v1",
         "tourname": "[Gen 8] Corsola Cup",
-        "tourrules": "-All Pokemon, -Giga Drain, +Corsola, +Focus Sash, !evasion moves clause, !accuracy moves clause",
+        "tourrules": "-All Pokemon, -Giga Drain, +Corsola, +Focus Sash, !Evasion Moves Clause, !Accuracy Moves Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
         "formatname": "Corsola Cup",
         "formatDescription": "Corsola only (Galar Corsola is allowed too)! Giga Drain is banned. Create teams in the [Gen 8] 1v1 format, and make sure it's level 100!",
         "sampleTeams":
@@ -283,7 +283,7 @@
     {
         "tourformat": "gen81v1",
         "tourname": "[Gen 8] Bulu Bash",
-        "tourrules": "-All Pokemon, +Tapu Bulu, +Focus Sash, !Evasion Moves Clause, !Accuracy Moves Clause",
+        "tourrules": "-All Pokemon, +Tapu Bulu, +Focus Sash, !Evasion Moves Clause, !Accuracy Moves Clause, !! Max Team Size = 1, !Picked Team Size, !Team Preview",
         "formatname": "Bulu Bash",
         "formatDescription": "Tapu Bulu only! Create teams in the [Gen 8] 1v1 format, and make sure it's level 100!",
         "sampleTeams":
