@@ -944,10 +944,6 @@ exports.commands =
 				this.mostRecentUserPM = toID(by);
 				text = "/pminfobox " + this.mostRecentUserPM + ", " + this.generateHTMLSample(tourJSON[defaultFormat].formatname, tourJSON[defaultFormat].formatDescription, tourJSON[defaultFormat].sampleTeams, true, true);
 			}
-			else if (arg === "all")
-			{
-				text = "/pm " + toID(by) + ", VGC Room Tour Sample Teams: https://pastebin.com/rhFBBMMB";
-			}
 			else
 			{
 				this.mostRecentUserPM = toID(by);
