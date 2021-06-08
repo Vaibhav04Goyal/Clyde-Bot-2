@@ -551,7 +551,7 @@ exports.commands =
 			"Did you hear Old MacDonald had a son in the military? His name was E.I. G.I. Joe.",
 			"What do you call someone who immigrates to Sweden? Artifical Swedener!",
 			"My son told me he wanted to study burrowing rodents in college. I told him to gopher it!",
-			"In breaking news, the new Peak-a-Boo virus has infected a local baby. The baby was rushed to the ICU.",
+			"In breaking news, the new Peek-a-Boo virus has infected a local baby. The baby was rushed to the ICU.",
 			"I asked a librarian if they had any books about paranoia. Whispering, she replied, \\\\\"They're right behind you\".\\\\",
 			"What did the Spanish firefighter name his two sons? José and Hose B!",
 			"My fear of palindromes is really starting to affect my life, so I asked my doctor if they could prescribe me anything. Unfortunately, my doctor gave me Xanax :(",
