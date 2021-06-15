@@ -350,5 +350,18 @@
         "formatDescription": "",
         "sampleTeams": [],
         "tournote": "VGC 2021, but two restricted legendary Pokemon are allowed!"
+    },
+    "gen8vgchackmons":
+    {
+        "tourformat": "gen8vgc2021series9",
+        "tourname": "[Gen 8] VGC Pure Hackmons",
+        "tourrules": "-Nonexistent, !Obtainable Moves, !Obtainable Abilities, !EV Limit, +Mythical, +Restricted Legendary, !!Min Source Gen = 1, !Species Clause, !Item Clause",
+        "formatname": "VGC Pure Hackmons",
+        "formatDescription": "Anything that can be hacked in-game and is usable in local battles is allowed, but it's VGC style! Bring 6, pick 4, level 50, doubles.",
+        "sampleTeams":
+        [
+            ["zaciancrowned", "regieleki", "eternatuseternamax", "eternatuseternamax", "giratina", "zaciancrowned", "https://pokepast.es/0e0c2e8ca2733fab", "Ransei made this"]
+        ],
+        "tournote": ""
     }
 }
