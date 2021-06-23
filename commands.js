@@ -600,7 +600,7 @@ exports.commands =
 		let year = 2021;
 		const defaultFormat = "gen8vgc2021series9";
 		const defaultRank = "1760";
-		const vgcstats = "https://vgcstats.com";
+		const pikalytics = "https://pikalytics.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2021series9-1760.txt";
 		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2021series9-1760.txt";
 		const jorijnUsage = "https://drive.google.com/drive/folders/1bX8exQcxDBenqNfUbhMyRtx6YG1MxWHf";
@@ -686,9 +686,9 @@ exports.commands =
 			text += 
 			'<strong>VGC Usage Stats!</strong> \
 			<ul style = "margin: 0 0 0 -20px"> \
-				<li><a href = "' + vgcstats + '">VGC Stats Website</a></li> \
-				<li><a href = "' + psUsage + '">Showdown Usage</a></li> \
-				<li><a href = "' + psDetailedUsage + '">Showdown Detailed Usage</a></li> \
+				<li><a href = "' + pikalytics + '">Pikalytics - Battle Spot and Showdown usage</a></li> \
+				<li><a href = "' + psUsage + '">Raw Showdown Usage</a></li> \
+				<li><a href = "' + psDetailedUsage + '">Raw Showdown Detailed Usage</a></li> \
 				<li><a href = "' + jorijnUsage + '">Jorijn\'s Detailed Showdown Usage</a></li> \
 				<li><a href = "' + babiri + '">babiri.net\'s Showdown Ladder Teams</a></li> \
 			</ul>';
