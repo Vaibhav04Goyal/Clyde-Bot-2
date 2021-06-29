@@ -561,6 +561,7 @@ exports.commands =
 			"What did the Spanish firefighter name his two sons? José and Hose B!",
 			"My fear of palindromes is really starting to affect my life, so I asked my doctor if they could prescribe me anything. Unfortunately, my doctor gave me Xanax :(",
 			"I've been training to be a magician. For my first trick, I will make the following things disappear:",
+			"What do pear trees do before they grow their fruit? They pre-pear!",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
