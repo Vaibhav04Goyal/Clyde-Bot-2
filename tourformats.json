@@ -37,6 +37,15 @@
         ],
         "tournote": ""
     },
+    "gen8vgc2021series10":
+    {
+        "tourformat": "gen8vgc2021series9",
+        "tourname": "[Gen 8] VGC 2021 Series 10",
+        "tourrules": "Limit One Restricted, * Restricted Legendary, Dynamax Clause",
+        "formatname": "",
+        "formatDescription": "",
+        "tournote": "Up to one restricted Pokemon is allowed, but Dynamaxing is not allowed!"
+    },
     "gen8vgc2020":
     {
         "tourformat": "gen8vgc2020",

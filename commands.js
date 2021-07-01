@@ -225,6 +225,11 @@ exports.commands =
 				case "series8":
 					tourObject = tourJSON["gen8vgc2021series8"];
 					break;
+				case "10":
+				case "s10":
+				case "series10":
+					tourObject = tourJSON["gen8vgc2021series10"];
+					break;
 				case "vgc20":
 				case "vgc2020":
 				case "20":
