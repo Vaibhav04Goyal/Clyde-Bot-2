@@ -44,6 +44,7 @@
         "tourrules": "Limit One Restricted, * Restricted Legendary, Dynamax Clause",
         "formatname": "",
         "formatDescription": "",
+        "sampleTeams": [],
         "tournote": "Up to one restricted Pokemon is allowed, but Dynamaxing is not allowed!"
     },
     "gen8vgc2020":
