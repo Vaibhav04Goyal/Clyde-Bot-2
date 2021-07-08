@@ -24,7 +24,7 @@ const MIN_BOLD_LENGTH = 18;
 const MIN_BOLD_PROPORTION = 0.8;
 
 let initial_login = true;
-let ranks = " +%@*&#";
+let ranks = " +^%@*&#";
 let rankMap = new Map();
 for (let i = 0, len = ranks.length; i < len; i++)
 {
@@ -32,7 +32,6 @@ for (let i = 0, len = ranks.length; i < len; i++)
 }
 
 const commandsJSON = require("./commandpermissions.json");
-const { bold } = require("colors");
 const globalCommandsObject = commandsJSON["global"];
 
 exports.parse =

@@ -84,7 +84,7 @@
         },
         "contentcreators":
         {
-            "rank": 6
+            "rank": 7
         },
         "notice":
         {
@@ -134,13 +134,9 @@
         {
             "rank": 2
         },
-        "8ball":
-        {
-            "rank": 2
-        },
         "say":
         {
-            "rank": 2
+            "rank": 3
         },
         "objectively":
         {
@@ -156,7 +152,7 @@
         },
         "uno":
         {
-            "rank": 2
+            "rank": 3
         },
         "chef":
         {
@@ -192,7 +188,7 @@
         },
         "custom":
         {
-            "rank": 6
+            "rank": 7
         }
     }
     
