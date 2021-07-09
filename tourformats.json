@@ -1,4 +1,14 @@
 {
+    "gen8vgc2021series10":
+    {
+        "tourformat": "gen8vgc2021series10",
+        "tourname": "[Gen 8] VGC 2021 Series 10",
+        "tourrules": "",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Up to one restricted Pokemon is allowed, but Dynamaxing is not allowed!"
+    },
     "gen8vgc2021series9":
     {
         "tourformat": "gen8vgc2021series9",
@@ -36,16 +46,6 @@
             ["koffing", "koffing", "koffing", "koffing", "koffing", "koffing", "https://www.smogon.com/forums/threads/series-8-sample-team-thread-accepting-submissions.3677426/", "More VGC 2021 Teams - Smogon"]
         ],
         "tournote": ""
-    },
-    "gen8vgc2021series10":
-    {
-        "tourformat": "gen8vgc2021series9",
-        "tourname": "[Gen 8] VGC 2021 Series 10",
-        "tourrules": "Limit One Restricted, * Restricted Legendary, Dynamax Clause",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "Up to one restricted Pokemon is allowed, but Dynamaxing is not allowed!"
     },
     "gen8vgc2020":
     {
