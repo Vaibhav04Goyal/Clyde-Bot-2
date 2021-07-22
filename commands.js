@@ -569,6 +569,7 @@ exports.commands =
 			"I've been training to be a magician. For my first trick, I will make the following things disappear:",
 			"What do pear trees do before they grow their fruit? They pre-pear!",
 			"What do you call a wandering Neanderthal? A meanderthal!",
+			"Did you hear about the man who tied a criminal to the dock? He was arrested for harboring a fugitive!"
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
