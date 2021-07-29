@@ -279,7 +279,7 @@
     {
         "tourformat": "gen4doublesou",
         "tourname": "[Gen 4] VGC 2010",
-        "tourrules": "Flat Rules, !Sleep Clause Mod, !OHKO Clause, !Evasion Moves Clause, !HP Percentage Mod, !Endless Battle Clause, !Picked Team Size, Max Team Size = 4, Adjust Level Down = 50, !Team Preview, Limit Two Restricted, *Restricted Legendary, +Dialga, +Giratina, +Groudon, +Ho-Oh, +Kyogre, +Lugia, +Mewtwo, +Palkia, +Rayquaza, +Explosion, +Baton Pass, +Arena Trap, +Sand Veil, +Swinub + Snow Cloak, +Piloswine + Snow Cloak, +Mamoswine + Snow Cloak",
+        "tourrules": "Flat Rules, !Sleep Clause Mod, !OHKO Clause, !Evasion Moves Clause, !HP Percentage Mod, !Endless Battle Clause, !Picked Team Size, Max Team Size = 4, !Team Preview, Limit Two Restricted, *Restricted Legendary, +Dialga, +Giratina, +Groudon, +Ho-Oh, +Kyogre, +Lugia, +Mewtwo, +Palkia, +Rayquaza, +Explosion, +Baton Pass, +Arena Trap, +Sand Veil, +Swinub + Snow Cloak, +Piloswine + Snow Cloak, +Mamoswine + Snow Cloak",
 		"formatname": "VGC 2010",
         "formatDescription": "Two restricted Pokemon are allowed, with no Team Preview! Use [Gen 4] Doubles OU to create a team. Back in real VGC 2010, you could bring different Pokemon to a best-of-three set and even switch around items between games! You could also bring 4 restricted Pokemon, but of course could only use two in one game. On Showdown, you can only bring 4 Pokemon to a match, since there's no Team Preview and there's no support for choosing a Pokemon without Team Preview.",
         "sampleTeams":
