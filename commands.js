@@ -608,14 +608,13 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 6;
+		let month = 7;
 		let year = 2021;
-		const defaultFormat = "gen8vgc2021series9";
+		const defaultFormat = "gen8vgc2021series10";
 		const defaultRank = "1760";
 		const pikalytics = "https://pikalytics.com";
-		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/gen8vgc2021series9-1760.txt";
-		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/gen8vgc2021series9-1760.txt";
-		const jorijnUsage = "https://drive.google.com/drive/folders/1bX8exQcxDBenqNfUbhMyRtx6YG1MxWHf";
+		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/" + defaultFormat + "-1760.txt";
+		const psDetailedUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/moveset/" + defaultFormat + "-1760.txt";
 		const babiri = "https://babiri.net";
 
 		// Usage stats API: https://www.smogon.com/forums/threads/usage-stats-api.3661849
@@ -701,7 +700,6 @@ exports.commands =
 				<li><a href = "' + pikalytics + '">Pikalytics - Battle Spot and Showdown usage</a></li> \
 				<li><a href = "' + psUsage + '">Raw Showdown Usage</a></li> \
 				<li><a href = "' + psDetailedUsage + '">Raw Showdown Detailed Usage</a></li> \
-				<li><a href = "' + jorijnUsage + '">Jorijn\'s Detailed Showdown Usage</a></li> \
 				<li><a href = "' + babiri + '">babiri.net\'s Showdown Ladder Teams</a></li> \
 			</ul>';
 
