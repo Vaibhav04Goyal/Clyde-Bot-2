@@ -4,10 +4,17 @@
         "tourformat": "gen8vgc2021series10",
         "tourname": "[Gen 8] VGC 2021 Series 10",
         "tourrules": "",
-        "formatname": "",
-        "formatDescription": "",
-        "sampleTeams": [],
-        "tournote": "Up to one restricted Pokemon is allowed, but Dynamaxing is not allowed!"
+        "formatname": "VGC 2021 (Series 10)",
+        "formatDescription": "VGC 2021 Series 10 allowed all Pokemon that be obtained with the Galar or battle-ready symbol in-game, in addition to one restricted legendary Pokemon, like Zacian, Kyogre, Xerneas, etc. Dynamaxing is also prohibited.",
+        "sampleTeams": [
+            ["palkia", "landorustherian", "zapdos", "amoonguss", "stakataka", "incineroar", "https://pokepast.es/38285c011b520684", "Bro Kappa's 1st Place Victory Road World Cup Open Team"],
+            ["zaciancrowned", "urshifurapidstrike", "incineroar", "rillaboom", "regieleki", "landorus", "https://pokepast.es/818a391479bca54a", "Ghiso's Top 4 Victory Road World Cup Open Team"],
+            ["kyogre", "tornadus", "tsareena", "naganadel", "incineroar", "regieleki", "https://pokepast.es/ca72c17690afc7a5", "Chulainn's Top 8 Victory Road World Cup Open Team"],
+            ["calyrexshadow", "tapulele", "whimsicott", "entei", "ditto", "urshifurapidstrike", "https://pokepast.es/077e68dfd0e335a1", "Human's Top 4 Victory Road World Cup Open Team"],
+            ["xerneas", "volcarona", "rillaboom", "regieleki", "indeedeef", "incineroar", "https://pokepast.es/9248793c3b99c54b", "Frigo / Midnights's Top 4 Creators Cup III Team"],
+            ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2021 Teams - Victory Road"]
+        ],
+        "tournote": ""
     },
     "gen8vgc2021series9":
     {
