@@ -18,11 +18,12 @@
         "formatDescription": "VGC 2021 Series 7 & 9 allowed all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, except restricted legendary Pokemon like Zacian, Kyogre, etc.",
         "sampleTeams":
         [
+            ["landorustherian", "incineroar", "regieleki", "tapufini", "moltresgalar", "amoonguss", "https://pokepast.es/f17d63f2040e92ed", "Prro-T's 1st Place Players Cup IV Team"],
+            ["landorustherian", "moltresgalar", "grimmsnarl", "spectrier", "registeel", "regieleki", "https://pokepast.es/6595dc82ca2ca20d", "Ilbona's 2nd Place Players Cup IV Team"],
+            ["blastoisegmax", "rillaboomgmax", "incineroar", "landorustherian", "registeel", "thundurus", "https://pokepast.es/368bf65e884becf6", "fevzioe's 3rd Place Players Cup IV Team"],
+            ["venusaurgmax", "torkoal", "grimmsnarl", "porygon2", "registeel", "landorustherian", "https://pokepast.es/933f7bc0d25d06dc", "Wilfire70's 4th Place Players Cup IV Team"],
             ["coalossalgmax", "dragapult", "urshifurapidstrikegmax", "rillaboomgmax", "togekiss", "incineroar", "https://pokepast.es/8b7f59ae61fae0a6", "marc0fiero's 1st Place VR Circuit Spring Series Team"],
-            ["venusaurgmax", "torkoal", "grimmsnarl", "porygon2", "regirock", "zapdos", "https://pokepast.es/74cd7d6f310f31d1", "North's 1st Place VR Circuit Spring Series Qualifier Team"],
-            ["metagross", "moltresgalar", "rotomwash", "entei", "grimmsnarl", "porygon2", "https://pokepast.es/5e58ee70776c6ee2", "Giulu Tarlao's 1st Place VR Circuit Spring Series Qualifier Team"],
             ["regieleki", "clefairy", "rillaboomgmax", "glastrier", "celesteela", "urshifugmax", "https://pokepast.es/9a51f8cd7c2d3de5", "Liakos's 1st Place Smogon Major Team"],
-            ["landorustherian", "thundurus", "urshifugmax", "tapufini", "kartana", "incineroar", "https://pokepast.es/18fa71ab88dce632", "marc0fiero's 2nd Place Smogon Major Team"],
             ["salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "salamencemega", "https://victoryroadvgc.com/pokemon-sword-shield-rental-vgc-teams/", "More VGC 2021 Teams - Victory Road"],
             ["koffing", "koffing", "koffing", "koffing", "koffing", "koffing", "https://www.smogon.com/forums/threads/series-9-sample-teams.3682855/", "More VGC 2021 Teams - Smogon"]
         ],
