@@ -945,7 +945,7 @@ exports.commands =
 	sample: "samples",
 	samples: function(arg, by, room)
 	{
-		let defaultFormat = "gen8vgc2021series9";
+		let defaultFormat = "gen8vgc2021series10";
 		let text = "";
 		if (this.isPM(room))
 		{
