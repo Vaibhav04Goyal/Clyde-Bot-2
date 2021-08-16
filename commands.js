@@ -356,6 +356,7 @@ exports.commands =
 					this.say(room, "Cannot start random battle tours.");
 					return;
 				case "cap":
+				case "cap1v1":
 					this.say(room, "Cannot start CAP tours.");
 					return;
 				default:
