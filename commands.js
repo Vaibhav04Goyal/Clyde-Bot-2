@@ -175,14 +175,15 @@ exports.commands =
 			const defaultTour = "vgc2021";
 			
 			// Handle default case, double elim, and random format options.
+			arglist[0] = toID(arglist[0]);
 			switch (arglist[0])
 			{
 				case "": // No argument specified, use default tour.
 					arglist[0] = defaultTour;
 					break;
 				case "double":
-				case "double elim":
-				case "double elimination":
+				case "doubleelim":
+				case "doubleelimination":
 					arglist[0] = defaultTour;
 					arglist[1] = "elimination";
 					arglist[2] = "128";
@@ -198,7 +199,7 @@ exports.commands =
 					isOfficial = true;
 					break;
 				case "random":
-				case "random vgc":
+				case "randomvgc":
 					let vgcFormats = ["vgc11", "vgc12", "vgc13", "vgc14", "vgc15", "vgc16", "vgc17", "vgc18", "sun", "moon", "ultra", "vgc20", "series7"];
 					arglist[0] = vgcFormats[Math.floor(Math.random() * vgcFormats.length)];
 					break;
@@ -242,24 +243,23 @@ exports.commands =
 					tourObject = tourJSON["gen8vgc2021nodynamax"];
 					break;
 				case "gscup":
-				case "gs cup":
 				case "vgc2022":
 				case "2022":
 					tourObject = tourJSON["gen8gscup"];
 					break;
 				case "ultra":
-				case "ultra series":
+				case "ultraseries":
 				case "vgc19":
 				case "vgc2019":
 				case "19":
 					tourObject = tourJSON["gen7vgc2019ultraseries"];
 					break;
 				case "moon":
-				case "moon series":
+				case "moonseries":
 					tourObject = tourJSON["gen7vgc2019moonseries"];
 					break;
 				case "sun":
-				case "sun series":
+				case "sunseries":
 					tourObject = tourJSON["gen7vgc2019sunseries"];
 					break;
 				case "vgc18":
@@ -314,54 +314,45 @@ exports.commands =
 					break;
 				case "corsola":
 				case "corsolacup":
-				case "corsola cup":
 					tourObject = tourJSON["gen8corsolacup"];
 					break;
 				case "bulu":
-				case "tapu bulu":
-				case "tapu bulu cup":
+				case "tapubulu":
+				case "tapubulucup":
 				case "bulucup":
-				case "bulu cup":
 				case "bulubash":
-				case "bulu bash":
 					tourObject = tourJSON["gen8bulucup"];
 					break;
 				case "crab":
 				case "craboff":
-				case "crab off":
 					tourObject = tourJSON["gen8craboff"];
 					break;
 				case "chansey":
 				case "chanseycup":
-				case "chansey cup":
 				case "chanseyclash":
-				case "chansey clash":
 					tourObject = tourJSON["gen8chanseyclash"];
 					break;
 				case "inverse":
-				case "inverse vgc":
+				case "inversevgc":
 				case "vgc inverse":
 					tourObject = tourJSON["gen8inversevgc"];
 					break;
 				case "hackmons":
-				case "vgc hackmons":
-				case "hackmons vgc":
+				case "vgchackmons":
+				case "hackmonsvgc":
 					tourObject = tourJSON["gen8vgchackmons"];
 					break;
-				case "random battle":
-				case "randombattle":
-				case "gen8randombattle":
-				case "randomdoubles":
-				case "gen8doublesrandombattle":
-					this.say(room, "Cannot start random battle tours.");
-					return;
-				case "cap":
-				case "cap1v1":
-					this.say(room, "Cannot start CAP tours.");
-					return;
 				default:
-					tourformat = arglist[0];
-					tourname = "";
+					if (arglist[0].includes('random') || arglist[0].includes('randbat')) {
+						this.say(room, "Cannot start Random Battle tournaments.");
+						return;
+					} else if (arglist[0].includes('cap')) {
+						this.say(room, "Cannot start CAP tournaments.");
+						return;
+					} else {
+						tourformat = arglist[0];
+						tourname = "";
+					}
 					break;
 			}
 
