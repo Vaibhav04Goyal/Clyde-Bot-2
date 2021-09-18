@@ -379,7 +379,7 @@
     {
         "tourformat": "gen8vgc2021series10",
         "tourname": "[Gen 8] GS Cup",
-        "tourrules": "Limit Two Restricted, * Restricted Legendary, !Dynamax Clause",
+        "tourrules": "!Limit One Restricted, Limit Two Restricted, * Restricted Legendary, !Dynamax Clause",
         "formatname": "",
         "formatDescription": "",
         "sampleTeams": [],
