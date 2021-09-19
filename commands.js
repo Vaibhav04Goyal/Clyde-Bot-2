@@ -282,9 +282,9 @@ exports.commands =
 				case "15":
 					tourObject = tourJSON["gen6vgc2015"];
 					break;
-				case "vgc14.5":
-				case "vgc2014.5":
-				case "14.5":
+				case "vgc145":
+				case "vgc20145":
+				case "145":
 					tourObject = tourJSON["gen6vgc2014.5"];
 					break;
 				case "vgc14":
