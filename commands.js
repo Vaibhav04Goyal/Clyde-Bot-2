@@ -567,6 +567,7 @@ exports.commands =
 			"Did you hear about the man who tied a criminal to the dock? He was arrested for harboring a fugitive!",
 			"Did you hear about the bad rainbow who was committing crimes? It got sent to prism. Luckily for the rainbow, it was a light sentence.",
 			"What do you call an egg found on the beach? San Diego!",
+			"How do you help a female sibling? Assister!",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
