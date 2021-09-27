@@ -568,6 +568,7 @@ exports.commands =
 			"Did you hear about the bad rainbow who was committing crimes? It got sent to prism. Luckily for the rainbow, it was a light sentence.",
 			"What do you call an egg found on the beach? San Diego!",
 			"How do you help a female sibling? Assister!",
+			"A guy came into my officie claiming he was able to turn people into windmills. I immediately became a huge fan!",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
