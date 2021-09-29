@@ -385,6 +385,16 @@
         "sampleTeams": [],
         "tournote": "VGC 2021, but two restricted legendary Pokemon are allowed!"
     },
+    "gen8series99":
+    {
+        "tourformat": "gen8vgc2021series10",
+        "tourname": "[Gen 8] VGC Series 99",
+        "tourrules": "!Limit One Restricted, !Dynamax Clause, +Mythical, +Restricted Legendary, !! Min Source Gen = 5",
+        "formatname": "",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Series 99! Use as many Mythical and Restricted Pokemon as you like!"
+    },
     "gen8vgchackmons":
     {
         "tourformat": "gen8vgc2021series9",

@@ -337,6 +337,11 @@ exports.commands =
 				case "vgc inverse":
 					tourObject = tourJSON["gen8inversevgc"];
 					break;
+				case "99":
+				case "vgc99":
+				case "series99":
+					tourObject = tourJSON["gen8series99"];
+					break;
 				case "hackmons":
 				case "vgchackmons":
 				case "hackmonsvgc":
