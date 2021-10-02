@@ -203,7 +203,7 @@
     {
         "tourformat": "gen6battlespotdoubles",
         "tourname": "[Gen 6] VGC 2014.5",
-        "tourrules": "+Kalos Pokedex",
+        "tourrules": "Kalos Pokedex",
         "formatname": "VGC 2014.5",
         "formatDescription": "Like VGC 2014, you are only allowed to use Pokemon from the Kalos Pokedex. Unlike VGC 14, VGC 14.5 allows ORAS tutor moves (e.g. Hyper Voice Sylveon). This was played in late 2014 at Premier Challenges. Create teams for VGC 2014.5 by selecting \"[Gen 6] Battle Spot Doubles\" in the teambuilder.",
         "sampleTeams":
