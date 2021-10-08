@@ -184,7 +184,7 @@
     },
     "gen6vgc2015":
     {
-        "tourformat": "gen6battlespotdoubles",
+        "tourformat": "gen6vgc2015",
         "tourname": "[Gen 6] VGC 2015",
         "tourrules": "",
         "formatname": "VGC 2015",
@@ -201,7 +201,7 @@
     },
     "gen6vgc2014.5":
     {
-        "tourformat": "gen6battlespotdoubles",
+        "tourformat": "gen6vgc2015",
         "tourname": "[Gen 6] VGC 2014.5",
         "tourrules": "Kalos Pokedex",
         "formatname": "VGC 2014.5",
@@ -234,7 +234,7 @@
     },
     "gen5vgc2013":
     {
-        "tourformat": "gen5gbudoubles",
+        "tourformat": "gen5vgc2013",
         "tourname": "[Gen 5] VGC 2013",
         "tourrules": "",
         "formatname": "VGC 2013",
