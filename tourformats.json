@@ -188,7 +188,7 @@
         "tourname": "[Gen 6] VGC 2015",
         "tourrules": "",
         "formatname": "VGC 2015",
-        "formatDescription": "VGC 2015 was Generation VI's National Pokedex format, played on ORAS. Like in 2014, the new blue pentagon rule only allowed Pokemon that were caught in Generation VI to be used. Create teams for VGC 2015 by selecting \"[Gen 6] Battle Spot Doubles\" in the teambuilder.",
+        "formatDescription": "VGC 2015 was Generation VI's National Pokedex format, played on ORAS. Like in 2014, the new blue pentagon rule only allowed Pokemon that were caught in Generation VI to be used.",
         "sampleTeams":
         [
             ["kangaskhanmega", "cresselia", "heatran", "amoonguss", "landorustherian", "thundurus", "https://pokepast.es/ca89718c1c6e9077", "SHADEviera's 1st Place Worlds Team"],
@@ -205,7 +205,7 @@
         "tourname": "[Gen 6] VGC 2014.5",
         "tourrules": "Kalos Pokedex",
         "formatname": "VGC 2014.5",
-        "formatDescription": "Like VGC 2014, you are only allowed to use Pokemon from the Kalos Pokedex. Unlike VGC 14, VGC 14.5 allows ORAS tutor moves (e.g. Hyper Voice Sylveon). This was played in late 2014 at Premier Challenges. Create teams for VGC 2014.5 by selecting \"[Gen 6] Battle Spot Doubles\" in the teambuilder.",
+        "formatDescription": "Like VGC 2014, you are only allowed to use Pokemon from the Kalos Pokedex. Unlike VGC 14, VGC 14.5 allows ORAS tutor moves (e.g. Hyper Voice Sylveon). This was played in late 2014 at Premier Challenges. Create teams for VGC 2014.5 by selecting \"[Gen 6] VGC 2015\" in the teambuilder.",
         "sampleTeams":
         [
             ["charizardmegay", "mawilemega", "sylveon", "conkeldurr", "tyranitar", "zapdos", "https://pokepast.es/15301a4155f436a0", "Darkeness's PC Multi-1st Place Team"],
@@ -219,7 +219,7 @@
         "tourname": "[Gen 6] VGC 2014",
         "tourrules": "",
         "formatname": "VGC 2014",
-        "formatDescription": "VGC 2014 only allowed Pokemon from the Kalos Pokedex. Because VGC 2014 was on Pokemon X and Y, all ORAS Mega Evolutions and move tutor moves are banned. Additionally, the new \"blue pentagon\" rule only allowed players to use Pokemon obtained in X and Y. Create teams for VGC 2014 by selecting \"[Gen 6] Battle Spot Doubles\" in the teambuilder.",
+        "formatDescription": "VGC 2014 only allowed Pokemon from the Kalos Pokedex. Because VGC 2014 was on Pokemon X and Y, all ORAS Mega Evolutions and move tutor moves are banned. Additionally, the new \"blue pentagon\" rule only allowed players to use Pokemon obtained in X and Y.",
         "sampleTeams":
         [
             ["gyaradosmega", "pachirisu", "gothitelle", "gardevoir", "garchomp", "talonflame", "https://pokepast.es/35e1f41321d981cd", "Sejun Park's 1st Place Worlds Team"],
@@ -238,7 +238,7 @@
         "tourname": "[Gen 5] VGC 2013",
         "tourrules": "",
         "formatname": "VGC 2013",
-        "formatDescription": "The final year of VGC played in Generation V, VGC 2013 was a National Pokedex format that allowed the Therian formes of the Genies, BW2 move tutors, and all the released Hidden Abilities. Create teams for VGC 2013 by selecting \"[Gen 5] GBU Doubles\" in the teambuilder.",
+        "formatDescription": "The final year of VGC played in Generation V, VGC 2013 was a National Pokedex format that allowed the Therian formes of the Genies, BW2 move tutors, and all the released Hidden Abilities.",
         "sampleTeams":
         [
             ["mamoswine", "tornadus", "latios", "amoonguss", "heatran", "conkeldurr", "https://pokepast.es/adae1559f253e904", "Mean's 1st Place Worlds Team"],
@@ -255,7 +255,7 @@
         "tourname": "[Gen 5] VGC 2012",
         "tourrules": "",
         "formatname": "VGC 2012",
-        "formatDescription": "VGC 2012 was a National Pokedex format like 2013. It was played on Black and White, since BW2 had not been released yet outside of Japan. Notably, there was no access to Therian formes of the Genies, Hidden Abilities of the Genies, Breloom, Conkeldurr, and many other Unova Pokemon, and no access to BW2 move tutor moves. Create teams for VGC 2012 by selecting \"[Gen 5] GBU Doubles\" in the teambuilder.",
+        "formatDescription": "VGC 2012 was a National Pokedex format like 2013. It was played on Black and White, since BW2 had not been released yet outside of Japan. Notably, there was no access to Therian formes of the Genies, Hidden Abilities of the Genies, Breloom, Conkeldurr, and many other Unova Pokemon, and no access to BW2 move tutor moves.",
         "sampleTeams":
         [
             ["cresselia", "metagross", "hydreigon", "garchomp", "tyranitar", "rotomwash", "https://pokepast.es/7b7face31d5575cf", "Ray Rizzo's 1st Place Worlds Team"],
@@ -272,7 +272,7 @@
         "tourname": "[Gen 5] VGC 2011",
         "tourrules": "",
         "formatname": "VGC 2011",
-        "formatDescription": "VGC 2011 was played on Pokemon Black and White, and you could only use Pokemon from the Unova Pokedex. BW2 move tutor moves and most Hidden Abilities are banned, because they were unreleased at the time. Create teams for VGC 2011 by selecting \"[Gen 5] GBU Doubles\" in the teambuilder.",
+        "formatDescription": "VGC 2011 was played on Pokemon Black and White, and you could only use Pokemon from the Unova Pokedex. BW2 move tutor moves and most Hidden Abilities are banned, because they were unreleased at the time.",
         "sampleTeams":
         [
             ["gothitelle", "thundurus", "terrakion", "hydreigon", "escavalier", "conkeldurr", "https://pokepast.es/81e1a1b26fbcf536", "Ray Rizzo's 1st Place Worlds Team"],
