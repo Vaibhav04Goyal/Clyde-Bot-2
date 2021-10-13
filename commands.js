@@ -212,7 +212,6 @@ exports.commands =
 			{
 				case "vgc21":
 				case "vgc2021":
-				case "11":
 				case "s11":
 				case "series11":
 				case "8":
