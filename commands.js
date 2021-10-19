@@ -877,7 +877,7 @@ exports.commands =
 	},
 	sunglasses: function(arg, by, room)
 	{
-		let text = "<img src = \"https://discord.com/assets/5f80f04e6ee97feebdd00feff92ced82.svg\" width=50 height=50>";
+		let text = "<img src = \"https://i.snipboard.io/a6LIdY.jpg\" width=50 height=50>";
 		this.say(room, "/addhtmlbox " + text);
 	},
 	tympole: function(arg, by, room)
