@@ -1,10 +1,10 @@
 {
     "gen8vgc2021series11":
     {
-        "tourformat": "gen8vgc2021series10",
+        "tourformat": "gen8vgc2021series11",
         "tourname": "[Gen 8] VGC 2021 Series 11",
-        "tourrules": "!Dynamax Clause",
-        "formatname": "VGC 2021 (Series 8)",
+        "tourrules": "",
+        "formatname": "VGC 2021 (Series 11)",
         "formatDescription": "VGC 2021 Series 8 / 11 allows all Pokemon that can be obtained with the Galar or battle-ready symbol in-game, including up to one restricted legendary Pokemon like Zacian, Kyogre, etc.",
         "sampleTeams":
         [
