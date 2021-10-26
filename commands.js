@@ -462,50 +462,22 @@ exports.commands =
 			"How many of " + arglist[0] + " does it take to change a lightbulb? Just one - all they have to do is hold the lightbulb in place while the world revolves around them.",
 		];
 
-		let douInsultList = [
-			arglist[0] + " is the reason we have to put instructions on shampoo.",
-			"Roses are red, violets are blue. If " + arglist[0] + " was a Pokemon, I wouldn't choose you.",
-			arglist[0] + " doesn't have nice access to anything, really.",
-			arglist[0] + " lost to matame 6 times in one tournament.",
-			arglist[0] + " uses Fake Out with Psychic Terrain up.",
-			arglist[0] + " uses the word objectively to describe subjective things.",
-			"They say opposites attract. I hope " + arglist[0] + " meets someone who is good-looking, intelligent, and cultured.",
-			arglist[0] + "'s social life is as exciting as the derivative of e^^x^^.",
-			"The intersection of " + arglist[0] + "'s brain and reality is the null set.",
-			"Trying to understand " + arglist[0] + "'s teambuilding decisions is more complex than solving the P vs. NP problem.",
-			arglist[0] + " is the type of person who stares at a can of orange juice because it says \"concentrate\"",
-			"AuraRayquaza has better opinions than " + arglist[0] + ".",
-			arglist[0] + "\'s team decisions are even more questionable than Totem's choice of anime.",
-			arglist[0] + " peaked in 2015.",
-			arglist[0] + " lost to mono-Fire."
-		];
-
 		let text = "";
 
 		let insultNum = parseInt(arglist[1]);
-		if (arglist[1] == null)
+		if (!arglist[1])
 		{
 			let rand = Math.floor(insultList.length * Math.random());
 			insultNum = rand;
 		}
-		if (room !== "dou")
+		
+		text = insultList[insultNum];
+		if (insultNum === 0 && arglist[0] === "Bright Size")
 		{
-			text = insultList[insultNum];
-			if (insultNum === 0 && arglist[0] === "Bright Size")
-			{
-				text = "Bright Size is worse than Bright Size. If you think about it long enough, you'll realize you thought too long.";
-			}
-		}
-		else
-		{
-			text = douInsultList[insultNum];
-			if (insultNum === 12 && arglist[0] === "AuraRayquaza")
-			{
-				text = "AuraRayquaza has better opinions than AuraRayquaza. If you think about it long enough, you'll realize you thought too long.";
-			}
+			text = "Bright Size is worse than Bright Size. If you think about it long enough, you'll realize you thought too long.";
 		}
 
-		if (text == undefined)
+		if (!text)
 		{
 			text = arglist[0] + " is bad and should feel bad.";
 			send("|/pm " + toID(by) +  ", You entered an invalid insult number, probably. Valid insult numbers are 0-" + (insultList.length - 1) + ".");
@@ -593,7 +565,7 @@ exports.commands =
 		}
 
 		let text = jokeList[jokeNum];
-		if (text == undefined)
+		if (!text)
 		{
 			text = "le epic funny joke.";
 			send("|/pm " + toID(by) + ", You entered an invalid joke number, probably. Valid joke numbers are 0-" + (jokeList.length - 1) + ".");
