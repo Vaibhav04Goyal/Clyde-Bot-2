@@ -581,6 +581,7 @@ exports.commands =
 			"What do you call an egg found on the beach? San Diego!",
 			"How do you help a female sibling? Assister!",
 			"A guy came into my office claiming he was able to turn people into windmills. I immediately became a huge fan!",
+			"Why did the ghost go to the bar? To get some booze!",
 		];
 
 		let jokeNum = arg === "latest" ? jokeList.length - 1 : parseInt(arg);
