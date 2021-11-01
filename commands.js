@@ -339,6 +339,11 @@ exports.commands =
 				case "chanseyclash":
 					tourObject = tourJSON["gen8chanseyclash"];
 					break;
+				case "dog":
+				case "doggy":
+				case "doggyduel":
+					tourObject = tourJSON["gen8doggyduel"];
+					break;
 				case "inverse":
 				case "inversevgc":
 				case "vgc inverse":

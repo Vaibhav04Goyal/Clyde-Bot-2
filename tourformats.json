@@ -370,6 +370,16 @@
         ],
         "tournote": ""
     },
+    "gen8doggyduel":
+    {
+        "tourformat": "gen8vgc2021series9",
+        "tourname": "[Gen 8] Doggy Duel",
+        "tourrules": "!! Min Source Gen = 3, +Restricted Legendary, -All Pokemon, +Growlithe, +Arcanine, +Suicune, +Entei, +Electrike, +Manectric, +Lillipup, +Herdier, +Stoutland, +Rockruff, +Lycanroc, +Zygarde-10, +Yamper, +Bolthund, +Zacian, +Zamazenta",
+        "formatname": "Doggy Duel",
+        "formatDescription": "",
+        "sampleTeams": [],
+        "tournote": "Doggy Duel! Only dog-related Pokemon are allowed."
+    },
     "gen8inversevgc":
     {
         "tourformat": "gen8vgc2021series10",
