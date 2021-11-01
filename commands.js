@@ -475,7 +475,7 @@ exports.commands =
 			let rand = Math.floor(insultList.length * Math.random());
 			insultNum = rand;
 		}
-		
+
 		text = insultList[insultNum];
 		if (insultNum === 0 && arglist[0] === "Bright Size")
 		{
@@ -594,7 +594,7 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 9;
+		let month = 10;
 		let year = 2021;
 		const defaultFormat = "gen8vgc2021series10";
 		const defaultRank = "1760";
