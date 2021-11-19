@@ -391,7 +391,7 @@
         "formatname": "Battle Festival Doubles",
         "formatDescription": "",
         "sampleTeams": [],
-        "tournote": "Battle Festival allows VGC-style play in Brilliant Diamond / Shining Pearl; only Pokemon available in the Sinnoh Dex are allowed. Please note VGC play will continue officially on Sword/Shield."
+        "tournote": "Battle Festival allows VGC-style play in Brilliant Diamond / Shining Pearl; only Pokemon available in BDSP are allowed. Restricted / mythical Pokemon are also not allowed. Please note VGC play will continue officially on Sword/Shield."
     },
     "gen8inversevgc":
     {
