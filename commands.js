@@ -342,10 +342,10 @@ exports.commands =
 				case "dog":
 				case "doggy":
 				case "doggyduel":
-					tourObject = tourJSON["gen8bdspvgc"];
+					tourObject = tourJSON["gen8doggyduel"];
 					break;
 				case "bdsp":
-					tourObject = tourJSON["gen8doggyduel"];
+					tourObject = tourJSON["gen8bdspvgc"];
 					break;
 				case "inverse":
 				case "inversevgc":
