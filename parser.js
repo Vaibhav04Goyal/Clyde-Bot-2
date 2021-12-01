@@ -514,8 +514,8 @@ exports.parse =
 		if (!user || room.charAt(0) === ',') return;
 
 		// Removes extra spaces and null characters so messages that should trigger stretching do so
-		msg = msg.trim().replace(/[ \u0000\u200B-\u200F]+/g, " ");
 
+		msg = msg.trim().replace(/[ \u0000\u200B-\u200F]+/g, " ");
 		let now = Date.now();
 		if (!this.chatData[user])
 		{
@@ -536,6 +536,9 @@ exports.parse =
 		let roomData = userData[room];
 
 		roomData.times.push(now);
+
+		// Return early if it was a broadcasted command (e.g. math command)
+		if (msg.startsWith('/raw')) return;
 
 		// This deals with punishing rulebreakers. Note that the bot can't think, however, so it might make mistakes. It will not punish drivers+.
 		if (config.allowmute && toID(room) === 'vgc' && config.whitelist.indexOf(user) === -1 && "%@*&#".indexOf(auth) === -1)
@@ -602,7 +605,7 @@ exports.parse =
 
 			// Moderation for stretching (over x consecutive characters in the message are the same)
 			let stretchMatch = /(.)\1{7,}/gi.test(msg) || /(..+)\1{4,}/gi.test(msg); // Matches the same character (or group of characters) 8 (or 5) or more times in a row
-			if (stretchMatch)
+			if (stretchMatch && !msg.startsWith('!'))
 			{
 				if (pointVal < 1)
 				{
