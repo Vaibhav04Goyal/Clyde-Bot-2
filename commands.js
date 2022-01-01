@@ -602,9 +602,9 @@ exports.commands =
 		let JSONresponse;
 		let wasSuccessful = true;
 		let lastMonthRank;
-		let month = 10;
+		let month = 12;
 		let year = 2021;
-		const defaultFormat = "gen8vgc2021series10";
+		const defaultFormat = "gen8vgc2021series11";
 		const defaultRank = "1760";
 		const pikalytics = "https://pikalytics.com";
 		const psUsage = "https://www.smogon.com/stats/" + year + "-" + (month < 10 ? "0" + month : month) + "/" + defaultFormat + "-1760.txt";
