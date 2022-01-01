@@ -210,6 +210,15 @@ exports.commands =
 			// Prepare tournament format.
 			switch (arglist[0])
 			{
+				case "gscup":
+				case "vgc22":
+				case "vgc2022":
+				case "22":
+				case "2022":
+				case "s12":
+				case "series12":
+					tourObject = tourJSON["gen8vgc2022"];
+					break;
 				case "vgc21":
 				case "vgc2021":
 				case "s11":
@@ -243,11 +252,6 @@ exports.commands =
 				case "nodynamax":
 				case "nomax":
 					tourObject = tourJSON["gen8vgc2021nodynamax"];
-					break;
-				case "gscup":
-				case "vgc2022":
-				case "2022":
-					tourObject = tourJSON["gen8gscup"];
 					break;
 				case "ultra":
 				case "ultraseries":
