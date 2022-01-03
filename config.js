@@ -14,18 +14,18 @@ exports.serverid = "showdown";
 /* The name of the bot and password. I recommend setting up the account prior to
  * launching node main.js for the first time. Use a strong password if you
  * intend for this bot to be a roombot.   */
-exports.nick = "";
-exports.pass = "";
-exports.avatar = "";
-exports.status = "";
+exports.nick = "Clyde Bot 2";
+exports.pass = "arshvansh";
+exports.avatar = "pokemonbreeder";
+exports.status = "I am Cute Bot by 10 not foundツ";
 
 /* The owner(s) of the bot. Owners should be in quotes, separated by commas.
  * An owner of this bot has access to all commands defined in commands.js,
  * in addition to being the only ones who can access admin commands.  */
-exports.owners = [""];
+exports.owners = ["10 not foundツ"];
 
 /* Rooms that should be joined in quotes, separated by commas. */
-exports.rooms = ["exampleRoom", "another room"];
+exports.rooms = ["botdevelopment", "idm"];
 
 /* Any private rooms that should be joined in quotes, separated by commas.
  * The only difference in private rooms are moderation type (you can't warn).
@@ -37,12 +37,12 @@ exports.privaterooms = [""];
  * character must be made of more than just alphanumeric characters and
  * spaces, and you really shouldn't use ! or / because those are normal
  * commands.   */
-exports.commandcharacter = '.';
+exports.commandcharacter = '&';
 
 /* If this is changed to true, config changes can be adjusted on-the-fly.
  * It's pretty much useless though (use .reload to dynamically update
  * parser and commands), so I would just leave it false.*/
-exports.watchconfig = false;
+exports.watchconfig = true;
 
 /* Secondary websocket protocols should be defined here. However, I'm told
  * Showdown doesn't support these yet, so it's best to leave this empty. */
@@ -60,7 +60,7 @@ exports.debuglevel = 3;
 /* How fast the bot will attempt to reconnect after a disconnection,
  * in seconds. Depending on your Internet speed, setting this too low
  * may cause multiple instances of the bot to join, or not join at all. */
-exports.timeout = 20;
+exports.timeout = 5;
 
 /* Users here will never be punished by the bot. By default, all
  * users with drivers or higher will not be warned.   */
@@ -83,7 +83,7 @@ exports.git = "";
  * Stretching is considered to be using the same character 8 times in a row, or some group of characters 5 times in a row.
  * Bold abuse is considered to be a chat line with at least 18 letters in bold OR 80% of their total letters being in bold.
  * Punishments are accelerated if a user continues to activate the bot's warnings/mutes.   */
-exports.allowmute = false;
+exports.allowmute = true;
 
 /* You can customize what punishments are appropriate after repeated offenses here.*/
 exports.punishvals =
